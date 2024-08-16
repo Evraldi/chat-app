@@ -1,0 +1,212 @@
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"apanya","username":"mek gmana"}
+{"level":"info","message":"Received message:","text":"a","username":"mek gmana"}
+{"level":"info","message":"Received message:","text":"su","username":"mek gmana"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"apa kabar","username":"Unknown"}
+{"level":"error","message":"Error saving message to DB: Message is not defined","stack":"ReferenceError: Message is not defined\n    at Socket.<anonymous> (/home/evraldi/my_project/chat-app/backend/server.js:47:26)\n    at Socket.emit (node:events:520:28)\n    at Socket.emitUntyped (/home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/typed-events.js:69:22)\n    at /home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/socket.js:704:39\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"cuy","username":"anjay123"}
+{"level":"error","message":"Error saving message to DB: Message is not defined","stack":"ReferenceError: Message is not defined\n    at Socket.<anonymous> (/home/evraldi/my_project/chat-app/backend/server.js:47:26)\n    at Socket.emit (node:events:520:28)\n    at Socket.emitUntyped (/home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/typed-events.js:69:22)\n    at /home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/socket.js:704:39\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"apakabar","username":"anjay123"}
+{"level":"error","message":"Error saving message to DB: Message is not defined","stack":"ReferenceError: Message is not defined\n    at Socket.<anonymous> (/home/evraldi/my_project/chat-app/backend/server.js:47:26)\n    at Socket.emit (node:events:520:28)\n    at Socket.emitUntyped (/home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/typed-events.js:69:22)\n    at /home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/socket.js:704:39\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"cuy","username":"anjay123"}
+{"level":"error","message":"Error saving message to DB: Message is not defined","stack":"ReferenceError: Message is not defined\n    at Socket.<anonymous> (/home/evraldi/my_project/chat-app/backend/server.js:47:26)\n    at Socket.emit (node:events:520:28)\n    at Socket.emitUntyped (/home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/typed-events.js:69:22)\n    at /home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/socket.js:704:39\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"oke ngabs","username":"anjay123"}
+{"level":"error","message":"Error saving message to DB: Message is not defined","stack":"ReferenceError: Message is not defined\n    at Socket.<anonymous> (/home/evraldi/my_project/chat-app/backend/server.js:47:26)\n    at Socket.emit (node:events:520:28)\n    at Socket.emitUntyped (/home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/typed-events.js:69:22)\n    at /home/evraldi/my_project/chat-app/backend/node_modules/socket.io/dist/socket.js:704:39\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"oke cuy","username":"anjay123"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"gmana ngabs","username":"anjay123"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"bisa aja lu bang","username":"anjay123"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"kwkw","username":"anjay123"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"apakabar","username":"anjay123"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"halo","username":"anjay123"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"halo","username":"anjay123"}
+{"level":"info","message":"Received message:","text":"memek lu ya","username":"anjay123"}
+{"level":"info","message":"Received message:","text":"halo gais","username":"anjay123"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"kontol ayam lu ya","username":"agusngentot"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"maksud amat gus","username":"anjay123"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"itulah ane sob","username":"anjay123"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"apanya sob","username":"agusngentot"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"agus apa kabar mek","username":"anjay123"}
+{"level":"info","message":"Received message:","text":"baik bro gmana nganggur lu","username":"agusngentot"}
+{"level":"info","message":"Received message:","text":"alhamdullilah nganggur dngan lancar nih bro","username":"anjay123"}
+{"level":"info","message":"Received message:","text":"alhammdullilah bro kalau begitu mah, kabari ya kalau ada loker","username":"agusngentot"}
+{"level":"info","message":"Received message:","text":"pasti bro sesama pengangguran wajib saling tolong menolong","username":"anjay123"}
+{"level":"info","message":"Received message:","text":"kelas king ini mahkotanya king","username":"agusngentot"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"king apa kabar","username":"anjay123"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Client disconnected"}
+{"level":"info","message":"New client connected"}
+{"level":"info","message":"Received message:","text":"gmana kabar nya king","username":"anjay123"}
+{"level":"info","message":"Received message:","text":"alhamdullilah king baik nih","username":"agusngentot"}
+{"level":"info","message":"Received message:","text":"kelas king","username":"anjay123"}
+{"level":"info","message":"Received message:","text":"ngentot lu","username":"agusngentot"}
+{"level":"info","message":"Received message:","text":"loker yang dijanjiin mana ngentot","username":"agusngentot"}
+{"level":"info","message":"Received message:","text":"ini buktinya","username":"anjay123"}
+{"level":"info","message":"Client disconnected"}

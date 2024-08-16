@@ -1,20 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
+import axios from 'axios';
+import "../css/chat.css";
 
-const socket = io('http://localhost:5000');
+const socket = io(process.env.REACT_APP_SOCKET_URL);
 
-function Chat() {
+const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [messageText, setMessageText] = useState('');
+  const [error, setError] = useState('');
   const [username, setUsername] = useState('');
 
   useEffect(() => {
-    // Fetch existing messages
-    fetch('http://localhost:5000/messages')
-      .then(response => response.json())
-      .then(data => setMessages(data));
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
 
-    // Listen for new messages
+    const fetchMessages = async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/messages`);
+        // Urutkan pesan berdasarkan createdAt secara menurun
+        const sortedMessages = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setMessages(sortedMessages);
+      } catch (err) {
+        setError('Failed to load messages.');
+      }
+    };
+
+    fetchMessages();
+
     socket.on('receiveMessage', (message) => {
       setMessages((prevMessages) => [message, ...prevMessages]);
     });
@@ -22,28 +37,32 @@ function Chat() {
     return () => socket.off('receiveMessage');
   }, []);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (username && messageText) {
-      // Send the message to server through HTTP
-      fetch('http://localhost:5000/messages', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, text: messageText }),
-      }).then(() => {
-        // Send the message to all clients through WebSocket
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (messageText && username) {
+      try {
+        await axios.post(`${process.env.REACT_APP_API_URL}/messages`, {
+          username,
+          text: messageText,
+        });
         socket.emit('sendMessage', { username, text: messageText });
         setMessageText('');
-      });
+      } catch (err) {
+        setError('Failed to send message.');
+      }
     }
   };
 
   return (
     <div className="Chat">
       <h1>Chat Application</h1>
+      {error && <p className="error">{error}</p>}
       <div className="messages">
         {messages.map((msg, index) => (
-          <div key={index}>
+          <div
+            key={index}
+            className={`message ${msg.username === username ? 'self' : 'other'}`}
+          >
             <strong>{msg.username}: </strong>{msg.text}
           </div>
         ))}
@@ -51,22 +70,15 @@ function Chat() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Username"
-          value={username}
-          onChange={e => setUsername(e.target.value)}
-          required
-        />
-        <input
-          type="text"
           placeholder="Type a message"
           value={messageText}
-          onChange={e => setMessageText(e.target.value)}
+          onChange={(e) => setMessageText(e.target.value)}
           required
         />
         <button type="submit">Send</button>
       </form>
     </div>
   );
-}
+};
 
 export default Chat;

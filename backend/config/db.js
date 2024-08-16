@@ -1,17 +1,15 @@
-// backend/config/db.js
-
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/chatapp', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+    await mongoose.connect(process.env.MONGO_URI, {
+      //useNewUrlParser: true,
+      //useUnifiedTopology: true,
     });
-    console.log('MongoDB Connected');
-  } catch (error) {
-    console.error('Error connecting to MongoDB', error);
-    process.exit(1);
+    console.log('MongoDB connected');
+  } catch (err) {
+    console.error('Failed to connect to MongoDB, retrying...', err);
+    setTimeout(connectDB, 5000);
   }
 };
 

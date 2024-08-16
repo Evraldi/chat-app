@@ -1,48 +1,63 @@
+require('dotenv').config();
+
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const cors = require('cors');
 const connectDB = require('./config/db');
+const Message = require('./models/Message');
 const messageRoutes = require('./routes/messages');
+const authRoutes = require('./routes/auth');
+const errorHandler = require('./middleware/errorHandler');
+const logger = require('./utils/logger');
 
 const app = express();
 const server = http.createServer(app);
+
+connectDB();
+
 const io = socketIo(server, {
   cors: {
-    origin: '*', // Mengizinkan semua origin. Untuk keamanan, ganti ini dengan domain frontend kamu di produksi.
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
     methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+    credentials: true,
   }
 });
 
-// Connect to MongoDB
-connectDB();
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  methods: ['GET', 'POST'],
+  credentials: true,
+}));
 
-// Middleware
-app.use(cors());
 app.use(express.json());
 
-// API routes
 app.use('/messages', messageRoutes);
+app.use('/auth', authRoutes);
 
-// Socket.IO setup
 io.on('connection', (socket) => {
-  console.log('New client connected');
+  logger.info('New client connected');
 
-  // Handle incoming messages from clients
-  socket.on('sendMessage', (message) => {
-    console.log('Received message:', message);
+  socket.on('sendMessage', async (message) => {
+    logger.info('Received message:', message);
 
-    // Save message to database (optional)
-    // Add your database logic here
+    try {
+      const newMessage = new Message(message);
+      await newMessage.save();
 
-    // Broadcast message to all connected clients
-    io.emit('receiveMessage', message);
+      io.emit('receiveMessage', newMessage);
+    } catch (err) {
+      logger.error('Error saving message to DB:', err);
+    }
   });
 
   socket.on('disconnect', () => {
-    console.log('Client disconnected');
+    logger.info('Client disconnected');
   });
 });
 
+app.use(errorHandler);
+
 const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () => logger.info(`Server running on port ${PORT}`));
