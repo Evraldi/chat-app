@@ -1,52 +1,46 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './components/Login';
+import React, { useState, useEffect } from 'react';
+import io from 'socket.io-client';
+import Auth from './components/Auth';
 import Chat from './components/Chat';
+import './css/login.css';
 
-function App() {
-  const [user, setUser] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
+const socket = io('http://localhost:5000/chat');  // Namespace yang benar
 
-  React.useEffect(() => {
-    const token = localStorage.getItem('token');
-    const username = localStorage.getItem('username');
+const App = () => {
+  const [token, setToken] = useState('');
+  const [room, setRoom] = useState('');
+  const [username, setUsername] = useState('');
 
-    if (token && username) {
-      setUser(username);
-      setLoading(false);
-    } else if (token) {
-      const fetchUserData = async () => {
-        try {
-          const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/me`, {
-            headers: { Authorization: `Bearer ${token}` },
-          });
-          const data = await response.json();
-          setUser(data.username);
-        } catch (error) {
-          console.error('Failed to fetch user data:', error);
-        } finally {
-          setLoading(false);
-        }
-      };
-      fetchUserData();
-    } else {
-      setLoading(false);
+  useEffect(() => {
+    if (token && room) {
+      socket.emit('joinRoom', room);
     }
-  }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+    socket.on('receiveMessage', (message) => {
+      // Handle received message
+      console.log('Received message:', message);
+    });
+
+    return () => {
+      socket.off('receiveMessage');
+    };
+  }, [token, room]);
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<Login setUser={setUser} />} />
-        <Route path="/chat" element={user ? <Chat user={user} /> : <Navigate to="/login" />} />
-        <Route path="/" element={<Navigate to={user ? '/chat' : '/login'} />} />
-      </Routes>
-    </Router>
+    <div className="app">
+      {!token ? (
+        <Auth setToken={setToken} />
+      ) : (
+        <Chat
+          socket={socket}
+          room={room}
+          setRoom={setRoom}
+          username={username}
+          setUsername={setUsername}
+        />
+      )}
+    </div>
   );
-}
+};
 
 export default App;

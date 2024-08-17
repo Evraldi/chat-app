@@ -1,82 +1,85 @@
+// In Chat.js
 import React, { useState, useEffect } from 'react';
-import io from 'socket.io-client';
 import axios from 'axios';
-import "../css/chat.css";
 
-const socket = io(process.env.REACT_APP_SOCKET_URL);
-
-const Chat = () => {
+const Chat = ({ socket, room, setRoom, username, setUsername }) => {
+  const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const [messageText, setMessageText] = useState('');
-  const [error, setError] = useState('');
-  const [username, setUsername] = useState('');
+  const [rooms, setRooms] = useState([]);
 
   useEffect(() => {
-    const storedUsername = localStorage.getItem('username');
-    if (storedUsername) {
-      setUsername(storedUsername);
-    }
-
-    const fetchMessages = async () => {
+    const fetchRooms = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/messages`);
-        // Urutkan pesan berdasarkan createdAt secara menurun
-        const sortedMessages = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-        setMessages(sortedMessages);
-      } catch (err) {
-        setError('Failed to load messages.');
+        const response = await axios.get('http://localhost:5000/rooms');
+        setRooms(response.data);
+      } catch (error) {
+        console.error('Error fetching rooms:', error);
       }
     };
 
-    fetchMessages();
-
-    socket.on('receiveMessage', (message) => {
-      setMessages((prevMessages) => [message, ...prevMessages]);
-    });
-
-    return () => socket.off('receiveMessage');
+    fetchRooms();
   }, []);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (messageText && username) {
-      try {
-        await axios.post(`${process.env.REACT_APP_API_URL}/messages`, {
-          username,
-          text: messageText,
-        });
-        socket.emit('sendMessage', { username, text: messageText });
-        setMessageText('');
-      } catch (err) {
-        setError('Failed to send message.');
-      }
+  const handleCreateRoom = async (roomName) => {
+    try {
+      await axios.post('http://localhost:5000/rooms', { name: roomName });
+      setRooms((prevRooms) => [...prevRooms, { name: roomName }]);
+    } catch (error) {
+      console.error('Error creating room:', error);
     }
   };
 
+  const handleSendMessage = () => {
+    if (message) {
+      socket.emit('sendMessage', { text: message, room }, (response) => {
+        if (response.status === 'ok') {
+          setMessage('');
+        } else {
+          console.error('Failed to send message');
+        }
+      });
+    }
+  };
+
+  useEffect(() => {
+    socket.on('receiveMessage', (newMessage) => {
+      setMessages((prevMessages) => [...prevMessages, newMessage]);
+    });
+
+    return () => {
+      socket.off('receiveMessage');
+    };
+  }, [socket]);
+
   return (
-    <div className="Chat">
-      <h1>Chat Application</h1>
-      {error && <p className="error">{error}</p>}
+    <div className="chat">
+      <div className="room-selection">
+        <select value={room} onChange={(e) => setRoom(e.target.value)}>
+          <option value="">Select a room</option>
+          {rooms.map((room, index) => (
+            <option key={index} value={room.name}>
+              {room.name}
+            </option>
+          ))}
+        </select>
+        <button onClick={() => handleCreateRoom(prompt('Enter new room name:'))}>
+          Create Room
+        </button>
+      </div>
       <div className="messages">
         {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`message ${msg.username === username ? 'self' : 'other'}`}
-          >
-            <strong>{msg.username}: </strong>{msg.text}
+          <div key={index}>
+            <strong>{msg.username}:</strong> {msg.text}
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Type a message"
-          value={messageText}
-          onChange={(e) => setMessageText(e.target.value)}
-          required
-        />
-        <button type="submit">Send</button>
-      </form>
+      <input
+        type="text"
+        placeholder="Type a message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <button onClick={handleSendMessage}>Send</button>
     </div>
   );
 };
