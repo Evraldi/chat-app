@@ -1,12 +1,14 @@
-// In Chat.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import MessageList from './MessageList';
+import MessageInput from './MessageInput';
 
 const Chat = ({ socket, room, setRoom, username, setUsername }) => {
   const [message, setMessage] = useState('');
-  const [messages, setMessages] = useState([]);
   const [rooms, setRooms] = useState([]);
+  const [messages, setMessages] = useState([]);
 
+  // Fetch rooms on component mount
   useEffect(() => {
     const fetchRooms = async () => {
       try {
@@ -20,17 +22,22 @@ const Chat = ({ socket, room, setRoom, username, setUsername }) => {
     fetchRooms();
   }, []);
 
-  const handleCreateRoom = async (roomName) => {
-    try {
-      await axios.post('http://localhost:5000/rooms', { name: roomName });
-      setRooms((prevRooms) => [...prevRooms, { name: roomName }]);
-    } catch (error) {
-      console.error('Error creating room:', error);
+  // Handle room creation
+  const handleCreateRoom = async () => {
+    const roomName = prompt('Enter new room name:');
+    if (roomName) {
+      try {
+        await axios.post('http://localhost:5000/rooms', { name: roomName });
+        setRooms((prevRooms) => [...prevRooms, { name: roomName }]);
+      } catch (error) {
+        console.error('Error creating room:', error);
+      }
     }
   };
 
+  // Handle sending messages
   const handleSendMessage = () => {
-    if (message) {
+    if (message && room) {
       socket.emit('sendMessage', { text: message, room }, (response) => {
         if (response.status === 'ok') {
           setMessage('');
@@ -41,45 +48,53 @@ const Chat = ({ socket, room, setRoom, username, setUsername }) => {
     }
   };
 
+  // Handle socket events and fetch messages when room changes
   useEffect(() => {
-    socket.on('receiveMessage', (newMessage) => {
-      setMessages((prevMessages) => [...prevMessages, newMessage]);
-    });
+    if (socket && room) {
+      // Join room on mount
+      socket.emit('joinRoom', room);
 
-    return () => {
-      socket.off('receiveMessage');
-    };
-  }, [socket]);
+      // Fetch initial messages for the room
+      const fetchMessages = async () => {
+        try {
+          const response = await axios.get(`http://localhost:5000/messages?room=${room}`);
+          setMessages(response.data);
+        } catch (error) {
+          console.error('Error fetching messages:', error);
+        }
+      };
+
+      fetchMessages();
+
+      // Listen for new messages
+      const handleReceiveMessage = (message) => {
+        setMessages((prevMessages) => [...prevMessages, message]);
+      };
+
+      socket.on('receiveMessage', handleReceiveMessage);
+
+      // Cleanup socket listener on room change
+      return () => {
+        socket.off('receiveMessage', handleReceiveMessage);
+      };
+    }
+  }, [socket, room]);
 
   return (
     <div className="chat">
       <div className="room-selection">
         <select value={room} onChange={(e) => setRoom(e.target.value)}>
           <option value="">Select a room</option>
-          {rooms.map((room, index) => (
-            <option key={index} value={room.name}>
-              {room.name}
+          {rooms.map((r, index) => (
+            <option key={index} value={r.name}>
+              {r.name}
             </option>
           ))}
         </select>
-        <button onClick={() => handleCreateRoom(prompt('Enter new room name:'))}>
-          Create Room
-        </button>
+        <button onClick={handleCreateRoom}>Create Room</button>
       </div>
-      <div className="messages">
-        {messages.map((msg, index) => (
-          <div key={index}>
-            <strong>{msg.username}:</strong> {msg.text}
-          </div>
-        ))}
-      </div>
-      <input
-        type="text"
-        placeholder="Type a message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
-      <button onClick={handleSendMessage}>Send</button>
+      <MessageList messages={messages} />
+      <MessageInput message={message} setMessage={setMessage} handleSendMessage={handleSendMessage} />
     </div>
   );
 };

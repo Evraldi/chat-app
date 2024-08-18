@@ -6,10 +6,10 @@ const socketIo = require('socket.io');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const Message = require('./models/Message');
-const Room = require('./models/Room');  // Import Room model
+const Room = require('./models/Room');
 const messageRoutes = require('./routes/messages');
 const authRoutes = require('./routes/auth');
-const roomRoutes = require('./routes/rooms');  // Import room routes
+const roomRoutes = require('./routes/rooms');
 const errorHandler = require('./middleware/errorHandler');
 const logger = require('./utils/logger');
 const redisAdapter = require('socket.io-redis');
@@ -45,6 +45,7 @@ app.use('/rooms', roomRoutes);
 
 io.of('/chat').use((socket, next) => {
   const token = socket.handshake.auth.token;
+  logger.info('Token received:', token);
   jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
     if (err) return next(new Error('Authentication error'));
     socket.user = user;
@@ -67,7 +68,7 @@ io.of('/chat').on('connection', (socket) => {
     } catch (error) {
       socket.emit('receiveMessage', { text: 'Error joining room', username: 'System' });
     }
-  });
+  });  
 
   socket.on('sendMessage', async (message, callback) => {
     try {
@@ -79,17 +80,19 @@ io.of('/chat').on('connection', (socket) => {
       await newMessage.save();
 
       io.of('/chat').to(message.room).emit('receiveMessage', newMessage);
+      console.log('Message sent:', newMessage); // Tambahkan log
       callback({ status: 'ok' });
     } catch (error) {
-      logger.error('Error saving message:', error);
+      console.error('Error saving message:', error);
       callback({ status: 'error' });
     }
   });
 
-  socket.on('disconnect', () => {
-    logger.info(`User disconnected: ${socket.user.id}`);
+  socket.on('disconnect', (reason) => {
+    logger.info(`User disconnected: ${socket.user.id}, reason: ${reason}`);
   });
 });
+
 
 app.use(errorHandler);
 

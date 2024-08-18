@@ -1,3 +1,5 @@
+/* login.css */
+
 .app {
   display: flex;
   flex-direction: column;
@@ -5,32 +7,55 @@
   padding: 20px;
 }
 
-.auth, .chat {
-  max-width: 600px;
+.chat {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input {
-  margin: 5px;
-  padding: 10px;
-  font-size: 1rem;
+.room-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-button {
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 400px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   padding: 10px;
-  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.message-input {
+  display: flex;
+  gap: 10px;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.message-input button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
 }
 
-.room-input, .message-input {
-  margin-bottom: 20px;
-}
-
-.message-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.message-list li {
-  margin-bottom: 10px;
+.message-input button:hover {
+  background-color: #0056b3;
 }
