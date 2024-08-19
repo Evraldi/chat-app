@@ -324,3 +324,54 @@
 {"level":"info","message":"User disconnected: 66bef9c030645ed1986858fb, reason: transport close"}
 {"level":"info","message":"Token received:"}
 {"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"User disconnected: 66bef9c030645ed1986858fb, reason: transport close"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"User disconnected: 66bef9c030645ed1986858fb, reason: transport close"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"User disconnected: 66bef9c030645ed1986858fb, reason: client namespace disconnect"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"User disconnected: 66bef9c030645ed1986858fb, reason: client namespace disconnect"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"User disconnected: 66bef9c030645ed1986858fb, reason: transport close"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"User disconnected: 66bef9c030645ed1986858fb, reason: transport close"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"User connected: 66bef9c030645ed1986858fb"}
+{"level":"info","message":"User disconnected: 66bef9c030645ed1986858fb, reason: client namespace disconnect"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Token received:"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
