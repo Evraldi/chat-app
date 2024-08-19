@@ -1,15 +1,15 @@
-// MessageInput.js
 import React from 'react';
 
-const MessageInput = ({ message, setMessage, handleSendMessage }) => {
+const MessageInput = ({ message, setMessage, onSendMessage }) => {
   return (
     <div className="message-input">
-      <input 
-        value={message} 
-        onChange={(e) => setMessage(e.target.value)} 
-        placeholder="Type a message" 
+      <input
+        type="text"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        placeholder="Type a message"
       />
-      <button onClick={handleSendMessage}>Send</button>
+      <button onClick={onSendMessage}>Send</button>
     </div>
   );
 };

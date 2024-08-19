@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import MessageList from './MessageList';
-import MessageInput from './MessageInput';
 
 const Chat = ({ socket, room, setRoom, username, setUsername }) => {
   const [message, setMessage] = useState('');
   const [rooms, setRooms] = useState([]);
   const [messages, setMessages] = useState([]);
 
-  // Fetch rooms on component mount
   useEffect(() => {
     const fetchRooms = async () => {
       try {
@@ -22,23 +19,9 @@ const Chat = ({ socket, room, setRoom, username, setUsername }) => {
     fetchRooms();
   }, []);
 
-  // Handle room creation
-  const handleCreateRoom = async () => {
-    const roomName = prompt('Enter new room name:');
-    if (roomName) {
-      try {
-        await axios.post('http://localhost:5000/rooms', { name: roomName });
-        setRooms((prevRooms) => [...prevRooms, { name: roomName }]);
-      } catch (error) {
-        console.error('Error creating room:', error);
-      }
-    }
-  };
-
-  // Handle sending messages
   const handleSendMessage = () => {
-    if (message && room) {
-      socket.emit('sendMessage', { text: message, room }, (response) => {
+    if (message && room && username) {
+      socket.emit('sendMessage', { text: message, room, username }, (response) => {
         if (response.status === 'ok') {
           setMessage('');
         } else {
@@ -48,37 +31,34 @@ const Chat = ({ socket, room, setRoom, username, setUsername }) => {
     }
   };
 
-  // Handle socket events and fetch messages when room changes
   useEffect(() => {
-    if (socket && room) {
-      // Join room on mount
-      socket.emit('joinRoom', room);
+    if (socket) {
+      socket.on('receiveMessage', (newMessage) => {
+        setMessages(prevMessages => [...prevMessages, newMessage]);
+      });
 
-      // Fetch initial messages for the room
-      const fetchMessages = async () => {
-        try {
-          const response = await axios.get(`http://localhost:5000/messages?room=${room}`);
-          setMessages(response.data);
-        } catch (error) {
-          console.error('Error fetching messages:', error);
-        }
-      };
+      socket.on('previousMessages', (msgs) => {
+        setMessages(msgs);
+      });
 
-      fetchMessages();
-
-      // Listen for new messages
-      const handleReceiveMessage = (message) => {
-        setMessages((prevMessages) => [...prevMessages, message]);
-      };
-
-      socket.on('receiveMessage', handleReceiveMessage);
-
-      // Cleanup socket listener on room change
       return () => {
-        socket.off('receiveMessage', handleReceiveMessage);
+        socket.off('receiveMessage');
+        socket.off('previousMessages');
       };
     }
-  }, [socket, room]);
+  }, [socket]);
+
+  useEffect(() => {
+    if (socket && room && username) {
+      socket.emit('joinRoom', { room, username });
+    }
+  }, [socket, room, username]);
+
+  const handleLogout = () => {
+    setUsername('');
+    setRoom('');
+    socket.disconnect();
+  };
 
   return (
     <div className="chat">
@@ -91,10 +71,32 @@ const Chat = ({ socket, room, setRoom, username, setUsername }) => {
             </option>
           ))}
         </select>
-        <button onClick={handleCreateRoom}>Create Room</button>
+        <button onClick={() => {
+          const roomName = prompt('Enter new room name:');
+          if (roomName) {
+            axios.post('http://localhost:5000/rooms', { name: roomName })
+              .then(() => setRooms(prevRooms => [...prevRooms, { name: roomName }]))
+              .catch(error => console.error('Error creating room:', error));
+          }
+        }}>Create Room</button>
+        <button onClick={handleLogout}>Logout</button>
       </div>
-      <MessageList messages={messages} />
-      <MessageInput message={message} setMessage={setMessage} handleSendMessage={handleSendMessage} />
+      <div className="message-list">
+        {messages.map((msg, index) => (
+          <div key={index} className="message">
+            <strong>{msg.username}: </strong>{msg.text}
+          </div>
+        ))}
+      </div>
+      <div className="message-input">
+        <input
+          type="text"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Type a message"
+        />
+        <button onClick={handleSendMessage}>Send</button>
+      </div>
     </div>
   );
 };
