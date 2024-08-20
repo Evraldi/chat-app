@@ -5,7 +5,7 @@ const RoomSelection = ({ rooms, room, setRoom, onCreateRoom }) => {
     <div className="room-selection">
       <select value={room} onChange={(e) => setRoom(e.target.value)}>
         <option value="">Select a room</option>
-        {rooms.map((r, index) => (
+        {Array.isArray(rooms) && rooms.map((r, index) => (
           <option key={index} value={r.name}>
             {r.name}
           </option>

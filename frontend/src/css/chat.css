@@ -48,10 +48,22 @@
 .message {
   padding: 5px;
   border-bottom: 1px solid #ddd;
+  max-width: 70%;
 }
 
 .message strong {
   color: #333;
+}
+
+.own-message {
+  margin-left: auto;
+  background-color: #dcf8c6;
+  border-radius: 10px 0 10px 10px;
+}
+
+.message-list .message:not(.own-message) {
+  background-color: #ffffff;
+  border-radius: 0 10px 10px 10px;
 }
 
 /* Message Input */

@@ -10,7 +10,7 @@ const Chat = ({ socket, room, setRoom, username, setUsername }) => {
     const fetchRooms = async () => {
       try {
         const response = await axios.get('http://localhost:5000/rooms');
-        setRooms(response.data);
+        setRooms(response.data.rooms);
       } catch (error) {
         console.error('Error fetching rooms:', error);
       }
@@ -79,11 +79,11 @@ const Chat = ({ socket, room, setRoom, username, setUsername }) => {
               .catch(error => console.error('Error creating room:', error));
           }
         }}>Create Room</button>
-        <button onClick={handleLogout}>Logout</button>
+        <button className="logout" onClick={handleLogout}>Logout</button>
       </div>
       <div className="message-list">
         {messages.map((msg, index) => (
-          <div key={index} className="message">
+          <div key={index} className={`message ${msg.username === username ? 'own-message' : ''}`}>
             <strong>{msg.username}: </strong>{msg.text}
           </div>
         ))}
@@ -98,7 +98,7 @@ const Chat = ({ socket, room, setRoom, username, setUsername }) => {
         <button onClick={handleSendMessage}>Send</button>
       </div>
     </div>
-  );
+  );  
 };
 
 export default Chat;
