@@ -1,0 +1,52 @@
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2025-04-11 07:25:30"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2025-04-11 07:25:30"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2025-04-11 07:25:30"}
+{"level":"info","message":"User registered: 67f861b2f264965a0f8b3385","service":"chat-app","timestamp":"2025-04-11 07:26:26","username":"evraldi"}
+{"level":"info","message":"User logged in: 67f861b2f264965a0f8b3385","service":"chat-app","timestamp":"2025-04-11 07:26:33","username":"evraldi"}
+{"level":"info","message":"Room created: 67f861d7f264965a0f8b338a","name":"this is coba","service":"chat-app","timestamp":"2025-04-11 07:27:03"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"YvyZ-Yc_Lhfm1ls8AALq","timestamp":"2025-04-11 07:27:48"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"YvyZ-Yc_Lhfm1ls8AALq","timestamp":"2025-04-11 07:27:48"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"_ZKTJdxqsWGrYN80AAMP","timestamp":"2025-04-11 07:27:50"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"_ZKTJdxqsWGrYN80AAMP","timestamp":"2025-04-11 07:27:50"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"-3boJNKbHlYAi5SqAAT_","timestamp":"2025-04-11 07:28:23"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"-3boJNKbHlYAi5SqAAT_","timestamp":"2025-04-11 07:28:23"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"n97xawTNB0JaFgh3AAYx","timestamp":"2025-04-11 07:29:06"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"n97xawTNB0JaFgh3AAYx","timestamp":"2025-04-11 07:29:06"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"LRbEIbnJ0mXd51-2AAZ0","timestamp":"2025-04-11 07:29:12"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"LRbEIbnJ0mXd51-2AAZ0","timestamp":"2025-04-11 07:29:12"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"JVSTn_oYgH4M7oeTAAeA","timestamp":"2025-04-11 07:29:30"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"JVSTn_oYgH4M7oeTAAeA","timestamp":"2025-04-11 07:29:30"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"NMYbQtm9-ZsagUnOAAfj","timestamp":"2025-04-11 07:29:38"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"NMYbQtm9-ZsagUnOAAfj","timestamp":"2025-04-11 07:29:38"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"wRUDfVVf1YCh-r77AAfx","timestamp":"2025-04-11 07:29:39"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"wRUDfVVf1YCh-r77AAfx","timestamp":"2025-04-11 07:29:39"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"SwUJbzn-AvUBjgIcAAf2","timestamp":"2025-04-11 07:29:39"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"SwUJbzn-AvUBjgIcAAf2","timestamp":"2025-04-11 07:29:39"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"lAijvz4yZiy4KTxeAAhE","timestamp":"2025-04-11 07:29:45"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"lAijvz4yZiy4KTxeAAhE","timestamp":"2025-04-11 07:29:45"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"OecfUWz0bNl4Yf8cAAp5","timestamp":"2025-04-11 07:30:42"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"OecfUWz0bNl4Yf8cAAp5","timestamp":"2025-04-11 07:30:42"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"5aI9-Jnn42HpxhulAAqf","timestamp":"2025-04-11 07:30:46"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"5aI9-Jnn42HpxhulAAqf","timestamp":"2025-04-11 07:31:10"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"PKN2zC_7gHJZzWYcAAqh","timestamp":"2025-04-11 07:31:11"}
+{"level":"info","message":"User evraldi attempting to join room memek","service":"chat-app","timestamp":"2025-04-11 07:31:22"}
+{"level":"info","message":"User evraldi joined room memek","service":"chat-app","timestamp":"2025-04-11 07:31:22"}
+{"level":"info","message":"Sending 3 previous messages to user in room memek","service":"chat-app","timestamp":"2025-04-11 07:31:22"}
+{"level":"info","message":"Received sendMessage event","room":"memek","service":"chat-app","timestamp":"2025-04-11 07:31:26","username":"evraldi"}
+{"id":"67f862def264965a0f8b3398","level":"info","message":"Message saved","room":"memek","service":"chat-app","timestamp":"2025-04-11 07:31:26"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"PKN2zC_7gHJZzWYcAAqh","timestamp":"2025-04-11 07:33:19"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"56du2GLjQCZjiCjqAAqj","timestamp":"2025-04-11 07:33:20"}
+{"level":"info","message":"User evraldi attempting to join room memek","service":"chat-app","timestamp":"2025-04-11 07:33:22"}
+{"level":"info","message":"User evraldi joined room memek","service":"chat-app","timestamp":"2025-04-11 07:33:22"}
+{"level":"info","message":"Sending 4 previous messages to user in room memek","service":"chat-app","timestamp":"2025-04-11 07:33:22"}
+{"level":"info","message":"User evraldi attempting to join room this is coba","service":"chat-app","timestamp":"2025-04-11 07:33:24"}
+{"level":"info","message":"User evraldi joined room this is coba","service":"chat-app","timestamp":"2025-04-11 07:33:24"}
+{"level":"info","message":"Sending 0 previous messages to user in room this is coba","service":"chat-app","timestamp":"2025-04-11 07:33:24"}
+{"level":"info","message":"Received sendMessage event","room":"this is coba","service":"chat-app","timestamp":"2025-04-11 07:33:26","username":"evraldi"}
+{"id":"67f86356f264965a0f8b33a2","level":"info","message":"Message saved","room":"this is coba","service":"chat-app","timestamp":"2025-04-11 07:33:26"}
+{"level":"info","message":"Room created: 67f86360f264965a0f8b33a5","name":"nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:36"}
+{"level":"info","message":"User evraldi attempting to join room nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:36"}
+{"level":"info","message":"User evraldi joined room nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:36"}
+{"level":"info","message":"Sending 0 previous messages to user in room nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:36"}
+{"level":"info","message":"Received sendMessage event","room":"nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:38","username":"evraldi"}
+{"id":"67f86362f264965a0f8b33a9","level":"info","message":"Message saved","room":"nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:38"}

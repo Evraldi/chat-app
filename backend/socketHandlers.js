@@ -1,56 +1,49 @@
-const Message = require('./models/Message');
-const Room = require('./models/Room');
+const logger = require('./utils/logger');
+const messageHandlers = require('./socketHandlers/messageHandlers');
+const roomHandlers = require('./socketHandlers/roomHandlers');
 
+/**
+ * Set up Socket.IO event handlers
+ * @param {Object} io - Socket.IO server instance
+ */
 const setupSocketIo = (io) => {
-  io.of('/chat').on('connection', (socket) => {
-    console.log('User connected:', socket.id);
+  // Create a namespace for chat
+  const chatNamespace = io.of('/chat');
+
+  // Handle new connections
+  chatNamespace.on('connection', (socket) => {
+    logger.info('User connected', { socketId: socket.id });
 
     // Handle joining a room
-    socket.on('joinRoom', async ({ room, username }) => {
-      console.log(`User ${username} joined room ${room}`);
-      try {
-        const roomDoc = await Room.findOne({ name: room });
-        if (!roomDoc) {
-          console.log(`Room ${room} does not exist`);
-          socket.emit('receiveMessage', { text: `Room ${room} does not exist`, username: 'System' });
-          return;
-        }
-        socket.join(room);
-        console.log(`User ${username} joined room ${room}`);
-        io.of('/chat').to(room).emit('receiveMessage', { text: `User ${username} joined room ${room}`, username: 'System' });
-
-        const messages = await Message.find({ room }).sort({ createdAt: 1 });
-        console.log(`Sending previous messages to ${room}:`, messages);
-        socket.emit('previousMessages', messages);
-      } catch (error) {
-        console.error('Error joining room:', error);
-        socket.emit('receiveMessage', { text: 'Error joining room', username: 'System' });
-      }
+    socket.on('joinRoom', (data) => {
+      roomHandlers.handleJoinRoom(io, socket, data);
     });
 
     // Handle sending a new message
-    socket.on('sendMessage', async (message, callback) => {
-      console.log('Received sendMessage event:', message);
-      try {
-        const newMessage = new Message({
-          username: message.username,
-          text: message.text,
-          room: message.room,
-        });
-        await newMessage.save();
-        console.log('Message saved:', newMessage);
-        io.of('/chat').to(message.room).emit('receiveMessage', newMessage);
-        callback({ status: 'ok' });
-      } catch (error) {
-        console.error('Error saving message:', error);
-        callback({ status: 'error' });
-      }
+    socket.on('sendMessage', (message, callback) => {
+      messageHandlers.handleSendMessage(io, socket, message, callback);
     });
 
+    // Handle disconnections
     socket.on('disconnect', (reason) => {
-      console.log(`User disconnected, reason: ${reason}`);
+      logger.info('User disconnected', { socketId: socket.id, reason });
+    });
+
+    // Handle errors
+    socket.on('error', (error) => {
+      logger.error(`Socket error: ${error.message}`, {
+        socketId: socket.id,
+        stack: error.stack
+      });
     });
   });
+
+  // Handle namespace errors
+  chatNamespace.on('error', (error) => {
+    logger.error(`Namespace error: ${error.message}`, { stack: error.stack });
+  });
+
+  return chatNamespace;
 };
 
 module.exports = setupSocketIo;

@@ -1,0 +1,89 @@
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
+const logger = require('../utils/logger');
+const { success, error } = require('../utils/responseHandler');
+
+/**
+ * Register a new user
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
+exports.register = async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+      return error(res, 'Username and password are required', 400);
+    }
+
+    const existingUser = await User.findOne({ username });
+    if (existingUser) {
+      return error(res, 'Username already exists', 400);
+    }
+
+    const user = new User({ username, password });
+    await user.save();
+    
+    logger.info(`User registered: ${user._id}`, { username });
+    return success(res, null, 'User registered successfully', 201);
+  } catch (err) {
+    logger.error(`Failed to register user: ${err.message}`, { stack: err.stack });
+    return error(res, 'Failed to register user');
+  }
+};
+
+/**
+ * Login a user
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
+exports.login = async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+      return error(res, 'Username and password are required', 400);
+    }
+
+    const user = await User.findOne({ username });
+    if (!user || !(await user.comparePassword(password))) {
+      return error(res, 'Invalid credentials', 401);
+    }
+
+    const JWT_SECRET = process.env.JWT_SECRET;
+    if (!JWT_SECRET) {
+      logger.error('JWT_SECRET environment variable is not set');
+      return error(res, 'Server configuration error', 500);
+    }
+
+    const token = jwt.sign(
+      { id: user._id, username: user.username },
+      JWT_SECRET,
+      { expiresIn: '1h' }
+    );
+
+    logger.info(`User logged in: ${user._id}`, { username });
+    return success(res, { token }, 'Login successful');
+  } catch (err) {
+    logger.error(`Failed to login user: ${err.message}`, { stack: err.stack });
+    return error(res, 'Failed to login user');
+  }
+};
+
+/**
+ * Get current user information
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
+exports.getCurrentUser = (req, res) => {
+  try {
+    // User information is already attached to req by the auth middleware
+    return success(res, { 
+      id: req.user.id, 
+      username: req.user.username 
+    }, 'User information retrieved');
+  } catch (err) {
+    logger.error(`Failed to get current user: ${err.message}`, { stack: err.stack });
+    return error(res, 'Failed to get user information');
+  }
+};

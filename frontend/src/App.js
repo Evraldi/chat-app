@@ -1,36 +1,37 @@
-import React, { useState } from 'react';
-import { SocketProvider, useSocketContext } from './components/socket/SocketContext';
-import Auth from './components/Auth';
-import Chat from './components/Chat';
-import './css/chat.css';
+import React from 'react';
+import { AuthProvider } from './contexts/AuthContext';
+import { SocketProvider } from './contexts/SocketContext';
+import { ChatProvider } from './contexts/ChatContext';
+import AuthPage from './components/auth/AuthPage';
+import ChatPage from './components/chat/ChatPage';
+import Loader from './components/common/Loader';
+import { useAuth } from './contexts/AuthContext';
+import './App.css';
 
+// Main app content component
 const AppContent = () => {
-  const { socket, setUsername, username } = useSocketContext();
-  const [room, setRoom] = useState('');
+  const { currentUser, loading } = useAuth();
 
-  return (
-    <div className="app">
-      {!username ? (
-        <Auth setUsername={setUsername} />
-      ) : (
-        socket && (
-          <Chat
-            socket={socket}
-            room={room}
-            setRoom={setRoom}
-            username={username}
-            setUsername={setUsername}
-          />
-        )
-      )}
-    </div>
-  );
+  // Show loader while checking authentication status
+  if (loading) {
+    return <Loader fullScreen />;
+  }
+
+  // Show auth page if not logged in, chat page if logged in
+  return currentUser ? <ChatPage /> : <AuthPage />;
 };
 
-const App = () => (
-  <SocketProvider>
-    <AppContent />
-  </SocketProvider>
-);
+// Main app component with context providers
+const App = () => {
+  return (
+    <AuthProvider>
+      <SocketProvider>
+        <ChatProvider>
+          <AppContent />
+        </ChatProvider>
+      </SocketProvider>
+    </AuthProvider>
+  );
+};
 
 export default App;

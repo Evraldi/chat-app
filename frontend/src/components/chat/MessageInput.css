@@ -1,0 +1,26 @@
+.message-input-container {
+  display: flex;
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.message-input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.message-input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}

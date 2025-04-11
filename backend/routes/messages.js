@@ -1,69 +1,28 @@
 const express = require('express');
-const Message = require('../models/Message');
 const validateInput = require('../middleware/validateInput');
-const handleError = require('../middleware/errorHandler');
+const auth = require('../middleware/auth');
+const messageController = require('../controllers/messageController');
 const router = express.Router();
 
-// Fetch messages
-router.get('/', async (req, res) => {
-  try {
-    const { room } = req.query;
+/**
+ * @route   GET /messages
+ * @desc    Get messages for a specific room
+ * @access  Public
+ */
+router.get('/', messageController.getMessages);
 
-    if (!room) {
-      return res.status(400).json({ success: false, message: 'Room query parameter is required' });
-    }
+/**
+ * @route   POST /messages
+ * @desc    Create a new message
+ * @access  Public
+ */
+router.post('/', validateInput, messageController.createMessage);
 
-    const messages = await Message.find({ room })
-      .sort({ createdAt: -1 })
-      .limit(50);
-
-
-    if (!messages.length) {
-      return res.status(404).json({ success: false, message: 'No messages found' });
-    }
-
-    res.json({ success: true, messages });
-  } catch (error) {
-    handleError(res, error, 'Failed to fetch messages');
-  }
-});
-
-// Create message
-router.post('/', validateInput, async (req, res) => {
-  const { username, text, room } = req.body;
-
-  if (!username || !text || !room) {
-    return res.status(400).json({ success: false, message: 'Username, text, and room are required' });
-  }
-
-  try {
-    const message = new Message({ username, text, room });
-    await message.save();
-    res.status(201).json({ success: true, message });
-  } catch (error) {
-    handleError(res, error, 'Failed to create message');
-  }
-});
-
-// delete all messages in a room
-router.delete('/', async (req, res) => {
-  try {
-    const { room } = req.query;
-
-    if (!room) {
-      return res.status(400).json({ success: false, message: 'Room query parameter is required' });
-    }
-
-    const result = await Message.deleteMany({ room });
-
-    if (result.deletedCount === 0) {
-      return res.status(404).json({ success: false, message: 'No messages found to delete' });
-    }
-
-    res.status(200).json({ success: true, message: 'All messages deleted' });
-  } catch (error) {
-    handleError(res, error, 'Failed to delete messages');
-  }
-});
+/**
+ * @route   DELETE /messages
+ * @desc    Delete all messages in a room
+ * @access  Private (should be restricted to admins in a real app)
+ */
+router.delete('/', auth, messageController.deleteMessages);
 
 module.exports = router;
