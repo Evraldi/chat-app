@@ -1491,3 +1491,13 @@
 {"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"x21cY5_ztwT52J2LAAAh","timestamp":"2026-02-16 19:20:56"}
 {"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:20:59","username":"evraldi"}
 {"level":"info","message":"User connected","service":"chat-app","socketId":"8OAtNjRGz65vyVzQAAAl","timestamp":"2026-02-16 19:20:59"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-02-16 19:21:47"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-02-16 19:21:47"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-02-16 19:21:47"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"HeNwBjxNNgSs-uiEAAAB","timestamp":"2026-02-16 19:21:47"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"j2xp73yV14_l_pf_AAAD","timestamp":"2026-02-16 19:21:47"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"j2xp73yV14_l_pf_AAAD","timestamp":"2026-02-16 19:21:48"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"NwkyEzmZw5xee1s2AAAF","timestamp":"2026-02-16 19:21:48"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"NwkyEzmZw5xee1s2AAAF","timestamp":"2026-02-16 19:21:50"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:21:53","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"JIT75O5qT3w6tC--AAAH","timestamp":"2026-02-16 19:21:53"}
