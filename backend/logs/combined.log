@@ -50,3 +50,1444 @@
 {"level":"info","message":"Sending 0 previous messages to user in room nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:36"}
 {"level":"info","message":"Received sendMessage event","room":"nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:38","username":"evraldi"}
 {"id":"67f86362f264965a0f8b33a9","level":"info","message":"Message saved","room":"nambah room","service":"chat-app","timestamp":"2025-04-11 07:33:38"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-02-16 13:02:28"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-02-16 13:04:15"}
+{"level":"error","message":"MongoDB connection error: Socket 'connect' timed out after 107164ms (connectTimeoutMS: 30000)","service":"chat-app","stack":"MongooseServerSelectionError: Socket 'connect' timed out after 107164ms (connectTimeoutMS: 30000)\n    at _handleConnectionErrors (D:\\projek\\chat-app\\backend\\node_modules\\mongoose\\lib\\connection.js:1169:11)\n    at NativeConnection.openUri (D:\\projek\\chat-app\\backend\\node_modules\\mongoose\\lib\\connection.js:1100:11)\n    at runNextTicks (node:internal/process/task_queues:64:5)\n    at listOnTimeout (node:internal/timers:567:9)\n    at process.processTimers (node:internal/timers:541:7)\n    at async connectDB (D:\\projek\\chat-app\\backend\\config\\db.js:14:5)","timestamp":"2026-02-16 13:04:15"}
+{"level":"info","message":"Retrying connection in 5 seconds...","service":"chat-app","timestamp":"2026-02-16 13:04:15"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-02-16 13:04:20"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-02-16 13:04:25"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-02-16 13:04:25"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-02-16 13:04:25"}
+{"level":"info","message":"User registered: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 13:08:57","username":"evraldi"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 13:10:00","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"2HqxwWIfq7wSsniOAAAB","timestamp":"2026-02-16 13:10:00"}
+{"level":"info","message":"Room created: 6992b4ece1124da002c838e2","name":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:10:52"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:10:52"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:10:52"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:12:11"}
+{"level":"warn","message":{"room":"evraldi","text":"testing"},"service":"chat-app","timestamp":"2026-02-16 13:12:11"}
+{"level":"info","message":"Room created: 6992b55be1124da002c838e5","name":"anjir","service":"chat-app","timestamp":"2026-02-16 13:12:43"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:12:43"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:12:43"}
+{"level":"info","message":"Received sendMessage event","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:12:46"}
+{"level":"warn","message":{"room":"anjir","text":"test"},"service":"chat-app","timestamp":"2026-02-16 13:12:46"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"2HqxwWIfq7wSsniOAAAB","timestamp":"2026-02-16 13:13:01"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"nlbGmzWu3ymOmwk6AAAE","timestamp":"2026-02-16 13:13:02"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:13:05"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:13:05"}
+{"level":"info","message":"Sending 0 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:13:05"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:13:09","username":"evraldi"}
+{"id":"6992b575e1124da002c838eb","level":"info","message":"Message saved","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:13:09"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"nlbGmzWu3ymOmwk6AAAE","timestamp":"2026-02-16 13:13:42"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"p8JcEKhNh8KdxO98AAAH","timestamp":"2026-02-16 13:13:43"}
+{"level":"info","message":"Room created: 6992b599e1124da002c838f0","name":"adadad","service":"chat-app","timestamp":"2026-02-16 13:13:45"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:13:45"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:13:45"}
+{"level":"info","message":"Sending 0 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:13:45"}
+{"level":"info","message":"Received sendMessage event","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:13:47","username":"evraldi"}
+{"id":"6992b59be1124da002c838f4","level":"info","message":"Message saved","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:13:47"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"p8JcEKhNh8KdxO98AAAH","timestamp":"2026-02-16 13:17:13"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 13:21:18","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"RyyDaw9QhbN6KABHAAAJ","timestamp":"2026-02-16 13:21:18"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:20"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:20"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:21:21"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:21:21"}
+{"level":"info","message":"User undefined attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:21:21"}
+{"level":"warn","message":"Invalid join room data","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:21:21"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:21:22"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:21:22"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:22"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:22"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:36"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:36"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:21:38"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:21:38"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:38"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:38"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:21:38"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:21:38"}
+{"level":"info","message":"User undefined attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:21:39"}
+{"level":"warn","message":"Invalid join room data","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:21:39"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:21:39"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:21:39"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:40"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:21:40"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:21:40"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:21:40"}
+{"level":"info","message":"User undefined attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:21:41"}
+{"level":"warn","message":"Invalid join room data","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:21:41"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"RyyDaw9QhbN6KABHAAAJ","timestamp":"2026-02-16 13:21:43"}
+{"level":"info","message":"User registered: 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 13:22:05","username":"anjay"}
+{"level":"info","message":"User logged in: 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 13:22:09","username":"anjay"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"E-8a0j-6R8i_-RsIAAAL","timestamp":"2026-02-16 13:22:09"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:11"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:22:11"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:11"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:11"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:13"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:22:13"}
+{"level":"info","message":"User undefined attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:13"}
+{"level":"warn","message":"Invalid join room data","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:22:13"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:28"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:22:28"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:29"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:29"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:29"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:22:29"}
+{"level":"info","message":"User undefined attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:29"}
+{"level":"warn","message":"Invalid join room data","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:22:29"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:30"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:30"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:31"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:22:31"}
+{"level":"info","message":"User undefined attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:31"}
+{"level":"warn","message":"Invalid join room data","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:22:31"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"E-8a0j-6R8i_-RsIAAAL","timestamp":"2026-02-16 13:22:33"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"4qaRsXfEb59_F-VEAAAN","timestamp":"2026-02-16 13:22:33"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:34"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:34"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:34"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:35"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:35"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:35"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:35"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:35"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:35"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"4qaRsXfEb59_F-VEAAAN","timestamp":"2026-02-16 13:22:39"}
+{"level":"info","message":"User logged in: 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 13:22:42","username":"anjay"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"nrpkKYNK66BaD8tPAAAP","timestamp":"2026-02-16 13:22:42"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:43"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:22:43"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:43"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:43"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:44"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:22:44"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:45"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:45"}
+{"level":"info","message":"User undefined attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:45"}
+{"level":"warn","message":"Invalid join room data","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:22:45"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:46"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:46"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:46"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:22:46"}
+{"level":"info","message":"User undefined attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:47"}
+{"level":"warn","message":"Invalid join room data","room":"adadad","service":"chat-app","timestamp":"2026-02-16 13:22:47"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"nrpkKYNK66BaD8tPAAAP","timestamp":"2026-02-16 13:22:47"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"SkgydFUmp4iJwXRTAAAS","timestamp":"2026-02-16 13:22:47"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:48"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:48"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:48"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:48"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:48"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:48"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:49"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:49"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:49"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:49"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:49"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:49"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:50"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:50"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:50"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:51"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:51"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:22:51"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:51"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:51"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:51"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:52"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:52"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:22:52"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:54"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:54"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:22:54"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"SkgydFUmp4iJwXRTAAAS","timestamp":"2026-02-16 13:23:14"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"BsYxCgicVs0YBgIMAAAU","timestamp":"2026-02-16 13:23:14"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:23:15"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:23:16"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"BsYxCgicVs0YBgIMAAAU","timestamp":"2026-02-16 13:23:17"}
+{"level":"info","message":"User logged in: 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 13:23:19","username":"anjay"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"8q6q2v8KyYbZZXt0AAAW","timestamp":"2026-02-16 13:23:19"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:23:21"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:23:21"}
+{"level":"info","message":"User undefined attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:23:21"}
+{"level":"warn","message":"Invalid join room data","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:23:21"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:23:23"}
+{"level":"warn","message":{"room":"evraldi","text":"adada"},"service":"chat-app","timestamp":"2026-02-16 13:23:23"}
+{"level":"info","message":"User undefined attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:23:33"}
+{"level":"warn","message":"Invalid join room data","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:23:33"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"8q6q2v8KyYbZZXt0AAAW","timestamp":"2026-02-16 13:24:27"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"-RYHABdAZNe8w9XOAAAY","timestamp":"2026-02-16 13:24:28"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:24:29"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:30"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:31"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:31"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:31"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:31"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:31"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:24:31"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"-RYHABdAZNe8w9XOAAAY","timestamp":"2026-02-16 13:24:57"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"1irTsxsLqTMxRYqUAAAb","timestamp":"2026-02-16 13:24:58"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"1irTsxsLqTMxRYqUAAAb","timestamp":"2026-02-16 13:25:22"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"k3FKbOMIEV8s2-ICAAAd","timestamp":"2026-02-16 13:25:23"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:25:24"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:25:24"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:25:24"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:25:25"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:25:25"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:25:25"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:25:26"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:25:26"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:25:26"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"k3FKbOMIEV8s2-ICAAAd","timestamp":"2026-02-16 13:25:26"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"m4c4Y_FrqNdz9KjFAAAg","timestamp":"2026-02-16 13:25:27"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"m4c4Y_FrqNdz9KjFAAAg","timestamp":"2026-02-16 13:25:28"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"G-cVum2QW68Tcsm9AAAi","timestamp":"2026-02-16 13:25:28"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"G-cVum2QW68Tcsm9AAAi","timestamp":"2026-02-16 13:25:55"}
+{"level":"info","message":"User logged in: 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 13:26:00","username":"anjay"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"Nb9oLG69JzhCuaQzAAAk","timestamp":"2026-02-16 13:26:00"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:04"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:04"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:04"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:04"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:04"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:04"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:05"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:05"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:05"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:06"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:06"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:06"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:06"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:06"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:06"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:07"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:07"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:07"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:07"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:07"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:07"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:08"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:08"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:08"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"Nb9oLG69JzhCuaQzAAAk","timestamp":"2026-02-16 13:26:11"}
+{"level":"info","message":"User registered: 6992b893e1124da002c8395f","service":"chat-app","timestamp":"2026-02-16 13:26:28","username":"testing"}
+{"level":"info","message":"User logged in: 6992b893e1124da002c8395f","service":"chat-app","timestamp":"2026-02-16 13:26:31","username":"testing"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"DN2Fb8lZYwxaSbXCAAAm","timestamp":"2026-02-16 13:26:31"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:34"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:34"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:34"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:35"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:35"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:26:35"}
+{"level":"info","message":"User testing attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:36"}
+{"level":"info","message":"User testing joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:36"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:36"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:36"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:36"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:26:36"}
+{"level":"info","message":"User testing attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:38"}
+{"level":"info","message":"User testing joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:38"}
+{"level":"info","message":"Sending 1 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:38"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:40","username":"testing"}
+{"id":"6992b8a0e1124da002c8396d","level":"info","message":"Message saved","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 13:26:40"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:28:05"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:28:05"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:28:05"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:28:06"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:28:06"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:28:06"}
+{"level":"info","message":"User testing attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:28:07"}
+{"level":"info","message":"User testing joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:28:07"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:28:07"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:42"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:42"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:42"}
+{"level":"info","message":"User testing attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:30:42"}
+{"level":"info","message":"User testing joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:30:42"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:30:42"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:43"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:43"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:43"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:44"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:44"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:44"}
+{"level":"info","message":"User testing attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:30:45"}
+{"level":"info","message":"User testing joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:30:45"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:30:45"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:46"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:46"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:46"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:47"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:47"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:47"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:48"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:48"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:48"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:48"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:48"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:48"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:49"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:49"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:30:49"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:50"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:50"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:30:50"}
+{"level":"info","message":"Room created: 6992b9a2e1124da002c8398c","name":"lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:30:58"}
+{"level":"info","message":"User testing attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:30:58"}
+{"level":"info","message":"User testing joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:30:58"}
+{"level":"info","message":"Sending 0 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:30:58"}
+{"level":"info","message":"Received sendMessage event","room":"lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:31:02","username":"testing"}
+{"id":"6992b9a6e1124da002c83990","level":"info","message":"Message saved","room":"lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:31:02"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:23"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:23"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:23"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:23"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:23"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:23"}
+{"level":"info","message":"User testing attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"User testing joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:24"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:25"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:25"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:25"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:25"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:25"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:25"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:26"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:26"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:26"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:26"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:26"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:26"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:27"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:28"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:29"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:30"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:31"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:31"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:31"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:31"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:31"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:31"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:32"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:32"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:32"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:32"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:32"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:32"}
+{"level":"info","message":"User testing attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:31:33"}
+{"level":"info","message":"User testing joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:31:33"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:31:33"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:33"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:33"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:33"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:34"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:34"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:34"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:35"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:35"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:35"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:35"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:35"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:35"}
+{"level":"info","message":"User testing attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:36"}
+{"level":"info","message":"User testing joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:36"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:31:36"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:37"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:31:38"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 13:32:39","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"JsAUrqJSwxmZ7g_bAAAo","timestamp":"2026-02-16 13:32:39"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:32:42"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:32:42"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:32:42"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:32:44"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:32:44"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:32:44"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:32:47"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:32:47"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:32:47"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:32:48"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:32:48"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:32:48"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:32:48"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:32:48"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:32:48"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:41"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:41"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:41"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"DN2Fb8lZYwxaSbXCAAAm","timestamp":"2026-02-16 13:33:43"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"qkHCd_S11rhcVK4bAAAq","timestamp":"2026-02-16 13:33:43"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:47"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:47"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:47"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"qkHCd_S11rhcVK4bAAAq","timestamp":"2026-02-16 13:33:52"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"_CgbxESsrLX-28a-AAAs","timestamp":"2026-02-16 13:33:52"}
+{"level":"info","message":"User testing attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:53"}
+{"level":"info","message":"User testing joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:53"}
+{"level":"info","message":"Sending 0 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:33:53"}
+{"level":"info","message":"Received sendMessage event","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:33:59","username":"testing"}
+{"id":"6992ba57e1124da002c83a00","level":"info","message":"Message saved","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:33:59"}
+{"level":"info","message":"Received sendMessage event","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:34:03","username":"evraldi"}
+{"id":"6992ba5be1124da002c83a02","level":"info","message":"Message saved","room":"anjir","service":"chat-app","timestamp":"2026-02-16 13:34:03"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"_CgbxESsrLX-28a-AAAs","timestamp":"2026-02-16 13:38:11"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"JsAUrqJSwxmZ7g_bAAAo","timestamp":"2026-02-16 13:38:11"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"VWww37SBITpoGpRVAAAw","timestamp":"2026-02-16 13:38:11"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"5tcbQ51nyGkExghFAAAy","timestamp":"2026-02-16 13:38:12"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"5tcbQ51nyGkExghFAAAy","timestamp":"2026-02-16 13:40:27"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"CiYY7PiVdl2fkXnrAAA0","timestamp":"2026-02-16 13:40:28"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"CiYY7PiVdl2fkXnrAAA0","timestamp":"2026-02-16 13:41:39"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"uVKKJmFLqH9GrT1nAAA3","timestamp":"2026-02-16 13:41:39"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"uVKKJmFLqH9GrT1nAAA3","timestamp":"2026-02-16 13:41:39"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"VWww37SBITpoGpRVAAAw","timestamp":"2026-02-16 13:42:06"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"ZEEfPw2QpqrfimS2AAA5","timestamp":"2026-02-16 13:42:06"}
+{"level":"info","message":"User logged in: 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 13:42:16","username":"anjay"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"ryWZeeRn55nfkBuQAAA7","timestamp":"2026-02-16 13:42:16"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:17"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:17"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:17"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:18"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:18"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:18"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:19"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:19"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:19"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:19"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:19"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:19"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:20"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:20"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:20"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:21"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:21"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:21"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:21"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:21"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:21"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:22"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:22"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:22"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:22"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:22"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:22"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:23"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:23"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:23"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:23"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:23"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:23"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:25"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:27"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:27"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:42:27"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:27"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:27"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:27"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:28"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:28"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:42:28"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"ryWZeeRn55nfkBuQAAA7","timestamp":"2026-02-16 13:42:32"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"5dbefRgc8BbzHVrVAAA9","timestamp":"2026-02-16 13:42:33"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"5dbefRgc8BbzHVrVAAA9","timestamp":"2026-02-16 13:42:35"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"udX3Mi5rDvXVFhgoAAA_","timestamp":"2026-02-16 13:42:36"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:42"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:42"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:42:42"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"udX3Mi5rDvXVFhgoAAA_","timestamp":"2026-02-16 13:42:44"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"jFie9JFL_56wD6EdAABB","timestamp":"2026-02-16 13:42:44"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"jFie9JFL_56wD6EdAABB","timestamp":"2026-02-16 13:42:48"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"OXO2uLeF4RxdOsIyAABD","timestamp":"2026-02-16 13:42:49"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"OXO2uLeF4RxdOsIyAABD","timestamp":"2026-02-16 13:42:50"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"f4khU-vN_LO2TR_dAABG","timestamp":"2026-02-16 13:42:51"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"f4khU-vN_LO2TR_dAABG","timestamp":"2026-02-16 13:42:53"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"YMK1omaZgWd7Og_jAABI","timestamp":"2026-02-16 13:42:54"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:55"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:55"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:42:55"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"ZEEfPw2QpqrfimS2AAA5","timestamp":"2026-02-16 13:43:00"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"JZjLnJofLpsD4-usAABL","timestamp":"2026-02-16 13:43:01"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:02"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:02"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:02"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:43:13"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:43:13"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:43:13"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:13"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:13"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:13"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:14"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:14"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:14"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:15"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:15"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:15"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:43:16"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:43:16"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:43:16"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:43:16"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:43:16"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:43:16"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:17"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:17"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:17"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:18"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:18"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:18"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:18"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:18"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:18"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:19"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:19"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:19"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:19"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:19"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:19"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:21"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:21"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:21"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:22"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:22"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:22"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:22"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:22"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:43:22"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:23"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:23"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:43:23"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:30"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:30"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:30"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:31"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:31"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:31"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:32"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:32"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:32"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:32"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:32"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:32"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:34"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:34"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:34"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:44:34"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:44:34"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:44:34"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:44:35"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:44:35"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:44:35"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:44:36"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:44:37"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:44:37"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:44:37"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:37"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:37"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:44:37"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"YMK1omaZgWd7Og_jAABI","timestamp":"2026-02-16 13:47:11"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"cdvJeancW87J89aTAABO","timestamp":"2026-02-16 13:47:11"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"cdvJeancW87J89aTAABO","timestamp":"2026-02-16 13:48:12"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"nlgAvAoRT4czVvdXAABQ","timestamp":"2026-02-16 13:48:13"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:17"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:17"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:17"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:44"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:44"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:44"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:44"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:44"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:44"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:45"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:45"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:45"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:45"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:45"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:45"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:46"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:46"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:46"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:46"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:46"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:46"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:47"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:47"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:47"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:48"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:50"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"JZjLnJofLpsD4-usAABL","timestamp":"2026-02-16 13:49:54"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"wR4vfrWly6xzP_XOAABT","timestamp":"2026-02-16 13:49:54"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:55"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:55"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:55"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:55"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:55"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:55"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:56"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:56"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 13:49:56"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:57"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:57"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 13:49:57"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:58"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:58"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 13:49:58"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:58"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:58"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 13:49:58"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"wR4vfrWly6xzP_XOAABT","timestamp":"2026-02-16 13:54:26"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"r9ZmnUsg5U7ufqYtAABW","timestamp":"2026-02-16 13:54:26"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"r9ZmnUsg5U7ufqYtAABW","timestamp":"2026-02-16 13:54:26"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"n_NjWx6L7yhs2OKrAABY","timestamp":"2026-02-16 13:54:26"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"nlgAvAoRT4czVvdXAABQ","timestamp":"2026-02-16 13:54:27"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"CYki537v6NJek5ViAABb","timestamp":"2026-02-16 13:54:27"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:45"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:45"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:45"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"CYki537v6NJek5ViAABb","timestamp":"2026-02-16 14:07:47"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"WazuTtrUv0Hz0gtMAABe","timestamp":"2026-02-16 14:07:47"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:48"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:48"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:48"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:48"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:48"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:48"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 14:07:49"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:50"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 14:07:51"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:52"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:52"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 14:07:52"}
+{"level":"info","message":"User disconnected","reason":"ping timeout","service":"chat-app","socketId":"n_NjWx6L7yhs2OKrAABY","timestamp":"2026-02-16 14:50:38"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"WazuTtrUv0Hz0gtMAABe","timestamp":"2026-02-16 16:22:21"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 16:22:24","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"sgcnYV9nlpLurkNOAABg","timestamp":"2026-02-16 16:22:24"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"sG8I_uwTeT6FigscAABi","timestamp":"2026-02-16 16:22:32"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"sgcnYV9nlpLurkNOAABg","timestamp":"2026-02-16 16:34:38"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"roP5inmpRpnw896-AABk","timestamp":"2026-02-16 16:34:38"}
+{"level":"info","message":"User disconnected","reason":"ping timeout","service":"chat-app","socketId":"sG8I_uwTeT6FigscAABi","timestamp":"2026-02-16 17:24:34"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"roP5inmpRpnw896-AABk","timestamp":"2026-02-16 18:42:58"}
+{"level":"info","message":"User logged in: 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 18:43:01","username":"anjay"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"rQrewFQRZRiTUGmxAABm","timestamp":"2026-02-16 18:43:01"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:43:35"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:43:35"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:43:35"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:43:36"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:43:36"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:43:36"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:43:39"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:43:40"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:43:40"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:43:40"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:23"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:23"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:23"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:24"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:25"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:25"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:25"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:25"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:25"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:25"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:26"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:26"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:26"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:26"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:26"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:26"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:27"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:28"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:28"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:28"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:28"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:28"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:28"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:29"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:29"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:44:29"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:29"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:29"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:29"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:44:44"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:44:44"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:44:44"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:44:44"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:44:44"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:44:44"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:44:45"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:44:45"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:44:45"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:45"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:45"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:44:45"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:10"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:10"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:10"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:10"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:10"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:10"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:45:11"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:12"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:12"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:45:12"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:17"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:17"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:17"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:18"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:18"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:18"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:18"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:18"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:18"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:19"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:20"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:20"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:20"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:20"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:20"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:20"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:46:21"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:46:21"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:46:21"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:46:21"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:46:21"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:46:21"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:22"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:22"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:22"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:36"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:36"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:36"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"rQrewFQRZRiTUGmxAABm","timestamp":"2026-02-16 18:46:37"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"JlXRZaJfMh6_24CpAABp","timestamp":"2026-02-16 18:46:37"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:38"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:38"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:38"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:39"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:39"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:39"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:46:39"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:46:39"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:46:39"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:40"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:41"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:41"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:41"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:41"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:41"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:41"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:42"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:42"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:46:42"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:42"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:42"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:46:42"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:03"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:03"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:03"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:03"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:03"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:03"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:04"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:04"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:04"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:05"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:06"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:06"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:06"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:06"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:06"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:06"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:07"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:07"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:07"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:08"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:08"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:08"}
+{"level":"info","message":"User anjay attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:10"}
+{"level":"info","message":"User anjay joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:10"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:10"}
+{"level":"info","message":"User anjay attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"User anjay joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"User anjay attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"User anjay joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:11"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"JlXRZaJfMh6_24CpAABp","timestamp":"2026-02-16 18:48:23"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"NOafkDGECdMKXpJLAABr","timestamp":"2026-02-16 18:48:23"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"NOafkDGECdMKXpJLAABr","timestamp":"2026-02-16 18:48:23"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 18:48:25","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"wAQy0_nXX3bEZMBAAABt","timestamp":"2026-02-16 18:48:25"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:27"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:27"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:27"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:28"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:28"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:28"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:29"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:29"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:29"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:29"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:29"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:29"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:30"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:30"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:30"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:31"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:31"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:31"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:31"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:31"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:31"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:32"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:32"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:32"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:33"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:34"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:34"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:48:34"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:39"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:39"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:48:39"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:40"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:40"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:40"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:40"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:40"}
+{"level":"info","message":"Sending 2 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:40"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:43","username":"evraldi"}
+{"id":"6993041be1124da002c83b7a","level":"info","message":"Message saved","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:43"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:44","username":"evraldi"}
+{"id":"6993041ce1124da002c83b7c","level":"info","message":"Message saved","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:44"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:46","username":"evraldi"}
+{"id":"6993041ee1124da002c83b7e","level":"info","message":"Message saved","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:46"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:47","username":"evraldi"}
+{"id":"6993041fe1124da002c83b80","level":"info","message":"Message saved","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:47"}
+{"level":"info","message":"Received sendMessage event","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:48","username":"evraldi"}
+{"id":"69930420e1124da002c83b82","level":"info","message":"Message saved","room":"evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:48"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:52"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:52"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:48:52"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:52"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:52"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:48:52"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:50:08"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:50:08"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:50:08"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:50:13"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:50:13"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:50:13"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:51:04"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:51:04"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:51:04"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:51:05"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:51:05"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:51:05"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"wAQy0_nXX3bEZMBAAABt","timestamp":"2026-02-16 18:51:33"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"dWC_Qcrvs5hcC-LKAABw","timestamp":"2026-02-16 18:51:33"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:51:34"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:51:34"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:51:34"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"dWC_Qcrvs5hcC-LKAABw","timestamp":"2026-02-16 18:53:46"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"9tUeIEMVnBQy4yBTAABy","timestamp":"2026-02-16 18:53:47"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:53:48"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:53:48"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:53:48"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:18"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:18"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:18"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:18"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:18"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:18"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"9tUeIEMVnBQy4yBTAABy","timestamp":"2026-02-16 18:54:19"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"76uQ233wDrw1x_4xAAB0","timestamp":"2026-02-16 18:54:19"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:20"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:21"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:21"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:21"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:21"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:21"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:21"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:22"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:22"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:22"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:22"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:22"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:22"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:23"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:23"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:23"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:24"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:24"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:24"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:24"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:24"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:24"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:25"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:25"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:25"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:26"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:26"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:26"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:26"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:26"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:26"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:27"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:27"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:27"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:28"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:28"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:28"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:29"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:29"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:29"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:29"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:29"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:29"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:30"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:30"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:30"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:30"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:30"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:30"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:31"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:31"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:31"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:31"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:31"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:31"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:32"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:32"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:32"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:42"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:42"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:42"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:42"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:42"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:42"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:43"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:43"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:43"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:44"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:44"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:44"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:44"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:44"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:44"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:45"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:45"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:45"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:46"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:46"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:46"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:46"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:46"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 18:54:46"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 18:54:47"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"76uQ233wDrw1x_4xAAB0","timestamp":"2026-02-16 18:54:49"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"05_TXcGCm_J0X6dOAAB3","timestamp":"2026-02-16 18:54:49"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:50"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:50"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 18:54:50"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"V3f6Or0uozrR0p8BAAB5","timestamp":"2026-02-16 18:56:49"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"V3f6Or0uozrR0p8BAAB5","timestamp":"2026-02-16 18:57:06"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"05_TXcGCm_J0X6dOAAB3","timestamp":"2026-02-16 18:57:07"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"un5wo2x0LqNdxhNCAAB7","timestamp":"2026-02-16 18:57:07"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"un5wo2x0LqNdxhNCAAB7","timestamp":"2026-02-16 18:57:32"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"CSlyDZIE9ucvX1BtAAB-","timestamp":"2026-02-16 18:57:32"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"CSlyDZIE9ucvX1BtAAB-","timestamp":"2026-02-16 18:57:51"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"rWxF7RbvHRo2aUBPAACA","timestamp":"2026-02-16 18:57:52"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"rWxF7RbvHRo2aUBPAACA","timestamp":"2026-02-16 18:58:44"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"Gu8pm-zHcMlzkbdgAACC","timestamp":"2026-02-16 18:58:44"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"Gu8pm-zHcMlzkbdgAACC","timestamp":"2026-02-16 18:59:58"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"peGNxYN9K-61aGJbAACF","timestamp":"2026-02-16 18:59:58"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 19:00:02"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 19:00:02"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 19:00:02"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"peGNxYN9K-61aGJbAACF","timestamp":"2026-02-16 19:00:04"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"qtyMIBc4rgezwtY_AACH","timestamp":"2026-02-16 19:00:04"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 19:02:49"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 19:02:49"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 19:02:49"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 19:02:50"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 19:02:50"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 19:02:50"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"qtyMIBc4rgezwtY_AACH","timestamp":"2026-02-16 19:02:59"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"AaJ1L6i3269JOiYpAACK","timestamp":"2026-02-16 19:02:59"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"AaJ1L6i3269JOiYpAACK","timestamp":"2026-02-16 19:03:10"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"fjUk3NNaqwnnSQlCAACM","timestamp":"2026-02-16 19:03:10"}
+{"level":"error","message":"Global error handler: request entity too large","service":"chat-app","stack":"PayloadTooLargeError: request entity too large\n    at readStream (D:\\projek\\chat-app\\backend\\node_modules\\raw-body\\index.js:163:17)\n    at getRawBody (D:\\projek\\chat-app\\backend\\node_modules\\raw-body\\index.js:116:12)\n    at read (D:\\projek\\chat-app\\backend\\node_modules\\body-parser\\lib\\read.js:79:3)\n    at jsonParser (D:\\projek\\chat-app\\backend\\node_modules\\body-parser\\lib\\types\\json.js:138:5)\n    at Layer.handle [as handle_request] (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:286:9\n    at router.process_params (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at cors (D:\\projek\\chat-app\\backend\\node_modules\\cors\\lib\\index.js:188:7)","timestamp":"2026-02-16 19:05:08"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"fjUk3NNaqwnnSQlCAACM","timestamp":"2026-02-16 19:05:28"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"8LHaUzAwws_zjbheAACO","timestamp":"2026-02-16 19:05:29"}
+{"level":"error","message":"Global error handler: request entity too large","service":"chat-app","stack":"PayloadTooLargeError: request entity too large\n    at readStream (D:\\projek\\chat-app\\backend\\node_modules\\raw-body\\index.js:163:17)\n    at getRawBody (D:\\projek\\chat-app\\backend\\node_modules\\raw-body\\index.js:116:12)\n    at read (D:\\projek\\chat-app\\backend\\node_modules\\body-parser\\lib\\read.js:79:3)\n    at jsonParser (D:\\projek\\chat-app\\backend\\node_modules\\body-parser\\lib\\types\\json.js:138:5)\n    at Layer.handle [as handle_request] (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:286:9\n    at router.process_params (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at cors (D:\\projek\\chat-app\\backend\\node_modules\\cors\\lib\\index.js:188:7)","timestamp":"2026-02-16 19:05:41"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-02-16 19:07:31"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-02-16 19:07:31"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-02-16 19:07:31"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"80bzauxq8GafDslOAAAB","timestamp":"2026-02-16 19:07:31"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"80bzauxq8GafDslOAAAB","timestamp":"2026-02-16 19:07:36"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"FCYt653JwgI82v72AAAD","timestamp":"2026-02-16 19:07:36"}
+{"avatarLength":34799,"bio":"dadada","displayName":"adadada","level":"info","message":"Profile update request for user 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:07:46"}
+{"level":"info","message":"Profile updated successfully for user 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:07:46"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"FCYt653JwgI82v72AAAD","timestamp":"2026-02-16 19:07:47"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"YH1Py3YDSoVm4oB-AAAG","timestamp":"2026-02-16 19:07:47"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"YH1Py3YDSoVm4oB-AAAG","timestamp":"2026-02-16 19:07:49"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"BJ3u89qlWESBlLqUAAAJ","timestamp":"2026-02-16 19:07:49"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:52"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:52"}
+{"level":"info","message":"Sending 1 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:52"}
+{"level":"info","message":"Received sendMessage event","room":"lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:54","username":"evraldi"}
+{"id":"6993089aac5135c9d239c5fc","level":"info","message":"Message saved","room":"lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:54"}
+{"level":"info","message":"User evraldi leaving room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:56"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 19:07:56"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 19:07:56"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 19:07:56"}
+{"level":"info","message":"User evraldi leaving room adadad","service":"chat-app","timestamp":"2026-02-16 19:07:56"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:56"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:56"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:56"}
+{"level":"info","message":"User evraldi leaving room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi leaving room evraldi","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi leaving room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"Sending 2 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:57"}
+{"level":"info","message":"User evraldi leaving room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:07:58"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:58"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:58"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:58"}
+{"level":"info","message":"User evraldi leaving room anjir","service":"chat-app","timestamp":"2026-02-16 19:07:58"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 19:07:58"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 19:07:58"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 19:07:58"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"BJ3u89qlWESBlLqUAAAJ","timestamp":"2026-02-16 19:08:12"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"nGfhpWDZ9H_YZc17AAAL","timestamp":"2026-02-16 19:08:12"}
+{"level":"info","message":"User evraldi attempting to join room anjir","service":"chat-app","timestamp":"2026-02-16 19:08:13"}
+{"level":"info","message":"User evraldi joined room anjir","service":"chat-app","timestamp":"2026-02-16 19:08:13"}
+{"level":"info","message":"Sending 2 previous messages to user in room anjir","service":"chat-app","timestamp":"2026-02-16 19:08:13"}
+{"level":"info","message":"User evraldi leaving room anjir","service":"chat-app","timestamp":"2026-02-16 19:08:13"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 19:08:13"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 19:08:13"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 19:08:13"}
+{"level":"info","message":"User evraldi leaving room evraldi","service":"chat-app","timestamp":"2026-02-16 19:08:14"}
+{"level":"info","message":"User evraldi attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 19:08:14"}
+{"level":"info","message":"User evraldi joined room adadad","service":"chat-app","timestamp":"2026-02-16 19:08:14"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 19:08:14"}
+{"level":"info","message":"User evraldi leaving room adadad","service":"chat-app","timestamp":"2026-02-16 19:08:14"}
+{"level":"info","message":"User evraldi attempting to join room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:08:14"}
+{"level":"info","message":"User evraldi joined room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:08:14"}
+{"level":"info","message":"Sending 2 previous messages to user in room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:08:14"}
+{"level":"info","message":"Room created: 699308b0ac5135c9d239c616","name":"dadada","service":"chat-app","timestamp":"2026-02-16 19:08:16"}
+{"level":"info","message":"User evraldi leaving room lemes jirrr","service":"chat-app","timestamp":"2026-02-16 19:08:16"}
+{"level":"info","message":"User evraldi attempting to join room dadada","service":"chat-app","timestamp":"2026-02-16 19:08:16"}
+{"level":"info","message":"User evraldi joined room dadada","service":"chat-app","timestamp":"2026-02-16 19:08:16"}
+{"level":"info","message":"Sending 0 previous messages to user in room dadada","service":"chat-app","timestamp":"2026-02-16 19:08:16"}
+{"level":"info","message":"Received sendMessage event","room":"dadada","service":"chat-app","timestamp":"2026-02-16 19:08:20","username":"evraldi"}
+{"id":"699308b4ac5135c9d239c61a","level":"info","message":"Message saved","room":"dadada","service":"chat-app","timestamp":"2026-02-16 19:08:20"}
+{"avatarLength":34799,"bio":"adadadada","displayName":"evraldi cuy","level":"info","message":"Profile update request for user 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:08:40"}
+{"level":"info","message":"Profile updated successfully for user 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:08:40"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"nGfhpWDZ9H_YZc17AAAL","timestamp":"2026-02-16 19:08:41"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"fYmOjrjzoyeamyTdAAAO","timestamp":"2026-02-16 19:08:42"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 19:08:53"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 19:08:53"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 19:08:53"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"fYmOjrjzoyeamyTdAAAO","timestamp":"2026-02-16 19:09:22"}
+{"level":"info","message":"User logged in: 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:09:25","username":"anjay"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"o1b_HWdOvPYli_pbAAAQ","timestamp":"2026-02-16 19:09:25"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:09:33","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"yFEQ79yocNYRSnQtAAAS","timestamp":"2026-02-16 19:09:33"}
+{"level":"info","message":"User evraldi attempting to join room evraldi","service":"chat-app","timestamp":"2026-02-16 19:09:34"}
+{"level":"info","message":"User evraldi joined room evraldi","service":"chat-app","timestamp":"2026-02-16 19:09:34"}
+{"level":"info","message":"Sending 7 previous messages to user in room evraldi","service":"chat-app","timestamp":"2026-02-16 19:09:34"}
+{"level":"info","message":"Room created: 69930904ac5135c9d239c629","name":"testing","service":"chat-app","timestamp":"2026-02-16 19:09:40"}
+{"level":"info","message":"User evraldi leaving room evraldi","service":"chat-app","timestamp":"2026-02-16 19:09:40"}
+{"level":"info","message":"User evraldi attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:09:40"}
+{"level":"info","message":"User evraldi joined room testing","service":"chat-app","timestamp":"2026-02-16 19:09:40"}
+{"level":"info","message":"Sending 0 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:09:40"}
+{"level":"info","message":"Received sendMessage event","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:09:43","username":"evraldi"}
+{"id":"69930907ac5135c9d239c62d","level":"info","message":"Message saved","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:09:43"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"o1b_HWdOvPYli_pbAAAQ","timestamp":"2026-02-16 19:09:47"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"0qqOaRdKT9kyimy_AAAV","timestamp":"2026-02-16 19:09:47"}
+{"level":"info","message":"User anjay attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:09:47"}
+{"level":"info","message":"User anjay joined room testing","service":"chat-app","timestamp":"2026-02-16 19:09:47"}
+{"level":"info","message":"Sending 1 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:09:47"}
+{"level":"info","message":"Received sendMessage event","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:09:51","username":"anjay"}
+{"id":"6993090fac5135c9d239c633","level":"info","message":"Message saved","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:09:51"}
+{"avatarLength":0,"bio":"","displayName":"pemai slur","level":"info","message":"Profile update request for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:10:01"}
+{"level":"info","message":"Profile updated successfully for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:10:01"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"0qqOaRdKT9kyimy_AAAV","timestamp":"2026-02-16 19:10:02"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"zYCo7LxqoUYo-pt_AAAY","timestamp":"2026-02-16 19:10:03"}
+{"level":"info","message":"User anjay attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:10:03"}
+{"level":"info","message":"User anjay joined room testing","service":"chat-app","timestamp":"2026-02-16 19:10:03"}
+{"level":"info","message":"Sending 2 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:10:03"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"yFEQ79yocNYRSnQtAAAS","timestamp":"2026-02-16 19:10:07"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"xB-7uD4f6SJ_bqXGAAAa","timestamp":"2026-02-16 19:10:07"}
+{"level":"info","message":"User evraldi attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:10:08"}
+{"level":"info","message":"User evraldi joined room testing","service":"chat-app","timestamp":"2026-02-16 19:10:08"}
+{"level":"info","message":"Sending 2 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:10:08"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"zYCo7LxqoUYo-pt_AAAY","timestamp":"2026-02-16 19:11:34"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"vL2Rx-6krRpxy_MlAAAd","timestamp":"2026-02-16 19:11:34"}
+{"level":"error","message":"Global error handler: request entity too large","method":"PUT","service":"chat-app","stack":"PayloadTooLargeError: request entity too large\n    at readStream (D:\\projek\\chat-app\\backend\\node_modules\\raw-body\\index.js:163:17)\n    at getRawBody (D:\\projek\\chat-app\\backend\\node_modules\\raw-body\\index.js:116:12)\n    at read (D:\\projek\\chat-app\\backend\\node_modules\\body-parser\\lib\\read.js:79:3)\n    at jsonParser (D:\\projek\\chat-app\\backend\\node_modules\\body-parser\\lib\\types\\json.js:138:5)\n    at Layer.handle [as handle_request] (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:286:9\n    at router.process_params (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (D:\\projek\\chat-app\\backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at cors (D:\\projek\\chat-app\\backend\\node_modules\\cors\\lib\\index.js:188:7)","timestamp":"2026-02-16 19:11:39","url":"/profile"}
+{"avatarLength":34799,"bio":"","displayName":"","level":"info","message":"Profile update request for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:11:45"}
+{"level":"info","message":"Profile updated successfully for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:11:45"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"vL2Rx-6krRpxy_MlAAAd","timestamp":"2026-02-16 19:11:46"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"YI3NC8XeqvianktoAAAf","timestamp":"2026-02-16 19:11:47"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"YI3NC8XeqvianktoAAAf","timestamp":"2026-02-16 19:11:54"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"ihSNuMnhsb7wInn7AAAh","timestamp":"2026-02-16 19:11:54"}
+{"level":"info","message":"User anjay attempting to join room adadad","service":"chat-app","timestamp":"2026-02-16 19:11:55"}
+{"level":"info","message":"User anjay joined room adadad","service":"chat-app","timestamp":"2026-02-16 19:11:55"}
+{"level":"info","message":"Sending 1 previous messages to user in room adadad","service":"chat-app","timestamp":"2026-02-16 19:11:55"}
+{"level":"info","message":"User anjay leaving room adadad","service":"chat-app","timestamp":"2026-02-16 19:11:56"}
+{"level":"info","message":"User anjay attempting to join room dadada","service":"chat-app","timestamp":"2026-02-16 19:11:56"}
+{"level":"info","message":"User anjay joined room dadada","service":"chat-app","timestamp":"2026-02-16 19:11:56"}
+{"level":"info","message":"Sending 1 previous messages to user in room dadada","service":"chat-app","timestamp":"2026-02-16 19:11:56"}
+{"level":"info","message":"User anjay leaving room dadada","service":"chat-app","timestamp":"2026-02-16 19:12:00"}
+{"level":"info","message":"User anjay attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:12:00"}
+{"level":"info","message":"User anjay joined room testing","service":"chat-app","timestamp":"2026-02-16 19:12:00"}
+{"level":"info","message":"Sending 2 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:12:00"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-02-16 19:12:44"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-02-16 19:12:44"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-02-16 19:12:44"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"Fgxb6Yj0Q026z8LMAAAB","timestamp":"2026-02-16 19:12:44"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"JFEWJYyiokoGF05AAAAD","timestamp":"2026-02-16 19:12:45"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"JFEWJYyiokoGF05AAAAD","timestamp":"2026-02-16 19:12:47"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"bnBhCuQwg9NS_0M7AAAG","timestamp":"2026-02-16 19:12:48"}
+{"avatarLength":34799,"bio":"","displayName":"","level":"info","message":"Profile update request for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:12:52"}
+{"level":"info","message":"Profile updated successfully for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:12:52"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"bnBhCuQwg9NS_0M7AAAG","timestamp":"2026-02-16 19:12:53"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"Ycp8NphDBb3mU4OZAAAJ","timestamp":"2026-02-16 19:12:53"}
+{"level":"info","message":"User anjay attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:12:56"}
+{"level":"info","message":"User anjay joined room testing","service":"chat-app","timestamp":"2026-02-16 19:12:56"}
+{"level":"info","message":"Sending 2 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:12:56"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"Fgxb6Yj0Q026z8LMAAAB","timestamp":"2026-02-16 19:13:00"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"u-7iCGkDkon0c4QaAAAM","timestamp":"2026-02-16 19:13:00"}
+{"level":"info","message":"User evraldi attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:13:01"}
+{"level":"info","message":"User evraldi joined room testing","service":"chat-app","timestamp":"2026-02-16 19:13:01"}
+{"level":"info","message":"Sending 2 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:13:01"}
+{"level":"info","message":"Received sendMessage event","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:13:04","username":"evraldi"}
+{"id":"699309d00e0e31cdeb66b0a1","level":"info","message":"Message saved","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:13:04"}
+{"level":"info","message":"Received sendMessage event","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:13:07","username":"anjay"}
+{"id":"699309d30e0e31cdeb66b0a3","level":"info","message":"Message saved","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:13:07"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-02-16 19:14:43"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-02-16 19:14:43"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-02-16 19:14:43"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"PGkkghDZwfjVPz0lAAAB","timestamp":"2026-02-16 19:14:43"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"PjqjdYobWN9yqR1GAAAD","timestamp":"2026-02-16 19:14:43"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"PGkkghDZwfjVPz0lAAAB","timestamp":"2026-02-16 19:14:46"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"s3TE8gu4QxitVnmjAAAG","timestamp":"2026-02-16 19:14:46"}
+{"avatarLength":0,"bio":"","displayName":"adadadada","level":"info","message":"Profile update request for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:14:49"}
+{"level":"info","message":"Profile updated successfully for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:14:49"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"s3TE8gu4QxitVnmjAAAG","timestamp":"2026-02-16 19:14:51"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"bM1afjEBI2u4EZ6tAAAJ","timestamp":"2026-02-16 19:14:51"}
+{"level":"info","message":"User anjay attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:14:52"}
+{"level":"info","message":"User anjay joined room testing","service":"chat-app","timestamp":"2026-02-16 19:14:52"}
+{"level":"info","message":"Sending 4 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:14:52"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"PjqjdYobWN9yqR1GAAAD","timestamp":"2026-02-16 19:14:55"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"j80P1T-4UH90UzY6AAAM","timestamp":"2026-02-16 19:14:55"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"j80P1T-4UH90UzY6AAAM","timestamp":"2026-02-16 19:14:55"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"-sbJWSDbp8nIlowIAAAO","timestamp":"2026-02-16 19:14:55"}
+{"level":"info","message":"User evraldi attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:14:56"}
+{"level":"info","message":"User evraldi joined room testing","service":"chat-app","timestamp":"2026-02-16 19:14:56"}
+{"level":"info","message":"Sending 4 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:14:56"}
+{"avatarLength":34799,"bio":"","displayName":"anjing capek","level":"info","message":"Profile update request for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:15:19"}
+{"level":"info","message":"Profile updated successfully for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:15:19"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"bM1afjEBI2u4EZ6tAAAJ","timestamp":"2026-02-16 19:15:20"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"au1TRugAhmpGE4xXAAAQ","timestamp":"2026-02-16 19:15:20"}
+{"level":"info","message":"User anjay attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:15:26"}
+{"level":"info","message":"User anjay joined room testing","service":"chat-app","timestamp":"2026-02-16 19:15:26"}
+{"level":"info","message":"Sending 4 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:15:26"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"au1TRugAhmpGE4xXAAAQ","timestamp":"2026-02-16 19:15:44"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"137EEgI5F1G8Me0dAAAS","timestamp":"2026-02-16 19:15:44"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"137EEgI5F1G8Me0dAAAS","timestamp":"2026-02-16 19:15:50"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"8t68TIKODfHjiTUYAAAV","timestamp":"2026-02-16 19:15:50"}
+{"avatarLength":0,"bio":"dadada","displayName":"capek ngab","level":"info","message":"Profile update request for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:16:03"}
+{"level":"info","message":"Profile updated successfully for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:16:03"}
+{"avatarLength":34799,"bio":"dadada","displayName":"capek ngab","level":"info","message":"Profile update request for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:17:06"}
+{"level":"info","message":"Profile updated successfully for user 6992b78de1124da002c838fa","service":"chat-app","timestamp":"2026-02-16 19:17:06"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"8t68TIKODfHjiTUYAAAV","timestamp":"2026-02-16 19:19:46"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"BljUiJll4XpCBA84AAAY","timestamp":"2026-02-16 19:19:47"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"-sbJWSDbp8nIlowIAAAO","timestamp":"2026-02-16 19:19:51"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"zs_5ibhQ7tm9C5yrAAAa","timestamp":"2026-02-16 19:19:51"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"zs_5ibhQ7tm9C5yrAAAa","timestamp":"2026-02-16 19:19:52"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"-hPsbyhu2iRGb-IMAAAd","timestamp":"2026-02-16 19:19:52"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"-hPsbyhu2iRGb-IMAAAd","timestamp":"2026-02-16 19:19:53"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"BljUiJll4XpCBA84AAAY","timestamp":"2026-02-16 19:19:58"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:20:04","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"XjUT-lnomcRb7aAfAAAf","timestamp":"2026-02-16 19:20:04"}
+{"avatarLength":34799,"bio":"dadada","displayName":"dadadada","level":"info","message":"Profile update request for user 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:20:13"}
+{"level":"info","message":"Profile updated successfully for user 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:20:13"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"XjUT-lnomcRb7aAfAAAf","timestamp":"2026-02-16 19:20:14"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"x21cY5_ztwT52J2LAAAh","timestamp":"2026-02-16 19:20:15"}
+{"level":"info","message":"User evraldi attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:20:17"}
+{"level":"info","message":"User evraldi joined room testing","service":"chat-app","timestamp":"2026-02-16 19:20:17"}
+{"level":"info","message":"Sending 4 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:20:17"}
+{"level":"info","message":"User logged in: 6992b893e1124da002c8395f","service":"chat-app","timestamp":"2026-02-16 19:20:27","username":"testing"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"ukhsquLpqmjtsB5sAAAj","timestamp":"2026-02-16 19:20:27"}
+{"level":"info","message":"User testing attempting to join room testing","service":"chat-app","timestamp":"2026-02-16 19:20:29"}
+{"level":"info","message":"User testing joined room testing","service":"chat-app","timestamp":"2026-02-16 19:20:29"}
+{"level":"info","message":"Sending 4 previous messages to user in room testing","service":"chat-app","timestamp":"2026-02-16 19:20:29"}
+{"level":"info","message":"Received sendMessage event","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:20:32","username":"testing"}
+{"id":"69930b90f7953de4171d5155","level":"info","message":"Message saved","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:20:32"}
+{"level":"info","message":"Received sendMessage event","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:20:40","username":"evraldi"}
+{"id":"69930b98f7953de4171d5157","level":"info","message":"Message saved","room":"testing","service":"chat-app","timestamp":"2026-02-16 19:20:40"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"x21cY5_ztwT52J2LAAAh","timestamp":"2026-02-16 19:20:56"}
+{"level":"info","message":"User logged in: 6992b479e1124da002c838dd","service":"chat-app","timestamp":"2026-02-16 19:20:59","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"8OAtNjRGz65vyVzQAAAl","timestamp":"2026-02-16 19:20:59"}

@@ -6,26 +6,20 @@ import './RoomSelector.css';
 /**
  * Room selector component
  */
-const RoomSelector = ({ 
-  rooms, 
-  currentRoom, 
-  onRoomChange, 
-  onCreateRoom, 
+const RoomSelector = ({
+  rooms,
+  currentRoom,
+  onRoomChange,
+  onCreateRoom,
   onLogout,
-  disabled 
+  disabled
 }) => {
   const [newRoomName, setNewRoomName] = useState('');
   const [showCreateForm, setShowCreateForm] = useState(false);
 
-  // Handle room selection
-  const handleRoomChange = (e) => {
-    onRoomChange(e.target.value);
-  };
-
   // Handle create room form submission
   const handleCreateRoom = (e) => {
     e.preventDefault();
-    
     if (newRoomName.trim() && !disabled) {
       onCreateRoom(newRoomName);
       setNewRoomName('');
@@ -34,42 +28,36 @@ const RoomSelector = ({
   };
 
   return (
-    <div className="room-selector">
+    <div className="room-selector-sidebar">
       <div className="room-selector-header">
         <h2>Chat Rooms</h2>
-        <Button 
-          variant="danger" 
-          size="small" 
-          onClick={onLogout}
-          disabled={disabled}
-        >
-          Logout
-        </Button>
       </div>
 
-      <div className="room-selector-content">
-        <select
-          className="room-select"
-          value={currentRoom}
-          onChange={handleRoomChange}
-          disabled={disabled}
-        >
-          <option value="">Select a room</option>
-          {rooms.map((room) => (
-            <option key={room._id || room.name} value={room.name}>
-              {room.name}
-            </option>
-          ))}
-        </select>
-
-        {!showCreateForm ? (
-          <Button 
-            variant="secondary" 
-            size="small" 
-            onClick={() => setShowCreateForm(true)}
+      <div className="room-list">
+        {rooms.map((room) => (
+          <button
+            key={room._id || room.name}
+            className={`room-item ${currentRoom === room.name ? 'active' : ''}`}
+            onClick={() => onRoomChange(room.name)}
             disabled={disabled}
           >
-            Create Room
+            <span className="room-icon">#</span>
+            <span className="room-name">{room.name}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="room-selector-footer">
+        {!showCreateForm ? (
+          <Button
+            variant="secondary"
+            size="small"
+            fullWidth
+            onClick={() => setShowCreateForm(true)}
+            disabled={disabled}
+            className="create-room-btn"
+          >
+            + Create New Room
           </Button>
         ) : (
           <form className="create-room-form" onSubmit={handleCreateRoom}>
@@ -80,19 +68,20 @@ const RoomSelector = ({
               onChange={(e) => setNewRoomName(e.target.value)}
               placeholder="Room name"
               disabled={disabled}
+              autoFocus
             />
             <div className="create-room-actions">
-              <Button 
-                type="submit" 
-                variant="success" 
+              <Button
+                type="submit"
+                variant="success"
                 size="small"
                 disabled={!newRoomName.trim() || disabled}
               >
                 Create
               </Button>
-              <Button 
-                variant="secondary" 
-                size="small" 
+              <Button
+                variant="secondary"
+                size="small"
                 onClick={() => setShowCreateForm(false)}
                 disabled={disabled}
               >
@@ -101,6 +90,18 @@ const RoomSelector = ({
             </div>
           </form>
         )}
+
+        <div className="user-controls">
+          <Button
+            variant="danger"
+            size="small"
+            fullWidth
+            onClick={onLogout}
+            disabled={disabled}
+          >
+            Logout
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -80,7 +80,7 @@ export const SocketProvider = ({ children }) => {
         setConnected(false);
       }
     }
-  }, [currentUser]);  // Remove socket from dependencies to prevent reconnection loops
+  }, [currentUser]); // eslint-disable-next-line react-hooks/exhaustive-deps
 
   // Join a room
   const joinRoom = useCallback((room) => {
@@ -96,15 +96,23 @@ export const SocketProvider = ({ children }) => {
       return;
     }
 
-    if (!currentUser) {
-      console.error('Cannot join room: No current user');
-      setError('User not authenticated');
+    if (!currentUser || !currentUser.username) {
+      console.error('Cannot join room: No current user or username missing', currentUser);
+      setError('User not authenticated or invalid session');
       return;
     }
 
     console.log(`Joining room ${room} as ${currentUser.username}`);
     socket.emit('joinRoom', { room, username: currentUser.username });
   }, [socket, connected, currentUser, setError]);
+
+  // Leave a room
+  const leaveRoom = useCallback((room) => {
+    if (!socket || !connected || !currentUser) return;
+
+    console.log(`Leaving room ${room} as ${currentUser.username}`);
+    socket.emit('leaveRoom', { room, username: currentUser.username });
+  }, [socket, connected, currentUser]);
 
   // Send a message
   const sendMessage = useCallback((text, room) => {
@@ -157,6 +165,7 @@ export const SocketProvider = ({ children }) => {
     connected,
     error,
     joinRoom,
+    leaveRoom,
     sendMessage
   };
 

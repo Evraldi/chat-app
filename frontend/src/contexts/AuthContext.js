@@ -54,15 +54,18 @@ export const AuthProvider = ({ children }) => {
       const response = await authService.login(username, password);
 
       // Handle different response formats
+      console.log('Login response data:', response.data);
       if (response.data.success && response.data.data) {
         // Format: { success: true, data: { id, username, token } }
         const userData = response.data.data;
+        console.log('Setting user from data:', userData);
         setCurrentUser({
           id: userData.id,
-          username: userData.username
+          username: userData.username || username // Fallback to input username
         });
       } else if (response.data.success && response.data.token) {
         // Format: { success: true, token, id, username }
+        // Sometimes the API might return flat structure
         setCurrentUser({
           id: response.data.id,
           username: response.data.username || username

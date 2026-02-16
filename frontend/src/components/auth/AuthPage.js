@@ -11,11 +11,13 @@ const AuthPage = () => {
   const { login, register, error: authError, loading } = useAuth();
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   // Handle login
   const handleLogin = async (username, password) => {
     try {
       setError('');
+      setSuccessMessage('');
       await login(username, password);
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');
@@ -29,6 +31,7 @@ const AuthPage = () => {
       await register(username, password);
       // Switch to login form after successful registration
       setIsLogin(true);
+      setSuccessMessage('Registration successful! Please login.');
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed');
     }
@@ -36,10 +39,19 @@ const AuthPage = () => {
 
   return (
     <div className="auth-page">
+      {successMessage && isLogin && (
+        <div className="auth-success-message">
+          {successMessage}
+        </div>
+      )}
       {isLogin ? (
         <LoginForm
           onLogin={handleLogin}
-          onSwitchToRegister={() => setIsLogin(false)}
+          onSwitchToRegister={() => {
+            setIsLogin(false);
+            setSuccessMessage('');
+            setError('');
+          }}
           loading={loading}
           error={error || authError}
         />

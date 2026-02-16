@@ -27,6 +27,7 @@ const chatReducer = (state, action) => {
         ...state,
         currentRoom: action.payload,
         messages: [],
+        loading: true, // Set loading when changing rooms
         error: null
       };
     case 'SET_MESSAGES':
@@ -62,7 +63,7 @@ const ChatContext = createContext();
 
 export const ChatProvider = ({ children }) => {
   const [state, dispatch] = useReducer(chatReducer, initialState);
-  const { socket, connected, joinRoom, sendMessage } = useSocket();
+  const { socket, connected, joinRoom, leaveRoom, sendMessage } = useSocket();
   const { currentUser } = useAuth();
 
   // Fetch rooms on mount
@@ -111,11 +112,16 @@ export const ChatProvider = ({ children }) => {
 
   // Set current room and join it
   const setRoom = useCallback((roomName) => {
-    if (roomName) {
+    if (roomName && roomName !== state.currentRoom) {
+      if (state.currentRoom) {
+        // Leave current room first
+        leaveRoom(state.currentRoom);
+      }
+
       dispatch({ type: 'SET_CURRENT_ROOM', payload: roomName });
       joinRoom(roomName);
     }
-  }, [joinRoom]);
+  }, [joinRoom, leaveRoom, state.currentRoom]);
 
   // Create a new room
   const createRoom = useCallback(async (roomName) => {

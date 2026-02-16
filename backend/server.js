@@ -8,6 +8,7 @@ const connectDB = require('./config/db');
 const messageRoutes = require('./routes/messages');
 const authRoutes = require('./routes/auth');
 const roomRoutes = require('./routes/rooms');
+const profileRoutes = require('./routes/profile');
 const { handleError } = require('./middleware/errorHandler');
 const logger = require('./utils/logger');
 const setupSocketIo = require('./socketHandlers');
@@ -46,8 +47,8 @@ app.use(cors({
   methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
   credentials: true,
 }));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Apply rate limiting
 app.use('/api/', apiLimiter);
@@ -62,6 +63,7 @@ app.get('/health', (req, res) => {
 app.use('/messages', messageRoutes);
 app.use('/auth', authRoutes);
 app.use('/rooms', roomRoutes);
+app.use('/profile', profileRoutes);
 
 // 404 handler for undefined routes
 app.use((req, res) => {

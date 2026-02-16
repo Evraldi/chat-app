@@ -51,3 +51,42 @@
   font-size: 14px;
   color: #dc3545;
 }
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  opacity: 0.7;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.password-toggle:hover {
+  opacity: 1;
+  color: #495057;
+}
+
+.password-toggle:focus {
+  outline: none;
+  color: #007bff;
+  opacity: 1;
+}
+
+/* Adjust input padding to make room for the icon */
+.input [type="password"], 
+.input-wrapper input[type="text"] {
+  padding-right: 40px;
+}

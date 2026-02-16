@@ -19,6 +19,11 @@ const setupSocketIo = (io) => {
       roomHandlers.handleJoinRoom(io, socket, data);
     });
 
+    // Handle leaving a room
+    socket.on('leaveRoom', (data) => {
+      roomHandlers.handleLeaveRoom(io, socket, data);
+    });
+
     // Handle sending a new message
     socket.on('sendMessage', (message, callback) => {
       messageHandlers.handleSendMessage(io, socket, message, callback);

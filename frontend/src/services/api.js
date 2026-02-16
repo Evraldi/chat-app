@@ -85,4 +85,10 @@ export const messageService = {
     api.delete(`/messages?room=${room}`),
 };
 
+// Profile service
+export const profileService = {
+  getProfile: (userId) => api.get(`/profile/${userId}`),
+  updateProfile: (profileData) => api.put('/profile', profileData)
+};
+
 export default api;

@@ -23,7 +23,7 @@ exports.register = async (req, res) => {
 
     const user = new User({ username, password });
     await user.save();
-    
+
     logger.info(`User registered: ${user._id}`, { username });
     return success(res, null, 'User registered successfully', 201);
   } catch (err) {
@@ -63,7 +63,11 @@ exports.login = async (req, res) => {
     );
 
     logger.info(`User logged in: ${user._id}`, { username });
-    return success(res, { token }, 'Login successful');
+    return success(res, {
+      token,
+      id: user._id,
+      username: user.username
+    }, 'Login successful');
   } catch (err) {
     logger.error(`Failed to login user: ${err.message}`, { stack: err.stack });
     return error(res, 'Failed to login user');
@@ -75,12 +79,21 @@ exports.login = async (req, res) => {
  * @param {Object} req - Express request object
  * @param {Object} res - Express response object
  */
-exports.getCurrentUser = (req, res) => {
+exports.getCurrentUser = async (req, res) => {
   try {
-    // User information is already attached to req by the auth middleware
-    return success(res, { 
-      id: req.user.id, 
-      username: req.user.username 
+    // Fetch full user data from database
+    const user = await User.findById(req.user.id).select('-password');
+
+    if (!user) {
+      return error(res, 'User not found', 404);
+    }
+
+    return success(res, {
+      id: user._id,
+      username: user.username,
+      displayName: user.displayName,
+      bio: user.bio,
+      avatar: user.avatar
     }, 'User information retrieved');
   } catch (err) {
     logger.error(`Failed to get current user: ${err.message}`, { stack: err.stack });
