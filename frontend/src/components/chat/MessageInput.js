@@ -9,7 +9,6 @@ import './MessageInput.css';
 const MessageInput = ({ onSendMessage, disabled }) => {
   const [message, setMessage] = useState('');
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -19,12 +18,10 @@ const MessageInput = ({ onSendMessage, disabled }) => {
         setMessage('');
       } catch (error) {
         console.error('Failed to send message:', error.message);
-        // Keep the message in the input field so the user can try again
       }
     }
   };
 
-  // Handle key press (send on Enter)
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       handleSubmit(e);

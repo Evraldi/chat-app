@@ -8,12 +8,11 @@ import './AuthForms.css';
  * Authentication page component
  */
 const AuthPage = () => {
-  const { login, register, error: authError, loading } = useAuth();
+  const { login, register, error: authError, loading, setError: setAuthError } = useAuth();
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
-  // Handle login
   const handleLogin = async (username, password) => {
     try {
       setError('');
@@ -24,12 +23,10 @@ const AuthPage = () => {
     }
   };
 
-  // Handle registration
   const handleRegister = async (username, password) => {
     try {
       setError('');
       await register(username, password);
-      // Switch to login form after successful registration
       setIsLogin(true);
       setSuccessMessage('Registration successful! Please login.');
     } catch (err) {
@@ -51,6 +48,7 @@ const AuthPage = () => {
             setIsLogin(false);
             setSuccessMessage('');
             setError('');
+            setAuthError('');
           }}
           loading={loading}
           error={error || authError}
@@ -58,7 +56,12 @@ const AuthPage = () => {
       ) : (
         <RegisterForm
           onRegister={handleRegister}
-          onSwitchToLogin={() => setIsLogin(true)}
+          onSwitchToLogin={() => {
+            setIsLogin(true);
+            setSuccessMessage('');
+            setError('');
+            setAuthError('');
+          }}
           loading={loading}
           error={error || authError}
         />

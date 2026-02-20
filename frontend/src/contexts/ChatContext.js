@@ -9,10 +9,10 @@ const initialState = {
   currentRoom: '',
   messages: [],
   loading: false,
+  isLoadingMessages: false,
   error: null
 };
 
-// Chat reducer
 const chatReducer = (state, action) => {
   switch (action.type) {
     case 'SET_ROOMS':
@@ -27,13 +27,14 @@ const chatReducer = (state, action) => {
         ...state,
         currentRoom: action.payload,
         messages: [],
-        loading: true, // Set loading when changing rooms
+        isLoadingMessages: true,
         error: null
       };
     case 'SET_MESSAGES':
       return {
         ...state,
         messages: action.payload,
+        isLoadingMessages: false,
         loading: false,
         error: null
       };
@@ -47,18 +48,16 @@ const chatReducer = (state, action) => {
         ...state,
         loading: action.payload
       };
-    case 'SET_ERROR':
+    case 'SET_LOADING_MESSAGES':
       return {
         ...state,
-        error: action.payload,
-        loading: false
+        isLoadingMessages: action.payload
       };
     default:
       return state;
   }
 };
 
-// Create context
 const ChatContext = createContext();
 
 export const ChatProvider = ({ children }) => {
@@ -66,7 +65,6 @@ export const ChatProvider = ({ children }) => {
   const { socket, connected, joinRoom, leaveRoom, sendMessage } = useSocket();
   const { currentUser } = useAuth();
 
-  // Fetch rooms on mount
   useEffect(() => {
     const fetchRooms = async () => {
       try {
@@ -90,17 +88,16 @@ export const ChatProvider = ({ children }) => {
     }
   }, [currentUser]);
 
-  // Listen for socket events
   useEffect(() => {
     if (socket && connected) {
-      // Handle receiving a new message
       socket.on('receiveMessage', (newMessage) => {
         dispatch({ type: 'ADD_MESSAGE', payload: newMessage });
       });
-
-      // Handle receiving previous messages when joining a room
       socket.on('previousMessages', (messages) => {
-        dispatch({ type: 'SET_MESSAGES', payload: messages });
+        // Add minimal delay for smooth transition
+        setTimeout(() => {
+          dispatch({ type: 'SET_MESSAGES', payload: messages });
+        }, 500);
       });
 
       return () => {
@@ -110,11 +107,9 @@ export const ChatProvider = ({ children }) => {
     }
   }, [socket, connected]);
 
-  // Set current room and join it
   const setRoom = useCallback((roomName) => {
     if (roomName && roomName !== state.currentRoom) {
       if (state.currentRoom) {
-        // Leave current room first
         leaveRoom(state.currentRoom);
       }
 
@@ -123,7 +118,6 @@ export const ChatProvider = ({ children }) => {
     }
   }, [joinRoom, leaveRoom, state.currentRoom]);
 
-  // Create a new room
   const createRoom = useCallback(async (roomName) => {
     try {
       dispatch({ type: 'SET_LOADING', payload: true });
@@ -147,7 +141,6 @@ export const ChatProvider = ({ children }) => {
     }
   }, [state.rooms]);
 
-  // Send a message in the current room
   const sendChatMessage = useCallback(async (text) => {
     if (!state.currentRoom) {
       const errorMsg = 'Please select a room first';
@@ -174,12 +167,12 @@ export const ChatProvider = ({ children }) => {
     }
   }, [state.currentRoom, sendMessage, dispatch]);
 
-  // Context value
   const value = {
     rooms: state.rooms,
     currentRoom: state.currentRoom,
     messages: state.messages,
     loading: state.loading,
+    isLoadingMessages: state.isLoadingMessages,
     error: state.error,
     setRoom,
     createRoom,
@@ -193,7 +186,6 @@ export const ChatProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the chat context
 export const useChat = () => {
   const context = useContext(ChatContext);
   if (!context) {

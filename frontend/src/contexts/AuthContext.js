@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { authService } from '../services/api';
 
-// Create context
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -9,7 +8,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Check if user is logged in on mount
   useEffect(() => {
     const checkLoggedIn = async () => {
       try {
@@ -20,7 +18,6 @@ export const AuthProvider = ({ children }) => {
           if (response.data.success) {
             setCurrentUser(response.data.data);
           } else {
-            // Token is invalid or expired
             localStorage.removeItem('token');
           }
         }
@@ -35,7 +32,6 @@ export const AuthProvider = ({ children }) => {
     checkLoggedIn();
   }, []);
 
-  // Register a new user
   const register = async (username, password) => {
     try {
       setError(null);
@@ -47,35 +43,14 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // Login a user
   const login = async (username, password) => {
     try {
       setError(null);
       const response = await authService.login(username, password);
 
-      // Handle different response formats
-      console.log('Login response data:', response.data);
-      if (response.data.success && response.data.data) {
-        // Format: { success: true, data: { id, username, token } }
-        const userData = response.data.data;
-        console.log('Setting user from data:', userData);
-        setCurrentUser({
-          id: userData.id,
-          username: userData.username || username // Fallback to input username
-        });
-      } else if (response.data.success && response.data.token) {
-        // Format: { success: true, token, id, username }
-        // Sometimes the API might return flat structure
-        setCurrentUser({
-          id: response.data.id,
-          username: response.data.username || username
-        });
-      } else if (response.data.token) {
-        // Format: { token }
-        // If we only have token but no user data, use the username from login
-        setCurrentUser({
-          username: username
-        });
+      const userResponse = await authService.getCurrentUser();
+      if (userResponse.data.success) {
+        setCurrentUser(userResponse.data.data);
       }
 
       return response.data;
@@ -85,20 +60,20 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // Logout the current user
   const logout = () => {
     authService.logout();
     setCurrentUser(null);
   };
 
-  // Context value
   const value = {
     currentUser,
     loading,
     error,
     register,
     login,
-    logout
+    logout,
+    setCurrentUser,
+    setError
   };
 
   return (
@@ -108,7 +83,6 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the auth context
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {

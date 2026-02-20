@@ -1,25 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import './MessageList.css';
 
 /**
  * Message list component
  */
-const MessageList = ({ messages, currentUsername }) => {
+const MessageList = React.memo(({ messages, currentUsername }) => {
   const messagesEndRef = useRef(null);
+  const prevMessagesLengthRef = useRef(0);
 
-  // Scroll to bottom when messages change
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  // Helper to format time as HH:MM
   const formatTime = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
-  // Helper to format date for separators
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const today = new Date();
@@ -39,15 +33,24 @@ const MessageList = ({ messages, currentUsername }) => {
     }
   };
 
-  // Group messages by date
-  const renderMessages = () => {
+  useEffect(() => {
+    if (messages.length > prevMessagesLengthRef.current) {
+      // New messages added, scroll smoothly
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    } else if (messages.length > 0 && prevMessagesLengthRef.current === 0) {
+      // Initial load, scroll to bottom instantly
+      messagesEndRef.current?.scrollIntoView({ behavior: 'auto' });
+    }
+    prevMessagesLengthRef.current = messages.length;
+  }, [messages]);
+
+  const renderMessages = useMemo(() => {
     let lastDate = null;
     const content = [];
 
     messages.forEach((message, index) => {
       const messageDate = new Date(message.createdAt).toDateString();
 
-      // Add date separator if date changes
       if (messageDate !== lastDate) {
         content.push(
           <div key={`date-${messageDate}`} className="date-separator">
@@ -67,8 +70,12 @@ const MessageList = ({ messages, currentUsername }) => {
           className={`message-wrapper ${isOwnMessage ? 'own' : ''}`}
         >
           {!isSystemMessage && !isOwnMessage && (
-            <div className="message-avatar" title={message.username}>
-              {message.username.charAt(0).toUpperCase()}
+            <div className={`message-avatar ${message.avatar ? 'has-avatar' : ''}`} title={message.displayName || message.username}>
+              {message.avatar ? (
+                <img src={message.avatar} alt="Avatar" />
+              ) : (
+                (message.displayName || message.username).charAt(0).toUpperCase()
+              )}
             </div>
           )}
           <div
@@ -77,7 +84,7 @@ const MessageList = ({ messages, currentUsername }) => {
           >
             {!isSystemMessage && !isOwnMessage && (
               <div className="message-header">
-                <span className="message-username">{message.username}</span>
+                <span className="message-username">{message.displayName || message.username}</span>
               </div>
             )}
 
@@ -94,7 +101,7 @@ const MessageList = ({ messages, currentUsername }) => {
     });
 
     return content;
-  };
+  }, [messages, currentUsername]);
 
   if (!messages.length) {
     return (
@@ -106,11 +113,11 @@ const MessageList = ({ messages, currentUsername }) => {
 
   return (
     <div className="message-list">
-      {renderMessages()}
+      {renderMessages}
       <div ref={messagesEndRef} />
     </div>
   );
-};
+});
 
 MessageList.propTypes = {
   messages: PropTypes.arrayOf(

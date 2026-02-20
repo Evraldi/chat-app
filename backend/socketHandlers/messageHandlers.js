@@ -1,4 +1,5 @@
 const Message = require('../models/Message');
+const User = require('../models/User');
 const logger = require('../utils/logger');
 
 /**
@@ -11,7 +12,8 @@ const logger = require('../utils/logger');
 exports.handleSendMessage = async (io, socket, message, callback) => {
   logger.info('Received sendMessage event', { 
     username: message?.username,
-    room: message?.room
+    room: message?.room,
+    text: message?.text
   });
   
   try {
@@ -21,8 +23,14 @@ exports.handleSendMessage = async (io, socket, message, callback) => {
       return;
     }
     
+    const user = await User.findOne({ username: message.username }).select('displayName avatar');
+    const displayName = user?.displayName || '';
+    const avatar = user?.avatar || '';
+    
     const newMessage = new Message({
       username: message.username,
+      displayName,
+      avatar,
       text: message.text,
       room: message.room,
     });

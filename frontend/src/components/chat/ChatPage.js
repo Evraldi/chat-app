@@ -18,6 +18,7 @@ const ChatPage = () => {
     currentRoom,
     messages,
     loading,
+    isLoadingMessages,
     error,
     setRoom,
     createRoom,
@@ -27,16 +28,13 @@ const ChatPage = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
-  // Handle room change
   const handleRoomChange = (roomName) => {
     setRoom(roomName);
-    // On mobile, close sidebar after selection
     if (window.innerWidth < 768) {
       setIsSidebarOpen(false);
     }
   };
 
-  // Handle room creation
   const handleCreateRoom = async (roomName) => {
     try {
       await createRoom(roomName);
@@ -46,7 +44,6 @@ const ChatPage = () => {
     }
   };
 
-  // Handle message sending
   const handleSendMessage = async (text) => {
     try {
       console.log('ChatPage: Sending message:', text);
@@ -54,13 +51,11 @@ const ChatPage = () => {
       return true;
     } catch (err) {
       console.error('ChatPage: Error sending message:', err.message);
-      // Show error to user
       alert(`Failed to send message: ${err.message}`);
       return false;
     }
   };
 
-  // Handle logout
   const handleLogout = () => {
     logout();
   };
@@ -117,12 +112,16 @@ const ChatPage = () => {
             </div>
             <div className="user-profile-corner">
               <div
-                className="profile-circle"
+                className={`profile-circle ${currentUser?.avatar ? 'has-avatar' : ''}`}
                 title={currentUser?.username}
                 onClick={openProfileModal}
                 style={{ cursor: 'pointer' }}
               >
-                {currentUser?.username ? currentUser.username.charAt(0).toUpperCase() : '?'}
+                {currentUser?.avatar ? (
+                  <img src={currentUser.avatar} alt="Avatar" className="profile-circle-img" />
+                ) : (
+                  currentUser?.username ? currentUser.username.charAt(0).toUpperCase() : '?'
+                )}
               </div>
             </div>
           </div>
@@ -135,19 +134,22 @@ const ChatPage = () => {
                 </h3>
               </div>
               <div className="header-right">
-                <span className="room-status">Active</span>
                 <div
-                  className="profile-circle"
+                  className={`profile-circle ${currentUser?.avatar ? 'has-avatar' : ''}`}
                   title={currentUser?.username}
                   onClick={openProfileModal}
                   style={{ cursor: 'pointer' }}
                 >
-                  {currentUser?.username ? currentUser.username.charAt(0).toUpperCase() : '?'}
+                  {currentUser?.avatar ? (
+                    <img src={currentUser.avatar} alt="Avatar" className="profile-circle-img" />
+                  ) : (
+                    currentUser?.username ? currentUser.username.charAt(0).toUpperCase() : '?'
+                  )}
                 </div>
               </div>
             </div>
             <div className="message-list-container">
-              {loading ? (
+              {isLoadingMessages ? (
                 <div className="chat-loading">
                   <Loader size="medium" />
                 </div>
@@ -155,7 +157,6 @@ const ChatPage = () => {
                 <MessageList
                   messages={messages}
                   currentUsername={currentUser?.username || ''}
-                  key={currentRoom} // Force remount only when room changes
                 />
               )}
             </div>

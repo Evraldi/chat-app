@@ -1,43 +1,41 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
 import io from 'socket.io-client';
 import config from '../config/config';
 import { useAuth } from './AuthContext';
 
-// Create context
 const SocketContext = createContext();
 
 export const SocketProvider = ({ children }) => {
   const { currentUser } = useAuth();
-  const [socket, setSocket] = useState(null);
   const [connected, setConnected] = useState(false);
   const [error, setError] = useState(null);
+  const socketRef = useRef(null);
+  const prevUsernameRef = useRef(null);
 
-  // Connect to socket when user is authenticated
   useEffect(() => {
-    let newSocket;
+    if (currentUser && currentUser.username !== prevUsernameRef.current) {
+      console.log('Username changed, connecting socket for user:', currentUser.username);
 
-    if (currentUser) {
-      console.log('Attempting to connect socket with user:', currentUser.username);
+      // Disconnect existing socket if username changed
+      if (socketRef.current) {
+        console.log('Disconnecting previous socket due to username change');
+        socketRef.current.disconnect();
+        socketRef.current = null;
+        setConnected(false);
+      }
 
-      // Try both socket URLs to ensure compatibility
       const socketUrl = config.socketUrl || 'http://localhost:5000/chat';
-      console.log('Using socket URL:', socketUrl);
-
-      // Get token from localStorage
       const token = localStorage.getItem('token');
-      console.log('Token available:', !!token);
 
-      // Create new socket connection
-      newSocket = io(socketUrl, {
+      const newSocket = io(socketUrl, {
         auth: token ? { token } : undefined,
-        transports: ['websocket', 'polling'], // Try both transports
+        transports: ['websocket', 'polling'],
         reconnection: true,
         reconnectionAttempts: 5,
         reconnectionDelay: 1000,
-        timeout: 10000 // Increase timeout
+        timeout: 10000
       });
 
-      // Set up event listeners
       newSocket.on('connect', () => {
         console.log('Socket connected successfully');
         setConnected(true);
@@ -48,12 +46,6 @@ export const SocketProvider = ({ children }) => {
         console.error('Socket connection error:', err.message);
         setError(`Failed to connect to chat server: ${err.message}`);
         setConnected(false);
-
-        // Try to reconnect with different transport
-        if (newSocket.io.opts.transports.includes('websocket')) {
-          console.log('Retrying with polling transport...');
-          newSocket.io.opts.transports = ['polling'];
-        }
       });
 
       newSocket.on('disconnect', (reason) => {
@@ -61,30 +53,26 @@ export const SocketProvider = ({ children }) => {
         setConnected(false);
       });
 
-      // Save socket instance
-      setSocket(newSocket);
+      socketRef.current = newSocket;
+      prevUsernameRef.current = currentUser.username;
 
-      // Clean up on unmount
       return () => {
-        if (newSocket) {
-          console.log('Disconnecting socket on cleanup');
-          newSocket.disconnect();
-        }
+        // Don't disconnect on cleanup, keep socket alive
       };
-    } else {
-      // Disconnect if user logs out
-      if (socket) {
+    } else if (!currentUser) {
+      // User logged out
+      if (socketRef.current) {
         console.log('User logged out, disconnecting socket');
-        socket.disconnect();
-        setSocket(null);
+        socketRef.current.disconnect();
+        socketRef.current = null;
         setConnected(false);
+        prevUsernameRef.current = null;
       }
     }
-  }, [currentUser]); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentUser]);
 
-  // Join a room
   const joinRoom = useCallback((room) => {
-    if (!socket) {
+    if (!socketRef.current) {
       console.error('Cannot join room: Socket not initialized');
       setError('Socket not initialized');
       return;
@@ -103,21 +91,19 @@ export const SocketProvider = ({ children }) => {
     }
 
     console.log(`Joining room ${room} as ${currentUser.username}`);
-    socket.emit('joinRoom', { room, username: currentUser.username });
-  }, [socket, connected, currentUser, setError]);
+    socketRef.current.emit('joinRoom', { room, username: currentUser.username });
+  }, [connected, currentUser, setError]);
 
-  // Leave a room
   const leaveRoom = useCallback((room) => {
-    if (!socket || !connected || !currentUser) return;
+    if (!socketRef.current || !connected || !currentUser) return;
 
     console.log(`Leaving room ${room} as ${currentUser.username}`);
-    socket.emit('leaveRoom', { room, username: currentUser.username });
-  }, [socket, connected, currentUser]);
+    socketRef.current.emit('leaveRoom', { room, username: currentUser.username });
+  }, [connected, currentUser]);
 
-  // Send a message
   const sendMessage = useCallback((text, room) => {
     return new Promise((resolve, reject) => {
-      if (!socket) {
+      if (!socketRef.current) {
         const error = new Error('Socket not initialized');
         console.error(error);
         reject(error);
@@ -139,7 +125,8 @@ export const SocketProvider = ({ children }) => {
       }
 
       console.log(`Sending message to room ${room}: ${text}`);
-      socket.emit('sendMessage',
+      console.log('Current user:', currentUser);
+      socketRef.current.emit('sendMessage',
         {
           text,
           room,
@@ -157,11 +144,10 @@ export const SocketProvider = ({ children }) => {
         }
       );
     });
-  }, [socket, connected, currentUser]);
+  }, [connected, currentUser]);
 
-  // Context value
   const value = {
-    socket,
+    socket: socketRef.current,
     connected,
     error,
     joinRoom,

@@ -10,7 +10,6 @@ import './AuthForms.css';
  * Login form component
  */
 const LoginForm = ({ onLogin, onSwitchToRegister, loading, error }) => {
-  // Form validation function
   const validateForm = (values) => {
     const errors = {};
     
@@ -27,12 +26,10 @@ const LoginForm = ({ onLogin, onSwitchToRegister, loading, error }) => {
     return errors;
   };
 
-  // Form submission handler
   const handleSubmit = async (values) => {
     await onLogin(values.username, values.password);
   };
 
-  // Initialize form hook
   const { 
     values, 
     errors, 

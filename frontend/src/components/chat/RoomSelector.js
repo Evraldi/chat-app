@@ -6,7 +6,7 @@ import './RoomSelector.css';
 /**
  * Room selector component
  */
-const RoomSelector = ({
+const RoomSelector = React.memo(({
   rooms,
   currentRoom,
   onRoomChange,
@@ -17,7 +17,6 @@ const RoomSelector = ({
   const [newRoomName, setNewRoomName] = useState('');
   const [showCreateForm, setShowCreateForm] = useState(false);
 
-  // Handle create room form submission
   const handleCreateRoom = (e) => {
     e.preventDefault();
     if (newRoomName.trim() && !disabled) {
@@ -105,7 +104,7 @@ const RoomSelector = ({
       </div>
     </div>
   );
-};
+});
 
 RoomSelector.propTypes = {
   rooms: PropTypes.arrayOf(

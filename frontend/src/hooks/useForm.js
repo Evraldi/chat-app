@@ -13,7 +13,6 @@ const useForm = (initialValues = {}, onSubmit = () => {}, validate = () => ({}))
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [touched, setTouched] = useState({});
 
-  // Reset form to initial values
   const resetForm = useCallback(() => {
     setValues(initialValues);
     setErrors({});
@@ -21,7 +20,6 @@ const useForm = (initialValues = {}, onSubmit = () => {}, validate = () => ({}))
     setIsSubmitting(false);
   }, [initialValues]);
 
-  // Handle input change
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
     
@@ -31,7 +29,6 @@ const useForm = (initialValues = {}, onSubmit = () => {}, validate = () => ({}))
     }));
   }, []);
 
-  // Handle input blur (for validation)
   const handleBlur = useCallback((e) => {
     const { name } = e.target;
     
@@ -40,27 +37,22 @@ const useForm = (initialValues = {}, onSubmit = () => {}, validate = () => ({}))
       [name]: true
     }));
     
-    // Validate field on blur
     const validationErrors = validate(values);
     setErrors(validationErrors);
   }, [validate, values]);
 
-  // Handle form submission
   const handleSubmit = useCallback((e) => {
     if (e) e.preventDefault();
     
-    // Validate all fields
     const validationErrors = validate(values);
     setErrors(validationErrors);
     
-    // Mark all fields as touched
     const allTouched = Object.keys(values).reduce((acc, key) => {
       acc[key] = true;
       return acc;
     }, {});
     setTouched(allTouched);
     
-    // If no errors, submit the form
     if (Object.keys(validationErrors).length === 0) {
       setIsSubmitting(true);
       onSubmit(values, { resetForm });

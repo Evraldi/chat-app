@@ -43,7 +43,12 @@ exports.createMessage = async (req, res) => {
       return error(res, 'Username, text, and room are required', 400);
     }
 
-    const message = new Message({ username, text, room });
+    // Fetch user data to get displayName and avatar
+    const user = await User.findOne({ username }).select('displayName avatar');
+    const displayName = user?.displayName || '';
+    const avatar = user?.avatar || '';
+
+    const message = new Message({ username, displayName, avatar, text, room });
     await message.save();
     
     logger.info(`Message created: ${message._id}`, { username, room });
