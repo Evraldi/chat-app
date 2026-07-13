@@ -44,7 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: #f8f9fa;
   padding: 20px;
   flex-direction: column;
@@ -60,4 +60,41 @@
   border: 1px solid #c3e6cb;
   width: 100%;
   max-width: 400px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .auth-page {
+    padding: 16px;
+  }
+
+  .auth-form-container {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 10px;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+  }
+
+  .auth-form-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-page {
+    padding: 10px;
+  }
+
+  .auth-form-container {
+    padding: 16px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  .auth-form-title {
+    font-size: 20px;
+  }
 }

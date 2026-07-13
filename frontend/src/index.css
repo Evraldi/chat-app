@@ -43,3 +43,10 @@ button, input, select, textarea {
   outline: 3px solid rgba(0, 123, 255, 0.5);
   outline-offset: 2px;
 }
+
+/* Prevent zoom on mobile input focus */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}

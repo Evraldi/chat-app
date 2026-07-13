@@ -6,16 +6,17 @@ const logger = require('../utils/logger');
  * Handle joining a room
  * @param {Object} io - Socket.io instance
  * @param {Object} socket - Socket instance
- * @param {Object} data - Room and username data
+ * @param {Object} data - Room data
  */
-exports.handleJoinRoom = async (io, socket, { room, username }) => {
+exports.handleJoinRoom = async (io, socket, { room }) => {
+  const username = socket.user?.username;
   logger.info(`User ${username} attempting to join room ${room}`);
 
   try {
     if (!room || !username) {
       logger.warn('Invalid join room data', { room, username });
       socket.emit('receiveMessage', {
-        text: 'Invalid room or username',
+        text: 'Invalid room or authentication required',
         username: 'System'
       });
       return;
@@ -34,12 +35,6 @@ exports.handleJoinRoom = async (io, socket, { room, username }) => {
     // Join the socket to the room
     socket.join(room);
     logger.info(`User ${username} joined room ${room}`);
-
-    // Notify all users in the room (DISABLED)
-    // io.of('/chat').to(room).emit('receiveMessage', {
-    //   text: `User ${username} joined room ${room}`,
-    //   username: 'System'
-    // });
 
     // Send previous messages to the user
     try {
@@ -73,18 +68,13 @@ exports.handleJoinRoom = async (io, socket, { room, username }) => {
  * Handle leaving a room
  * @param {Object} io - Socket.io instance
  * @param {Object} socket - Socket instance
- * @param {Object} data - Room and username data
+ * @param {Object} data - Room data
  */
-exports.handleLeaveRoom = (io, socket, { room, username }) => {
+exports.handleLeaveRoom = (io, socket, { room }) => {
+  const username = socket.user?.username;
   logger.info(`User ${username} leaving room ${room}`);
 
   if (room) {
     socket.leave(room);
-
-    // Notify all users in the room (DISABLED)
-    // io.of('/chat').to(room).emit('receiveMessage', {
-    //   text: `User ${username} left room ${room}`,
-    //   username: 'System'
-    // });
   }
 };

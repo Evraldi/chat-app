@@ -41,7 +41,7 @@ const useForm = (initialValues = {}, onSubmit = () => {}, validate = () => ({}))
     setErrors(validationErrors);
   }, [validate, values]);
 
-  const handleSubmit = useCallback((e) => {
+    const handleSubmit = useCallback(async (e) => {
     if (e) e.preventDefault();
     
     const validationErrors = validate(values);
@@ -55,7 +55,13 @@ const useForm = (initialValues = {}, onSubmit = () => {}, validate = () => ({}))
     
     if (Object.keys(validationErrors).length === 0) {
       setIsSubmitting(true);
-      onSubmit(values, { resetForm });
+      try {
+        await onSubmit(values, { resetForm });
+      } catch (err) {
+        // silent fail - error handled by parent
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   }, [onSubmit, resetForm, validate, values]);
 

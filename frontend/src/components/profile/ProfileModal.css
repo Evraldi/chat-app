@@ -16,7 +16,7 @@
     border-radius: 12px;
     width: 90%;
     max-width: 500px;
-    max-height: 90vh;
+    max-height: 90dvh;
     overflow-y: auto;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
@@ -191,4 +191,34 @@
 
 .modal-actions button {
     min-width: 100px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-height: 85dvh;
+        border-radius: 12px;
+    }
+
+    .modal-header {
+        padding: 16px 20px;
+    }
+
+    .modal-header h2 {
+        font-size: 18px;
+    }
+
+    .profile-form {
+        padding: 20px;
+    }
+
+    .modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .modal-actions button {
+        min-width: auto;
+        width: 100%;
+    }
 }

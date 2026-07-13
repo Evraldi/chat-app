@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+    useEffect(() => {
     const checkLoggedIn = async () => {
       try {
         const token = localStorage.getItem('token');
@@ -21,8 +21,8 @@ export const AuthProvider = ({ children }) => {
             localStorage.removeItem('token');
           }
         }
-      } catch (err) {
-        console.error('Error checking authentication status:', err);
+            } catch (err) {
+        // silent - token invalid, will be cleared
         localStorage.removeItem('token');
       } finally {
         setLoading(false);
@@ -30,6 +30,13 @@ export const AuthProvider = ({ children }) => {
     };
 
     checkLoggedIn();
+
+    // Listen for forced logout events from api interceptor
+    const handleForceLogout = () => {
+      setCurrentUser(null);
+    };
+    window.addEventListener('auth:logout', handleForceLogout);
+    return () => window.removeEventListener('auth:logout', handleForceLogout);
   }, []);
 
   const register = async (username, password) => {

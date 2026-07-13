@@ -19,12 +19,11 @@ exports.getProfile = async (req, res) => {
         }
 
         return success(res, {
-            id: user._id,
-            username: user.username,
-            displayName: user.displayName,
-            bio: user.bio,
-            avatar: user.avatar
-        });
+                id: user._id,
+                username: user.username,
+                displayName: user.displayName,
+                avatar: user.avatar
+            });
     } catch (err) {
         logger.error(`Error fetching profile for ${req.params.userId}: ${err.message}`, { stack: err.stack });
         return error(res, `Failed to fetch profile: ${err.message}`, 500);
@@ -37,9 +36,9 @@ exports.getProfile = async (req, res) => {
 exports.updateProfile = async (req, res) => {
     try {
         const userId = req.user.id;
-        const { displayName, bio, avatar } = req.body;
+                const { displayName, avatar } = req.body;
 
-        logger.info(`Profile update request for user ${userId}`, { displayName, bio, avatarLength: avatar?.length });
+        logger.info(`Profile update request for user ${userId}`, { displayName, avatarLength: avatar?.length });
 
         const user = await User.findById(userId);
 
@@ -48,20 +47,18 @@ exports.updateProfile = async (req, res) => {
             return error(res, 'User not found', 404);
         }
 
-        // Update fields
+                // Update fields
         if (displayName !== undefined) user.displayName = displayName;
-        if (bio !== undefined) user.bio = bio;
         if (avatar !== undefined) user.avatar = avatar;
 
         await user.save();
 
         logger.info(`Profile updated successfully for user ${userId}`);
 
-        return success(res, {
+                return success(res, {
             id: user._id,
             username: user.username,
             displayName: user.displayName,
-            bio: user.bio,
             avatar: user.avatar
         }, 'Profile updated successfully');
     } catch (err) {

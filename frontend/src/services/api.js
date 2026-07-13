@@ -26,7 +26,8 @@ api.interceptors.response.use(
     if (error.response) {
       if (error.response.status === 401 && error.config.url !== '/auth/login') {
         localStorage.removeItem('token');
-        window.location.href = '/';
+        // Dispatch a custom event so AuthContext can react
+        window.dispatchEvent(new Event('auth:logout'));
       }
     }
     return Promise.reject(error);
@@ -67,8 +68,8 @@ export const messageService = {
   getMessages: (room) =>
     api.get(`/messages?room=${room}`),
 
-  createMessage: (username, text, room) =>
-    api.post('/messages', { username, text, room }),
+    createMessage: (text, room) =>
+    api.post('/messages', { text, room }),
 
   deleteAllMessages: (room) =>
     api.delete(`/messages?room=${room}`),

@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const logger = require('../utils/logger');
 
+let retryCount = 0;
+const MAX_RETRIES = 5;
+let retryTimer = null;
+
 /**
  * Connect to MongoDB database
  * @returns {Promise} Mongoose connection promise
@@ -13,6 +17,11 @@ const connectDB = async () => {
 
     await mongoose.connect(process.env.MONGO_URI);
     logger.info('MongoDB connected successfully');
+    retryCount = 0;
+    if (retryTimer) {
+      clearTimeout(retryTimer);
+      retryTimer = null;
+    }
     return mongoose.connection;
   } catch (err) {
     logger.error(`MongoDB connection error: ${err.message}`, { stack: err.stack });
@@ -21,10 +30,13 @@ const connectDB = async () => {
     if (process.env.NODE_ENV === 'production') {
       logger.error('Exiting application due to database connection failure');
       process.exit(1);
+    } else if (retryCount < MAX_RETRIES) {
+      // Retry connection in development with limit
+      retryCount++;
+      logger.info(`Retrying connection (${retryCount}/${MAX_RETRIES}) in 5 seconds...`);
+      retryTimer = setTimeout(connectDB, 5000);
     } else {
-      // Retry connection in development
-      logger.info('Retrying connection in 5 seconds...');
-      setTimeout(connectDB, 5000);
+      logger.error(`Failed to connect to database after ${MAX_RETRIES} retries. Giving up.`);
     }
   }
 };

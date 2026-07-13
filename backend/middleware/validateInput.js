@@ -1,8 +1,8 @@
 const Joi = require('joi');
 
 const messageSchema = Joi.object({
-  username: Joi.string().min(3).max(30).required(),
   text: Joi.string().max(500).required(),
+  room: Joi.string().min(1).max(50).required(),
 });
 
 const validateInput = (req, res, next) => {

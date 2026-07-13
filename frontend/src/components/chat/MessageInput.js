@@ -16,8 +16,8 @@ const MessageInput = ({ onSendMessage, disabled }) => {
       try {
         await onSendMessage(message);
         setMessage('');
-      } catch (error) {
-        console.error('Failed to send message:', error.message);
+            } catch (error) {
+        // silent fail - error handled by parent
       }
     }
   };

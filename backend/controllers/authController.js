@@ -16,6 +16,14 @@ exports.register = async (req, res) => {
       return error(res, 'Username and password are required', 400);
     }
 
+    if (username.length < 3) {
+      return error(res, 'Username must be at least 3 characters long', 400);
+    }
+
+    if (password.length < 6) {
+      return error(res, 'Password must be at least 6 characters long', 400);
+    }
+
     const existingUser = await User.findOne({ username });
     if (existingUser) {
       return error(res, 'Username already exists', 400);
@@ -88,11 +96,10 @@ exports.getCurrentUser = async (req, res) => {
       return error(res, 'User not found', 404);
     }
 
-    return success(res, {
+        return success(res, {
       id: user._id,
       username: user.username,
       displayName: user.displayName,
-      bio: user.bio,
       avatar: user.avatar
     }, 'User information retrieved');
   } catch (err) {

@@ -3151,3 +3151,339 @@
 {"level":"info","message":"Received sendMessage event","room":"testing","service":"chat-app","text":"adada","timestamp":"2026-02-20 23:22:57","username":"testing baru"}
 {"id":"69988a61e138bc3a595289c7","level":"info","message":"Message saved","room":"testing","service":"chat-app","timestamp":"2026-02-20 23:22:57"}
 {"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"n4z_dasueD5hQVZCAAAH","timestamp":"2026-02-20 23:30:01"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-07-13 06:46:41"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-07-13 06:46:41"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-07-13 06:46:41"}
+{"level":"info","message":"User registered: 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 06:49:13","username":"evraldi"}
+{"level":"info","message":"User logged in: 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 06:49:17","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"2oz44-ZnfdiydQLIAAAB","timestamp":"2026-07-13 06:49:17","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"2oz44-ZnfdiydQLIAAAB","timestamp":"2026-07-13 06:49:17","username":"evraldi"}
+{"level":"info","message":"Room created: 6a542805ddc96d8174e3dba5","name":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:49:25"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:49:25"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:49:25"}
+{"level":"info","message":"Sending 0 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:49:25"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"halo","timestamp":"2026-07-13 06:49:28","username":"evraldi"}
+{"id":"6a542808ddc96d8174e3dbaa","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:49:28"}
+{"level":"info","message":"User registered: 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:03","username":"evraldi1"}
+{"level":"info","message":"User logged in: 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:09","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"v9-JKvvTdn_6aN35AAAD","timestamp":"2026-07-13 06:50:09","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"v9-JKvvTdn_6aN35AAAD","timestamp":"2026-07-13 06:50:09","username":"evraldi1"}
+{"level":"info","message":"User evraldi1 attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:11"}
+{"level":"info","message":"User evraldi1 joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:11"}
+{"level":"info","message":"Sending 1 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:11"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"pakabar bre","timestamp":"2026-07-13 06:50:15","username":"evraldi1"}
+{"id":"6a542837ddc96d8174e3dbb5","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:15"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"baik","timestamp":"2026-07-13 06:50:25","username":"evraldi"}
+{"id":"6a542841ddc96d8174e3dbb8","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:25"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"nice","timestamp":"2026-07-13 06:50:27","username":"evraldi1"}
+{"id":"6a542843ddc96d8174e3dbbb","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:27"}
+{"level":"info","message":"Fetching profile for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:29"}
+{"avatarLength":0,"bio":"mana gw tau","displayName":"pantat mak kau hitam","level":"info","message":"Profile update request for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:39"}
+{"level":"info","message":"Profile updated successfully for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:39"}
+{"level":"info","message":"Fetching profile for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:40"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"oi","timestamp":"2026-07-13 06:50:46","username":"evraldi1"}
+{"id":"6a542856ddc96d8174e3dbc3","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:46"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"jir","timestamp":"2026-07-13 06:50:49","username":"evraldi"}
+{"id":"6a542859ddc96d8174e3dbc6","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:49"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"ganti nama","timestamp":"2026-07-13 06:50:50","username":"evraldi"}
+{"id":"6a54285addc96d8174e3dbc9","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:50:50"}
+{"level":"info","message":"Fetching profile for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:52"}
+{"avatarLength":6394,"bio":"mana gw tau","displayName":"pantat mak kau hitam","level":"info","message":"Profile update request for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:59"}
+{"level":"info","message":"Profile updated successfully for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:59"}
+{"level":"info","message":"Fetching profile for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 06:50:59"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"oi","timestamp":"2026-07-13 06:51:02","username":"evraldi1"}
+{"id":"6a542866ddc96d8174e3dbd1","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:51:02"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"njir","timestamp":"2026-07-13 06:51:05","username":"evraldi"}
+{"id":"6a542869ddc96d8174e3dbd4","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:51:05"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"MoyHK4f9bRdtDSZYAAAF","timestamp":"2026-07-13 06:57:11","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"MoyHK4f9bRdtDSZYAAAF","timestamp":"2026-07-13 06:57:11","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"AGEbbrSDN2QPP50eAAAH","timestamp":"2026-07-13 06:57:16","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"AGEbbrSDN2QPP50eAAAH","timestamp":"2026-07-13 06:57:16","username":"evraldi"}
+{"level":"info","message":"User undefined attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:58:43"}
+{"level":"warn","message":"Invalid join room data","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:58:43"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-07-13 06:59:18"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-07-13 06:59:18"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-07-13 06:59:18"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"k4M_eZgsvdtX8x2rAAAB","timestamp":"2026-07-13 06:59:18","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"k4M_eZgsvdtX8x2rAAAB","timestamp":"2026-07-13 06:59:18","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"NKAkrViMHcpwikPgAAAD","timestamp":"2026-07-13 06:59:18","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"NKAkrViMHcpwikPgAAAD","timestamp":"2026-07-13 06:59:18","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"jBNAyWyF3K0489Y_AAAF","timestamp":"2026-07-13 06:59:18","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"jBNAyWyF3K0489Y_AAAF","timestamp":"2026-07-13 06:59:18","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"xVhymb17EEpeLH2BAAAH","timestamp":"2026-07-13 06:59:19","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"xVhymb17EEpeLH2BAAAH","timestamp":"2026-07-13 06:59:19","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"xVhymb17EEpeLH2BAAAH","timestamp":"2026-07-13 06:59:21","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"jBNAyWyF3K0489Y_AAAF","timestamp":"2026-07-13 06:59:21","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"MlJuusa8CjlYvP5HAAAJ","timestamp":"2026-07-13 06:59:21","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"MlJuusa8CjlYvP5HAAAJ","timestamp":"2026-07-13 06:59:21","username":"evraldi"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:59:23"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:59:23"}
+{"level":"info","message":"Sending 9 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:59:23"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"NKAkrViMHcpwikPgAAAD","timestamp":"2026-07-13 06:59:29","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"k4M_eZgsvdtX8x2rAAAB","timestamp":"2026-07-13 06:59:29","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"v8aMWJyg9N9xGvglAAAL","timestamp":"2026-07-13 06:59:30","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"v8aMWJyg9N9xGvglAAAL","timestamp":"2026-07-13 06:59:30","username":"evraldi1"}
+{"level":"info","message":"User evraldi1 attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:59:30"}
+{"level":"info","message":"User evraldi1 joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:59:30"}
+{"level":"info","message":"Sending 9 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 06:59:30"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"AG4imqIi-ZdpuBt0AAAN","timestamp":"2026-07-13 07:05:02","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"AG4imqIi-ZdpuBt0AAAN","timestamp":"2026-07-13 07:05:02","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"OIdGnIS3EKXinI1nAAAP","timestamp":"2026-07-13 07:05:02","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"OIdGnIS3EKXinI1nAAAP","timestamp":"2026-07-13 07:05:02","username":"evraldi"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:08:45"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:08:45"}
+{"level":"info","message":"Sending 9 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:08:45"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"fpA5QrkSXMAu9aG8AAAR","timestamp":"2026-07-13 07:22:13","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"fpA5QrkSXMAu9aG8AAAR","timestamp":"2026-07-13 07:22:13","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"mYhjQc1HLZybVXPzAAAT","timestamp":"2026-07-13 07:22:13","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"mYhjQc1HLZybVXPzAAAT","timestamp":"2026-07-13 07:22:13","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"CbOtxs4KHCRWez7TAAAV","timestamp":"2026-07-13 07:22:17","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"CbOtxs4KHCRWez7TAAAV","timestamp":"2026-07-13 07:22:17","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"M8dPga1pZd32fLEeAAAX","timestamp":"2026-07-13 07:22:18","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"M8dPga1pZd32fLEeAAAX","timestamp":"2026-07-13 07:22:18","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"m5NBkRZCa2Xtu4qJAAAZ","timestamp":"2026-07-13 07:22:21","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"m5NBkRZCa2Xtu4qJAAAZ","timestamp":"2026-07-13 07:22:21","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"kLR6PLDakauCuU5ZAAAb","timestamp":"2026-07-13 07:22:21","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"kLR6PLDakauCuU5ZAAAb","timestamp":"2026-07-13 07:22:21","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"ZmivxbOUcV0qcQ2PAAAd","timestamp":"2026-07-13 07:22:27","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"ZmivxbOUcV0qcQ2PAAAd","timestamp":"2026-07-13 07:22:27","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"e8sEGg9B7BeT1DMPAAAf","timestamp":"2026-07-13 07:22:27","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"e8sEGg9B7BeT1DMPAAAf","timestamp":"2026-07-13 07:22:27","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"TNnBVDkBlEkwdXNyAAAi","timestamp":"2026-07-13 07:22:32","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"TNnBVDkBlEkwdXNyAAAi","timestamp":"2026-07-13 07:22:32","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"oMF0_NRxFsuLwqOoAAAj","timestamp":"2026-07-13 07:22:32","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"oMF0_NRxFsuLwqOoAAAj","timestamp":"2026-07-13 07:22:32","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"gJEmEhYGw2B7KThYAAAl","timestamp":"2026-07-13 07:22:37","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"gJEmEhYGw2B7KThYAAAl","timestamp":"2026-07-13 07:22:37","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"3B5F_KqsUchTIJykAAAn","timestamp":"2026-07-13 07:22:37","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"3B5F_KqsUchTIJykAAAn","timestamp":"2026-07-13 07:22:37","username":"evraldi1"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-07-13 07:23:07"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-07-13 07:23:07"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-07-13 07:23:07"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"fSaOCD9HNyY1AiizAAAC","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"fSaOCD9HNyY1AiizAAAC","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"bmMam47EJDv2yCiaAAAE","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"bmMam47EJDv2yCiaAAAE","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"4bRDcD-xG-0kHskiAAAF","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"4bRDcD-xG-0kHskiAAAF","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"3s7J8bXC6N_rKsXqAAAI","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"3s7J8bXC6N_rKsXqAAAI","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"p1eKgNCU_thggCzdAAAJ","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"p1eKgNCU_thggCzdAAAJ","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"dMIOqALO6DpmZbslAAAL","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"dMIOqALO6DpmZbslAAAL","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"04UpkOWJnUK7J6kcAAAO","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"04UpkOWJnUK7J6kcAAAO","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"EwdM_DGhIsStDj_lAAAP","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"EwdM_DGhIsStDj_lAAAP","timestamp":"2026-07-13 07:23:08","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"Rb8l98Q7MlFcGFGmAAAR","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"Rb8l98Q7MlFcGFGmAAAR","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"GGAk5ONXZ3b2iiadAAAT","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"GGAk5ONXZ3b2iiadAAAT","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"K6pGH97S2hbbtJ93AAAV","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"K6pGH97S2hbbtJ93AAAV","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"m7GQFQSAPR-xNPN9AAAX","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"m7GQFQSAPR-xNPN9AAAX","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"BEWOyvhT_pUksnEvAAAZ","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"BEWOyvhT_pUksnEvAAAZ","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"AHuaqr5Sf3lqtEVAAAAb","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"AHuaqr5Sf3lqtEVAAAAb","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"HYFHwjOhsQ3Qj_CUAAAd","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"HYFHwjOhsQ3Qj_CUAAAd","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"6Wtyade1DTP4JXWzAAAf","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"6Wtyade1DTP4JXWzAAAf","timestamp":"2026-07-13 07:23:09","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"6Wtyade1DTP4JXWzAAAf","timestamp":"2026-07-13 07:23:13","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"Rb8l98Q7MlFcGFGmAAAR","timestamp":"2026-07-13 07:23:13","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"BEWOyvhT_pUksnEvAAAZ","timestamp":"2026-07-13 07:23:13","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"AHuaqr5Sf3lqtEVAAAAb","timestamp":"2026-07-13 07:23:13","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"HYFHwjOhsQ3Qj_CUAAAd","timestamp":"2026-07-13 07:23:13","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"K6pGH97S2hbbtJ93AAAV","timestamp":"2026-07-13 07:23:13","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"GGAk5ONXZ3b2iiadAAAT","timestamp":"2026-07-13 07:23:13","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"m7GQFQSAPR-xNPN9AAAX","timestamp":"2026-07-13 07:23:13","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"oZUN5vFBe61trlqNAAAh","timestamp":"2026-07-13 07:23:21","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"oZUN5vFBe61trlqNAAAh","timestamp":"2026-07-13 07:23:21","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"q0wNy59J6nvbroXcAAAj","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"q0wNy59J6nvbroXcAAAj","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"bmMam47EJDv2yCiaAAAE","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"4bRDcD-xG-0kHskiAAAF","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"04UpkOWJnUK7J6kcAAAO","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"p1eKgNCU_thggCzdAAAJ","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"dMIOqALO6DpmZbslAAAL","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"EwdM_DGhIsStDj_lAAAP","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"3s7J8bXC6N_rKsXqAAAI","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"fSaOCD9HNyY1AiizAAAC","timestamp":"2026-07-13 07:23:31","username":"evraldi1"}
+{"level":"info","message":"Fetching profile for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 07:23:33"}
+{"level":"info","message":"User evraldi1 attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:23:36"}
+{"level":"info","message":"User evraldi1 joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:23:36"}
+{"level":"info","message":"Sending 9 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:23:36"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:26:47"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:26:47"}
+{"level":"info","message":"Sending 9 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:26:47"}
+{"level":"info","message":"Fetching profile for user 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 07:26:53"}
+{"level":"info","message":"Fetching profile for user 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 07:26:57"}
+{"level":"info","message":"Room created: 6a5430d9b701fcd43d068ec6","name":"bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"User evraldi1 leaving room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"User evraldi1 attempting to join room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"User evraldi1 joined room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"Sending 0 previous messages to user in room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"User evraldi1 leaving room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"User evraldi1 attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"User evraldi1 joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"Sending 9 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:27:06"}
+{"level":"info","message":"User evraldi1 leaving room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:27:08"}
+{"level":"info","message":"User evraldi1 attempting to join room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:08"}
+{"level":"info","message":"User evraldi1 joined room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:08"}
+{"level":"info","message":"Sending 0 previous messages to user in room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:08"}
+{"level":"info","message":"Received sendMessage event","room":"bebas dah","service":"chat-app","text":"halo","timestamp":"2026-07-13 07:27:11","username":"evraldi1"}
+{"id":"6a5430dfb701fcd43d068ecf","level":"info","message":"Message saved","room":"bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:11"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"oZUN5vFBe61trlqNAAAh","timestamp":"2026-07-13 07:27:14","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"Ar8kkP6xa2uTy8_EAAAl","timestamp":"2026-07-13 07:27:15","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"Ar8kkP6xa2uTy8_EAAAl","timestamp":"2026-07-13 07:27:15","username":"evraldi"}
+{"level":"info","message":"User evraldi attempting to join room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:15"}
+{"level":"info","message":"User evraldi joined room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:15"}
+{"level":"info","message":"Sending 1 previous messages to user in room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:15"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"Ar8kkP6xa2uTy8_EAAAl","timestamp":"2026-07-13 07:27:17","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"nNE-6PkRRHNUnIAzAAAn","timestamp":"2026-07-13 07:27:17","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"nNE-6PkRRHNUnIAzAAAn","timestamp":"2026-07-13 07:27:17","username":"evraldi"}
+{"level":"info","message":"User evraldi attempting to join room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:19"}
+{"level":"info","message":"User evraldi joined room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:19"}
+{"level":"info","message":"Sending 1 previous messages to user in room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:27:19"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-07-13 07:34:51"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-07-13 07:34:51"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-07-13 07:34:51"}
+{"level":"info","message":"User logged in: 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 07:35:18","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"VVMgJVMrBqzdpaPdAAAB","timestamp":"2026-07-13 07:35:18","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"VVMgJVMrBqzdpaPdAAAB","timestamp":"2026-07-13 07:35:18","username":"evraldi"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:20"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:20"}
+{"level":"info","message":"Sending 9 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:20"}
+{"level":"info","message":"User evraldi leaving room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:21"}
+{"level":"info","message":"User evraldi attempting to join room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:35:21"}
+{"level":"info","message":"User evraldi joined room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:35:21"}
+{"level":"info","message":"Sending 1 previous messages to user in room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:35:21"}
+{"level":"info","message":"User evraldi leaving room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:35:22"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:22"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:22"}
+{"level":"info","message":"Sending 9 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:22"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"oi","timestamp":"2026-07-13 07:35:23","username":"evraldi"}
+{"id":"6a5432cba5a4a136497c3d28","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:23"}
+{"level":"info","message":"User logged in: 6a54282bddc96d8174e3dbad","service":"chat-app","timestamp":"2026-07-13 07:35:34","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"i9i_Sh2FEsHBM3cZAAAD","timestamp":"2026-07-13 07:35:34","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"i9i_Sh2FEsHBM3cZAAAD","timestamp":"2026-07-13 07:35:34","username":"evraldi1"}
+{"level":"info","message":"User evraldi1 attempting to join room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:35:35"}
+{"level":"info","message":"User evraldi1 joined room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:35:35"}
+{"level":"info","message":"Sending 1 previous messages to user in room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:35:35"}
+{"level":"info","message":"User evraldi1 leaving room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:35:36"}
+{"level":"info","message":"User evraldi1 attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:36"}
+{"level":"info","message":"User evraldi1 joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:36"}
+{"level":"info","message":"Sending 10 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:36"}
+{"level":"info","message":"Received sendMessage event","room":"apa aja bebas","service":"chat-app","text":"oi","timestamp":"2026-07-13 07:35:38","username":"evraldi1"}
+{"id":"6a5432daa5a4a136497c3d32","level":"info","message":"Message saved","room":"apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:38"}
+{"level":"info","message":"Room created: 6a5432dea5a4a136497c3d35","name":"work","service":"chat-app","timestamp":"2026-07-13 07:35:42"}
+{"level":"info","message":"User evraldi1 leaving room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:35:42"}
+{"level":"info","message":"User evraldi1 attempting to join room work","service":"chat-app","timestamp":"2026-07-13 07:35:42"}
+{"level":"info","message":"User evraldi1 joined room work","service":"chat-app","timestamp":"2026-07-13 07:35:42"}
+{"level":"info","message":"Sending 0 previous messages to user in room work","service":"chat-app","timestamp":"2026-07-13 07:35:42"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"VVMgJVMrBqzdpaPdAAAB","timestamp":"2026-07-13 07:35:45","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"xQyaxrgZjefUBYzTAAAF","timestamp":"2026-07-13 07:35:45","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"xQyaxrgZjefUBYzTAAAF","timestamp":"2026-07-13 07:35:45","username":"evraldi"}
+{"level":"info","message":"Fetching profile for user 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 07:36:26"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"xQyaxrgZjefUBYzTAAAF","timestamp":"2026-07-13 07:36:28","username":"evraldi"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-07-13 07:39:38"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-07-13 07:39:38"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-07-13 07:39:38"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"_oHW7SdeNTQQDq6rAAAB","timestamp":"2026-07-13 07:39:38","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"_oHW7SdeNTQQDq6rAAAB","timestamp":"2026-07-13 07:39:38","username":"evraldi1"}
+{"level":"info","message":"User logged in: 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 07:39:43","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"U80KSePG-KFwEIG_AAAD","timestamp":"2026-07-13 07:39:43","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"U80KSePG-KFwEIG_AAAD","timestamp":"2026-07-13 07:39:43","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"U80KSePG-KFwEIG_AAAD","timestamp":"2026-07-13 07:39:45","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"ZhWYaFjDATO5NzoSAAAF","timestamp":"2026-07-13 07:39:47","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"ZhWYaFjDATO5NzoSAAAF","timestamp":"2026-07-13 07:39:47","username":"evraldi"}
+{"level":"info","message":"Fetching profile for user 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 07:39:48"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"ZhWYaFjDATO5NzoSAAAF","timestamp":"2026-07-13 07:39:51","username":"evraldi"}
+{"level":"info","message":"User logged in: 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 07:39:52","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"o7G05iQZzek86c8IAAAH","timestamp":"2026-07-13 07:39:52","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"o7G05iQZzek86c8IAAAH","timestamp":"2026-07-13 07:39:52","username":"evraldi"}
+{"level":"info","message":"User evraldi attempting to join room work","service":"chat-app","timestamp":"2026-07-13 07:39:54"}
+{"level":"info","message":"User evraldi joined room work","service":"chat-app","timestamp":"2026-07-13 07:39:54"}
+{"level":"info","message":"Sending 0 previous messages to user in room work","service":"chat-app","timestamp":"2026-07-13 07:39:54"}
+{"level":"info","message":"User evraldi leaving room work","service":"chat-app","timestamp":"2026-07-13 07:39:54"}
+{"level":"info","message":"User evraldi attempting to join room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:39:54"}
+{"level":"info","message":"User evraldi joined room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:39:54"}
+{"level":"info","message":"Sending 1 previous messages to user in room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:39:54"}
+{"level":"info","message":"User evraldi leaving room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:39:55"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:39:55"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:39:55"}
+{"level":"info","message":"Sending 11 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:39:55"}
+{"level":"info","message":"User evraldi leaving room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:39:55"}
+{"level":"info","message":"User evraldi attempting to join room work","service":"chat-app","timestamp":"2026-07-13 07:39:55"}
+{"level":"info","message":"User evraldi joined room work","service":"chat-app","timestamp":"2026-07-13 07:39:55"}
+{"level":"info","message":"Sending 0 previous messages to user in room work","service":"chat-app","timestamp":"2026-07-13 07:39:55"}
+{"level":"info","message":"User evraldi leaving room work","service":"chat-app","timestamp":"2026-07-13 07:39:57"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:39:57"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:39:57"}
+{"level":"info","message":"Sending 11 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:39:57"}
+{"level":"info","message":"User evraldi leaving room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:39:57"}
+{"level":"info","message":"User evraldi attempting to join room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:39:57"}
+{"level":"info","message":"User evraldi joined room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:39:57"}
+{"level":"info","message":"Sending 1 previous messages to user in room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:39:57"}
+{"level":"info","message":"Room created: 6a5433e07000404ac6587b77","name":"test","service":"chat-app","timestamp":"2026-07-13 07:40:00"}
+{"level":"info","message":"User evraldi leaving room bebas dah","service":"chat-app","timestamp":"2026-07-13 07:40:00"}
+{"level":"info","message":"User evraldi attempting to join room test","service":"chat-app","timestamp":"2026-07-13 07:40:00"}
+{"level":"info","message":"User evraldi joined room test","service":"chat-app","timestamp":"2026-07-13 07:40:00"}
+{"level":"info","message":"Sending 0 previous messages to user in room test","service":"chat-app","timestamp":"2026-07-13 07:40:00"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"o7G05iQZzek86c8IAAAH","timestamp":"2026-07-13 07:42:30","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"cJWzI6C1Bd4jl94DAAAJ","timestamp":"2026-07-13 07:42:31","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"cJWzI6C1Bd4jl94DAAAJ","timestamp":"2026-07-13 07:42:31","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"cJWzI6C1Bd4jl94DAAAJ","timestamp":"2026-07-13 07:45:36","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"EUowXKMAta3opvsqAAAL","timestamp":"2026-07-13 07:45:37","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"EUowXKMAta3opvsqAAAL","timestamp":"2026-07-13 07:45:37","username":"evraldi"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-07-13 07:45:57"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-07-13 07:45:57"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-07-13 07:45:57"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"-BHzHz0uMGquHXgOAAAB","timestamp":"2026-07-13 07:45:57","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"-BHzHz0uMGquHXgOAAAB","timestamp":"2026-07-13 07:45:57","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"4Uy3flNksW5Ndw-3AAAD","timestamp":"2026-07-13 07:45:57","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"4Uy3flNksW5Ndw-3AAAD","timestamp":"2026-07-13 07:45:57","username":"evraldi1"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"-BHzHz0uMGquHXgOAAAB","timestamp":"2026-07-13 07:46:15","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"ltb_dDWmXGhyA0U9AAAF","timestamp":"2026-07-13 07:46:16","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"ltb_dDWmXGhyA0U9AAAF","timestamp":"2026-07-13 07:46:16","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"client namespace disconnect","service":"chat-app","socketId":"ltb_dDWmXGhyA0U9AAAF","timestamp":"2026-07-13 07:46:20","username":"evraldi"}
+{"level":"info","message":"User logged in: 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 07:46:21","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"bDIZWN_ZsLi0_gZCAAAH","timestamp":"2026-07-13 07:46:21","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"bDIZWN_ZsLi0_gZCAAAH","timestamp":"2026-07-13 07:46:21","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"bDIZWN_ZsLi0_gZCAAAH","timestamp":"2026-07-13 07:46:23","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"xXI1SpdrQ-bPVXTgAAAJ","timestamp":"2026-07-13 07:46:25","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"xXI1SpdrQ-bPVXTgAAAJ","timestamp":"2026-07-13 07:46:25","username":"evraldi"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-07-13 07:50:12"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-07-13 07:50:12"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-07-13 07:50:12"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"dxu4Mi5rhZneE1XOAAAB","timestamp":"2026-07-13 07:50:12","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"dxu4Mi5rhZneE1XOAAAB","timestamp":"2026-07-13 07:50:12","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"U1kCF7Nu2VSzbN4eAAAD","timestamp":"2026-07-13 07:50:12","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"U1kCF7Nu2VSzbN4eAAAD","timestamp":"2026-07-13 07:50:12","username":"evraldi"}
+{"level":"info","message":"User logged in: 6a5427f8ddc96d8174e3db9f","service":"chat-app","timestamp":"2026-07-13 07:50:27","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"g0zsYBoGA0UZnf_3AAAF","timestamp":"2026-07-13 07:50:28","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"g0zsYBoGA0UZnf_3AAAF","timestamp":"2026-07-13 07:50:28","username":"evraldi"}
+{"level":"info","message":"Server running on port 5000","service":"chat-app","timestamp":"2026-07-13 07:54:00"}
+{"level":"info","message":"Environment: development","service":"chat-app","timestamp":"2026-07-13 07:54:00"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"PLfbmrwx5SZS2ytbAAAB","timestamp":"2026-07-13 07:54:00","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"PLfbmrwx5SZS2ytbAAAB","timestamp":"2026-07-13 07:54:00","username":"evraldi"}
+{"level":"info","message":"MongoDB connected successfully","service":"chat-app","timestamp":"2026-07-13 07:54:00"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"MeU11poti_wVOJTzAAAD","timestamp":"2026-07-13 07:54:00","username":"evraldi1"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"MeU11poti_wVOJTzAAAD","timestamp":"2026-07-13 07:54:00","username":"evraldi1"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"CBVmJsdmGJJULcgbAAAF","timestamp":"2026-07-13 07:54:02","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"CBVmJsdmGJJULcgbAAAF","timestamp":"2026-07-13 07:54:02","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"CBVmJsdmGJJULcgbAAAF","timestamp":"2026-07-13 07:54:04","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"TIM7r5HpjXpC3pTaAAAH","timestamp":"2026-07-13 07:54:06","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"TIM7r5HpjXpC3pTaAAAH","timestamp":"2026-07-13 07:54:06","username":"evraldi"}
+{"level":"info","message":"User evraldi attempting to join room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:54:12"}
+{"level":"info","message":"User evraldi joined room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:54:12"}
+{"level":"info","message":"Sending 11 previous messages to user in room apa aja bebas","service":"chat-app","timestamp":"2026-07-13 07:54:12"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"TIM7r5HpjXpC3pTaAAAH","timestamp":"2026-07-13 07:58:42","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"j33MFuCmK6SyJQqsAAAJ","timestamp":"2026-07-13 07:58:44","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"j33MFuCmK6SyJQqsAAAJ","timestamp":"2026-07-13 07:58:44","username":"evraldi"}
+{"level":"info","message":"User disconnected","reason":"transport close","service":"chat-app","socketId":"j33MFuCmK6SyJQqsAAAJ","timestamp":"2026-07-13 07:58:48","username":"evraldi"}
+{"level":"info","message":"Socket authenticated","service":"chat-app","socketId":"Tm-hs0BOwpJn8iJxAAAL","timestamp":"2026-07-13 07:58:49","username":"evraldi"}
+{"level":"info","message":"User connected","service":"chat-app","socketId":"Tm-hs0BOwpJn8iJxAAAL","timestamp":"2026-07-13 07:58:49","username":"evraldi"}

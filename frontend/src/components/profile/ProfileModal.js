@@ -8,9 +8,8 @@ import './ProfileModal.css';
 
 const ProfileModal = ({ isOpen, onClose, currentUser }) => {
     const { setCurrentUser } = useAuth();
-    const [formData, setFormData] = useState({
+        const [formData, setFormData] = useState({
         displayName: '',
-        bio: '',
         avatar: ''
     });
     const [loading, setLoading] = useState(false);
@@ -25,16 +24,13 @@ const ProfileModal = ({ isOpen, onClose, currentUser }) => {
                 try {
                     const response = await profileService.getProfile(currentUser.id);
                     const profileData = response.data.data;
-                    setFormData({
+                                        setFormData({
                         displayName: profileData.displayName || '',
-                        bio: profileData.bio || '',
                         avatar: profileData.avatar || ''
                     });
-                } catch (err) {
-                    console.error('Failed to load profile data:', err);
+                                } catch (err) {
                     setFormData({
                         displayName: currentUser.displayName || '',
-                        bio: currentUser.bio || '',
                         avatar: currentUser.avatar || ''
                     });
                 }
@@ -85,41 +81,22 @@ const ProfileModal = ({ isOpen, onClose, currentUser }) => {
 
         try {
             const response = await profileService.updateProfile(formData);
-            console.log('Update profile response:', response);
-
             if (response.data && response.data.success) {
-                try {
-                    setSuccess('Profile updated successfully!');
+                setSuccess('Profile updated successfully!');
 
-                    setCurrentUser({
-                        ...currentUser,
-                        displayName: formData.displayName,
-                        bio: formData.bio,
-                        avatar: formData.avatar
-                    });
+                setCurrentUser({
+                    ...currentUser,
+                    displayName: formData.displayName,
+                    avatar: formData.avatar
+                });
 
-                    const storedUser = JSON.parse(localStorage.getItem('user') || '{}');
-                    const updatedUser = {
-                        ...storedUser,
-                        displayName: formData.displayName,
-                        bio: formData.bio,
-                        avatar: formData.avatar
-                    };
-                    localStorage.setItem('user', JSON.stringify(updatedUser));
-
-                    setTimeout(() => {
-                        setSuccess('');
-                    }, 5000);
-                } catch (updateErr) {
-                    console.error('Error updating UI:', updateErr);
-                    setError('Profile updated but failed to refresh UI. Please refresh the page.');
-                }
+                setTimeout(() => {
+                    setSuccess('');
+                }, 5000);
             } else {
-                console.error('Update failed:', response.data);
                 setError(response.data?.message || 'Failed to update profile');
             }
         } catch (err) {
-            console.error('Update error:', err);
             setError(err.response?.data?.message || 'Failed to update profile');
         } finally {
             setLoading(false);
@@ -164,7 +141,7 @@ const ProfileModal = ({ isOpen, onClose, currentUser }) => {
                         </div>
                     </div>
 
-                    <Input
+                                        <Input
                         id="displayName"
                         label="Display Name"
                         type="text"
@@ -173,19 +150,6 @@ const ProfileModal = ({ isOpen, onClose, currentUser }) => {
                         onChange={handleChange}
                         placeholder="Enter display name"
                     />
-
-                    <div className="form-group">
-                        <label htmlFor="bio">Bio</label>
-                        <textarea
-                            id="bio"
-                            name="bio"
-                            value={formData.bio}
-                            onChange={handleChange}
-                            placeholder="Tell us about yourself..."
-                            rows="4"
-                            className="profile-textarea"
-                        />
-                    </div>
 
                     {error && <div className="profile-error">{error}</div>}
                     {success && <div className="profile-success">{success}</div>}
@@ -207,11 +171,10 @@ const ProfileModal = ({ isOpen, onClose, currentUser }) => {
 ProfileModal.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    currentUser: PropTypes.shape({
+        currentUser: PropTypes.shape({
         id: PropTypes.string,
         username: PropTypes.string,
         displayName: PropTypes.string,
-        bio: PropTypes.string,
         avatar: PropTypes.string
     })
 };

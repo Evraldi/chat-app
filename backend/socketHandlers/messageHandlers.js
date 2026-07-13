@@ -10,25 +10,32 @@ const logger = require('../utils/logger');
  * @param {Function} callback - Callback function
  */
 exports.handleSendMessage = async (io, socket, message, callback) => {
+  const username = socket.user?.username;
   logger.info('Received sendMessage event', { 
-    username: message?.username,
+    username,
     room: message?.room,
     text: message?.text
   });
   
   try {
-    if (!message || !message.username || !message.text || !message.room) {
+    if (!message || !message.text || !message.room) {
       logger.warn('Invalid message format', { message });
-      callback({ status: 'error', message: 'Invalid message format' });
+      callback({ status: 'error', message: 'Message text and room are required' });
       return;
     }
     
-    const user = await User.findOne({ username: message.username }).select('displayName avatar');
+    if (!username) {
+      logger.warn('Unauthenticated sendMessage attempt');
+      callback({ status: 'error', message: 'Authentication required' });
+      return;
+    }
+    
+    const user = await User.findOne({ username }).select('displayName avatar');
     const displayName = user?.displayName || '';
     const avatar = user?.avatar || '';
     
     const newMessage = new Message({
-      username: message.username,
+      username,
       displayName,
       avatar,
       text: message.text,

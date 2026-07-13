@@ -47,7 +47,7 @@ const LoginForm = ({ onLogin, onSwitchToRegister, loading, error }) => {
     <div className="auth-form-container">
       <h2 className="auth-form-title">Login</h2>
       
-      <form onSubmit={submitForm} className="auth-form">
+            <form onSubmit={submitForm} className="auth-form">
         <Input
           id="username"
           name="username"
@@ -57,6 +57,7 @@ const LoginForm = ({ onLogin, onSwitchToRegister, loading, error }) => {
           onBlur={handleBlur}
           error={errors.username}
           touched={touched.username}
+          disabled={loading}
           required
         />
         
@@ -70,6 +71,7 @@ const LoginForm = ({ onLogin, onSwitchToRegister, loading, error }) => {
           onBlur={handleBlur}
           error={errors.password}
           touched={touched.password}
+          disabled={loading}
           required
         />
         

@@ -1,4 +1,5 @@
 const Message = require('../models/Message');
+const User = require('../models/User');
 const logger = require('../utils/logger');
 const { success, error } = require('../utils/responseHandler');
 
@@ -9,21 +10,30 @@ const { success, error } = require('../utils/responseHandler');
  */
 exports.getMessages = async (req, res) => {
   try {
-    const { room } = req.query;
+    const { room, cursor, limit = 50 } = req.query;
 
     if (!room) {
       return error(res, 'Room query parameter is required', 400);
     }
 
-    const messages = await Message.find({ room })
-      .sort({ createdAt: -1 })
-      .limit(50);
+    const queryLimit = Math.min(parseInt(limit, 10) || 50, 100);
 
-    if (!messages.length) {
-      return error(res, 'No messages found', 404);
+    const query = { room };
+    if (cursor) {
+      // Cursor-based pagination: get messages older than the cursor ID
+      query._id = { $lt: cursor };
     }
 
-    return success(res, { messages }, 'Messages retrieved successfully');
+    const messages = await Message.find(query)
+      .sort({ _id: -1 })
+      .limit(queryLimit + 1); // Ambil 1 extra buat deteksi "hasMore"
+
+    const hasMore = messages.length > queryLimit;
+    if (hasMore) messages.pop(); // Buang extra
+
+    const nextCursor = messages.length > 0 ? messages[messages.length - 1]._id : null;
+
+    return success(res, { messages, nextCursor, hasMore }, 'Messages retrieved successfully');
   } catch (err) {
     logger.error(`Failed to fetch messages: ${err.message}`, { stack: err.stack });
     return error(res, 'Failed to fetch messages');
@@ -37,10 +47,16 @@ exports.getMessages = async (req, res) => {
  */
 exports.createMessage = async (req, res) => {
   try {
-    const { username, text, room } = req.body;
+    // Username diambil dari JWT token (req.user), bukan dari body
+    const username = req.user?.username;
+    const { text, room } = req.body;
 
-    if (!username || !text || !room) {
-      return error(res, 'Username, text, and room are required', 400);
+    if (!text || !room) {
+      return error(res, 'Text and room are required', 400);
+    }
+
+    if (!username) {
+      return error(res, 'Authentication required', 401);
     }
 
     // Fetch user data to get displayName and avatar

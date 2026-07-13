@@ -53,6 +53,13 @@ const chatReducer = (state, action) => {
         ...state,
         isLoadingMessages: action.payload
       };
+    case 'SET_ERROR':
+      return {
+        ...state,
+        error: action.payload,
+        loading: false,
+        isLoadingMessages: false
+      };
     default:
       return state;
   }
@@ -75,7 +82,6 @@ export const ChatProvider = ({ children }) => {
           dispatch({ type: 'SET_ROOMS', payload: response.data.data.rooms });
         }
       } catch (err) {
-        console.error('Error fetching rooms:', err);
         dispatch({
           type: 'SET_ERROR',
           payload: err.response?.data?.message || 'Failed to fetch rooms'
@@ -94,10 +100,7 @@ export const ChatProvider = ({ children }) => {
         dispatch({ type: 'ADD_MESSAGE', payload: newMessage });
       });
       socket.on('previousMessages', (messages) => {
-        // Add minimal delay for smooth transition
-        setTimeout(() => {
-          dispatch({ type: 'SET_MESSAGES', payload: messages });
-        }, 500);
+        dispatch({ type: 'SET_MESSAGES', payload: messages });
       });
 
       return () => {
@@ -132,7 +135,6 @@ export const ChatProvider = ({ children }) => {
         return newRoom;
       }
     } catch (err) {
-      console.error('Error creating room:', err);
       dispatch({
         type: 'SET_ERROR',
         payload: err.response?.data?.message || 'Failed to create room'
@@ -144,7 +146,6 @@ export const ChatProvider = ({ children }) => {
   const sendChatMessage = useCallback(async (text) => {
     if (!state.currentRoom) {
       const errorMsg = 'Please select a room first';
-      console.error(errorMsg);
       dispatch({
         type: 'SET_ERROR',
         payload: errorMsg
@@ -153,19 +154,16 @@ export const ChatProvider = ({ children }) => {
     }
 
     try {
-      console.log(`Attempting to send message in room ${state.currentRoom}`);
       const result = await sendMessage(text, state.currentRoom);
-      console.log('Message sent successfully:', result);
       return result;
     } catch (err) {
-      console.error('Error sending message:', err.message);
       dispatch({
         type: 'SET_ERROR',
         payload: err.message || 'Failed to send message'
       });
       return Promise.reject(err);
     }
-  }, [state.currentRoom, sendMessage, dispatch]);
+  }, [state.currentRoom, sendMessage]);
 
   const value = {
     rooms: state.rooms,

@@ -16,15 +16,4 @@ function handleError(err, req, res, next) {
   });
 }
 
-/**
- * Utility function for handling errors in route handlers
- * @param {Object} res - Express response object
- * @param {Error} error - Error object
- * @param {String} message - Custom error message
- */
-function handleRouteError(res, error, message) {
-  logger.error(`${message}: ${error.message}`, { stack: error.stack });
-  res.status(500).json({ success: false, message: message || 'Internal Server Error' });
-}
-
-module.exports = { handleError, handleRouteError };
+module.exports = { handleError };

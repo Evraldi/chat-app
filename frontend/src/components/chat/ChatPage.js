@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useChat } from '../../contexts/ChatContext';
+import { useToast } from '../common/Toast';
 import RoomSelector from './RoomSelector';
 import MessageList from './MessageList';
 import MessageInput from './MessageInput';
@@ -25,6 +26,7 @@ const ChatPage = () => {
     sendMessage
   } = useChat();
 
+  const { addToast } = useToast();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
@@ -35,23 +37,21 @@ const ChatPage = () => {
     }
   };
 
-  const handleCreateRoom = async (roomName) => {
+    const handleCreateRoom = async (roomName) => {
     try {
       await createRoom(roomName);
       setRoom(roomName);
     } catch (err) {
-      console.error('Error creating room:', err);
+      addToast(`Failed to create room: ${err.message}`, 'error');
     }
   };
 
   const handleSendMessage = async (text) => {
     try {
-      console.log('ChatPage: Sending message:', text);
       await sendMessage(text);
       return true;
     } catch (err) {
-      console.error('ChatPage: Error sending message:', err.message);
-      alert(`Failed to send message: ${err.message}`);
+      addToast(`Failed to send message: ${err.message}`, 'error');
       return false;
     }
   };
@@ -72,7 +72,7 @@ const ChatPage = () => {
     setIsProfileModalOpen(false);
   };
 
-  return (
+        return (
     <div className={`chat-page ${!isSidebarOpen ? 'sidebar-collapsed' : ''}`}>
       <div className={`sidebar-container ${isSidebarOpen ? 'open' : 'closed'}`}>
         <RoomSelector
@@ -83,13 +83,6 @@ const ChatPage = () => {
           onLogout={handleLogout}
           disabled={loading}
         />
-        <button
-          className="sidebar-toggle-btn"
-          onClick={toggleSidebar}
-          title={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
-        >
-          {isSidebarOpen ? '❮' : '❯'}
-        </button>
       </div>
 
       <div className="chat-content">
@@ -126,9 +119,16 @@ const ChatPage = () => {
             </div>
           </div>
         ) : (
-          <>
+                    <>
             <div className="chat-header">
               <div className="header-left">
+                <button
+                  className="sidebar-toggle-btn"
+                  onClick={toggleSidebar}
+                  title={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
+                >
+                  {isSidebarOpen ? '✕' : '☰'}
+                </button>
                 <h3>
                   <span style={{ opacity: 0.6 }}>#</span> {currentRoom}
                 </h3>

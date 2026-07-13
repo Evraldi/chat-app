@@ -7,16 +7,16 @@ const router = express.Router();
 /**
  * @route   GET /messages
  * @desc    Get messages for a specific room
- * @access  Public
+ * @access  Private (requires JWT)
  */
-router.get('/', messageController.getMessages);
+router.get('/', auth, messageController.getMessages);
 
 /**
  * @route   POST /messages
  * @desc    Create a new message
- * @access  Public
+ * @access  Private (requires JWT)
  */
-router.post('/', validateInput, messageController.createMessage);
+router.post('/', auth, validateInput, messageController.createMessage);
 
 /**
  * @route   DELETE /messages

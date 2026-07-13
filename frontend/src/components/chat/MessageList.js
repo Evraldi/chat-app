@@ -66,7 +66,7 @@ const MessageList = React.memo(({ messages, currentUsername }) => {
 
       content.push(
         <div
-          key={message._id || index}
+          key={message._id}
           className={`message-wrapper ${isOwnMessage ? 'own' : ''}`}
         >
           {!isSystemMessage && !isOwnMessage && (

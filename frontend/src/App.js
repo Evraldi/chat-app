@@ -2,6 +2,8 @@ import React from 'react';
 import { AuthProvider } from './contexts/AuthContext';
 import { SocketProvider } from './contexts/SocketContext';
 import { ChatProvider } from './contexts/ChatContext';
+import { ToastProvider } from './components/common/Toast';
+import ErrorBoundary from './components/common/ErrorBoundary';
 import AuthPage from './components/auth/AuthPage';
 import ChatPage from './components/chat/ChatPage';
 import Loader from './components/common/Loader';
@@ -24,13 +26,17 @@ const AppContent = () => {
 // Main app component with context providers
 const App = () => {
   return (
-    <AuthProvider>
-      <SocketProvider>
-        <ChatProvider>
-          <AppContent />
-        </ChatProvider>
-      </SocketProvider>
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <SocketProvider>
+          <ChatProvider>
+            <ToastProvider>
+              <AppContent />
+            </ToastProvider>
+          </ChatProvider>
+        </SocketProvider>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 };
 

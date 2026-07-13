@@ -8,4 +8,7 @@ const messageSchema = new mongoose.Schema({
   room: { type: String, required: true },
 }, { timestamps: true });
 
+// Compound index for efficient message queries by room, sorted by date
+messageSchema.index({ room: 1, createdAt: -1 });
+
 module.exports = mongoose.model('Message', messageSchema);
