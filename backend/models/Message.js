@@ -6,6 +6,8 @@ const messageSchema = new mongoose.Schema({
   avatar: { type: String, default: '' },
   text: { type: String, required: true },
   room: { type: String, required: true },
+  media: { type: String, default: '' }, // base64 or URL
+  mediaType: { type: String, default: '' }, // e.g., 'image/png' or 'audio/webm'
 }, { timestamps: true });
 
 // Compound index for efficient message queries by room, sorted by date

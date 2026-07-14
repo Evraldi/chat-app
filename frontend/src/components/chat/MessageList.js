@@ -88,7 +88,18 @@ const MessageList = React.memo(({ messages, currentUsername }) => {
               </div>
             )}
 
-            <div className="message-content">{message.text}</div>
+            <div className="message-content">
+              {message.text}
+              {message.media && message.mediaType && (
+                <div className="message-media">
+                  {message.mediaType.startsWith('image/') ? (
+                    <img src={message.media} alt="media" className="message-image" />
+                  ) : message.mediaType.startsWith('audio/') ? (
+                    <audio controls src={message.media} className="message-audio" />
+                  ) : null}
+                </div>
+              )}
+            </div>
 
             {!isSystemMessage && (
               <div className="message-time">
@@ -124,7 +135,9 @@ MessageList.propTypes = {
     PropTypes.shape({
       _id: PropTypes.string,
       username: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
+            text: PropTypes.string,
+      media: PropTypes.string,
+      mediaType: PropTypes.string,
       createdAt: PropTypes.string
     })
   ).isRequired,

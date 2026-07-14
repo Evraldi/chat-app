@@ -49,22 +49,19 @@ exports.createMessage = async (req, res) => {
   try {
     // Username diambil dari JWT token (req.user), bukan dari body
     const username = req.user?.username;
-    const { text, room } = req.body;
+    const { text, room, media, mediaType } = req.body;
 
-    if (!text || !room) {
-      return error(res, 'Text and room are required', 400);
+    if (!room) {
+      return error(res, 'Room is required', 400);
     }
-
-    if (!username) {
-      return error(res, 'Authentication required', 401);
+    if (!text && !media) {
+      return error(res, 'Message text or media is required', 400);
     }
-
     // Fetch user data to get displayName and avatar
     const user = await User.findOne({ username }).select('displayName avatar');
     const displayName = user?.displayName || '';
     const avatar = user?.avatar || '';
-
-    const message = new Message({ username, displayName, avatar, text, room });
+    const message = new Message({ username, displayName, avatar, text, room, media: media || '', mediaType: mediaType || '' });
     await message.save();
     
     logger.info(`Message created: ${message._id}`, { username, room });

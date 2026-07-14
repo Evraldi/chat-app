@@ -40,6 +40,8 @@ exports.handleSendMessage = async (io, socket, message, callback) => {
       avatar,
       text: message.text,
       room: message.room,
+      media: message.media || '',
+      mediaType: message.mediaType || ''
     });
     
     await newMessage.save();

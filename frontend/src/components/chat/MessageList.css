@@ -1,3 +1,15 @@
+/* Media styling */
+.message-media {
+  margin-top: 8px;
+}
+.message-image {
+  max-width: 200px;
+  border-radius: 8px;
+}
+.message-audio {
+  width: 250px;
+}
+
 .message-list {
   flex: 1;
   overflow-y: auto;

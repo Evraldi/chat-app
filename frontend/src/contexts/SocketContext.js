@@ -88,7 +88,7 @@ export const SocketProvider = ({ children }) => {
     socketRef.current.emit('leaveRoom', { room });
   }, [connected, currentUser]);
 
-  const sendMessage = useCallback((text, room) => {
+  const sendMessage = useCallback((payload, room) => {
     return new Promise((resolve, reject) => {
       if (!socketRef.current) {
         reject(new Error('Socket not initialized'));
@@ -106,7 +106,7 @@ export const SocketProvider = ({ children }) => {
       }
 
       socketRef.current.emit('sendMessage',
-        { text, room },
+        { ...payload, room },
         (response) => {
           if (response && response.status === 'ok') {
             resolve(response);

@@ -143,7 +143,7 @@ export const ChatProvider = ({ children }) => {
     }
   }, [state.rooms]);
 
-  const sendChatMessage = useCallback(async (text) => {
+  const sendChatMessage = useCallback(async (payload) => {
     if (!state.currentRoom) {
       const errorMsg = 'Please select a room first';
       dispatch({
@@ -154,7 +154,7 @@ export const ChatProvider = ({ children }) => {
     }
 
     try {
-      const result = await sendMessage(text, state.currentRoom);
+      const result = await sendMessage(payload, state.currentRoom);
       return result;
     } catch (err) {
       dispatch({
