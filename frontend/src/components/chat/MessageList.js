@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useMemo } from 'react';
+import React, { useEffect, useRef, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import './MessageList.css';
 
@@ -8,9 +8,19 @@ import './MessageList.css';
 const MessageList = React.memo(({ messages, currentUsername, currentUserRole, onDeleteMessage }) => {
   const messagesEndRef = useRef(null);
   const prevMessagesLengthRef = useRef(0);
+  const [menuOpenId, setMenuOpenId] = useState(null);
+
+  const canDelete = (message) =>
+    !message.username !== 'System' &&
+    (message.username === currentUsername || currentUserRole === 'admin');
+
+  const toggleMenu = (id) => {
+    setMenuOpenId((prev) => (prev === id ? null : id));
+  };
 
   const handleDelete = (messageId) => {
-    if (window.confirm('Delete this message?')) {
+    setMenuOpenId(null);
+    if (window.confirm('Delete this message? This cannot be undone.')) {
       onDeleteMessage && onDeleteMessage(messageId);
     }
   };
@@ -41,10 +51,8 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
 
   useEffect(() => {
     if (messages.length > prevMessagesLengthRef.current) {
-      // New messages added, scroll smoothly
       messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     } else if (messages.length > 0 && prevMessagesLengthRef.current === 0) {
-      // Initial load, scroll to bottom instantly
       messagesEndRef.current?.scrollIntoView({ behavior: 'auto' });
     }
     prevMessagesLengthRef.current = messages.length;
@@ -66,9 +74,9 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
         lastDate = messageDate;
       }
 
-
       const isOwnMessage = message.username === currentUsername;
       const isSystemMessage = message.username === 'System';
+      const deletable = !isSystemMessage && (message.username === currentUsername || currentUserRole === 'admin');
 
       content.push(
         <div
@@ -85,8 +93,7 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
             </div>
           )}
           <div
-            className={`message ${isOwnMessage ? 'message-own' : ''} ${isSystemMessage ? 'message-system' : ''
-              }`}
+            className={`message ${isOwnMessage ? 'message-own' : ''} ${isSystemMessage ? 'message-system' : ''}`}
           >
             {!isSystemMessage && !isOwnMessage && (
               <div className="message-header">
@@ -112,23 +119,41 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
                 {formatTime(message.createdAt)}
               </div>
             )}
-            {!isSystemMessage && (message.username === currentUsername || currentUserRole === "admin") && (
+          </div>
+
+          {deletable && (
+            <div className="msg-actions">
               <button
                 type="button"
-                className="message-delete-btn"
-                title="Delete message"
-                onClick={() => handleDelete(message._id)}
+                className="msg-kebab"
+                title="More actions"
+                onClick={() => toggleMenu(message._id)}
+                aria-label="More actions"
               >
-                X
+                &#8942;
               </button>
-            )}
-          </div>
+              {menuOpenId === message._id && (
+                <>
+                  <div className="msg-menu-backdrop" onClick={() => setMenuOpenId(null)} />
+                  <div className="msg-menu" role="menu">
+                    <button
+                      type="button"
+                      className="msg-menu-item msg-menu-delete"
+                      onClick={() => handleDelete(message._id)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
         </div>
       );
     });
 
     return content;
-  }, [messages, currentUsername]);
+  }, [messages, currentUsername, currentUserRole, menuOpenId]);
 
   if (!messages.length) {
     return (
@@ -151,13 +176,15 @@ MessageList.propTypes = {
     PropTypes.shape({
       _id: PropTypes.string,
       username: PropTypes.string.isRequired,
-            text: PropTypes.string,
+      text: PropTypes.string,
       media: PropTypes.string,
       mediaType: PropTypes.string,
       createdAt: PropTypes.string
     })
   ).isRequired,
-  currentUsername: PropTypes.string.isRequired
+  currentUsername: PropTypes.string.isRequired,
+  currentUserRole: PropTypes.string,
+  onDeleteMessage: PropTypes.func
 };
 
 export default MessageList;
