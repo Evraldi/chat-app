@@ -46,9 +46,9 @@ const ChatPage = () => {
     }
   };
 
-  const handleSendMessage = async (text) => {
+  const handleSendMessage = async (payload) => {
     try {
-      await sendMessage(text);
+      await sendMessage(payload);
       return true;
     } catch (err) {
       addToast(`Failed to send message: ${err.message}`, 'error');

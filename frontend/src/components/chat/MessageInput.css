@@ -1,5 +1,13 @@
-.message-input-container {
-  display: flex;
+
+.message-input-container button[type="submit"] {
+  margin-left: 8px;
+}
+/* Secondary button spacing */
+.message-input-container .secondary-button {
+  margin-left: 8px;
+}.message-input-container {
+  gap: 8px;
+
   padding: 20px;
   background-color: white;
   border-top: 1px solid #dee2e6;
