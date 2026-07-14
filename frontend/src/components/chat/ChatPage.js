@@ -23,7 +23,8 @@ const ChatPage = () => {
     error,
     setRoom,
     createRoom,
-    sendMessage
+    sendMessage,
+    deleteMessage
   } = useChat();
 
   const { addToast } = useToast();
@@ -157,6 +158,8 @@ const ChatPage = () => {
                 <MessageList
                   messages={messages}
                   currentUsername={currentUser?.username || ''}
+                  currentUserRole={currentUser?.role || ''}
+                  onDeleteMessage={deleteMessage}
                 />
               )}
             </div>

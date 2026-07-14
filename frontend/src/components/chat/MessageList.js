@@ -9,6 +9,7 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
   const messagesEndRef = useRef(null);
   const prevMessagesLengthRef = useRef(0);
   const [menuOpenId, setMenuOpenId] = useState(null);
+  const [pendingDeleteId, setPendingDeleteId] = useState(null);
 
   const canDelete = (message) =>
     !message.username !== 'System' &&
@@ -18,11 +19,20 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
     setMenuOpenId((prev) => (prev === id ? null : id));
   };
 
-  const handleDelete = (messageId) => {
+  const handleDeleteClick = (messageId) => {
     setMenuOpenId(null);
-    if (window.confirm('Delete this message? This cannot be undone.')) {
-      onDeleteMessage && onDeleteMessage(messageId);
+    setPendingDeleteId(messageId);
+  };
+
+  const confirmDelete = () => {
+    if (pendingDeleteId && onDeleteMessage) {
+      onDeleteMessage(pendingDeleteId);
     }
+    setPendingDeleteId(null);
+  };
+
+  const cancelDelete = () => {
+    setPendingDeleteId(null);
   };
 
   const formatTime = (dateString) => {
@@ -139,7 +149,7 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
                     <button
                       type="button"
                       className="msg-menu-item msg-menu-delete"
-                      onClick={() => handleDelete(message._id)}
+                      onClick={() => handleDeleteClick(message._id)}
                     >
                       Delete
                     </button>
@@ -167,6 +177,24 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
     <div className="message-list">
       {renderMessages}
       <div ref={messagesEndRef} />
+
+      {pendingDeleteId && (
+        <div className="confirm-backdrop" onClick={cancelDelete}>
+          <div className="confirm-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            <div className="confirm-icon" aria-hidden="true">!</div>
+            <h3 className="confirm-title">Delete message?</h3>
+            <p className="confirm-text">This action cannot be undone.</p>
+            <div className="confirm-actions">
+              <button type="button" className="confirm-btn confirm-cancel" onClick={cancelDelete}>
+                Cancel
+              </button>
+              <button type="button" className="confirm-btn confirm-delete" onClick={confirmDelete}>
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 });
