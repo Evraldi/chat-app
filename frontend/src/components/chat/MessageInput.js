@@ -12,7 +12,7 @@ const MessageInput = ({ onSendMessage, disabled }) => {
   const [selectedPreview, setSelectedPreview] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
-  const [audioChunks, setAudioChunks] = useState([]);
+  const chunksRef = useRef([]);
   const [recordSeconds, setRecordSeconds] = useState(0);
   const [message, setMessage] = useState('');
   const recordTimerRef = useRef(null);
@@ -28,7 +28,7 @@ const MessageInput = ({ onSendMessage, disabled }) => {
     e.preventDefault();
     if (disabled) return;
     // No text required: allow image or voice-only messages
-    if (!message.trim() && !selectedFile && audioChunks.length === 0) {
+    if (!message.trim() && !selectedFile && chunksRef.current.length === 0) {
       return;
     }
     let media = '';
@@ -52,7 +52,7 @@ const MessageInput = ({ onSendMessage, disabled }) => {
       setMessage('');
       setSelectedFile(null);
       setSelectedPreview('');
-      setAudioChunks([]);
+      chunksRef.current = [];
     } catch (error) {
       // silent fail - error handled by parent
     }
@@ -98,22 +98,22 @@ const MessageInput = ({ onSendMessage, disabled }) => {
       const recorder = new MediaRecorder(stream);
       recorder.ondataavailable = (ev) => {
         if (ev.data && ev.data.size > 0) {
-          setAudioChunks((prev) => [...prev, ev.data]);
+          chunksRef.current.push(ev.data);
         }
       };
       recorder.onstop = () => {
         stream.getTracks().forEach((t) => t.stop());
-        const blob = new Blob(audioChunks, { type: 'audio/webm' });
+        const blob = new Blob(chunksRef.current, { type: recorder.mimeType || 'audio/webm' });
+        chunksRef.current = [];
         const reader = new FileReader();
         reader.onloadend = () => {
           const payload = {
             text: message.trim(),
             media: reader.result,
-            mediaType: 'audio/webm'
+            mediaType: recorder.mimeType || 'audio/webm'
           };
           onSendMessage(payload).catch(() => {});
           setMessage('');
-          setAudioChunks([]);
         };
         reader.readAsDataURL(blob);
       };
@@ -227,7 +227,7 @@ const MessageInput = ({ onSendMessage, disabled }) => {
         <Button
           type="submit"
           variant="primary"
-          disabled={(!message.trim() && !selectedFile && !audioChunks.length) || disabled}
+          disabled={(!message.trim() && !selectedFile && chunksRef.current.length === 0) || disabled}
           className="send-btn"
         >
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
