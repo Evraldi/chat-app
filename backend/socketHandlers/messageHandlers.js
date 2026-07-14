@@ -18,9 +18,16 @@ exports.handleSendMessage = async (io, socket, message, callback) => {
   });
   
   try {
-    if (!message || !message.text || !message.room) {
+    if (!message || !message.room) {
       logger.warn('Invalid message format', { message });
-      callback({ status: 'error', message: 'Message text and room are required' });
+      callback({ status: 'error', message: 'Room is required' });
+      return;
+    }
+
+    // Text is optional when media (image/voice note) is attached
+    if (!message.text && !message.media) {
+      logger.warn('Empty message', { message });
+      callback({ status: 'error', message: 'Message must contain text or media' });
       return;
     }
     
@@ -38,7 +45,7 @@ exports.handleSendMessage = async (io, socket, message, callback) => {
       username,
       displayName,
       avatar,
-      text: message.text,
+      text: message.text || '',
       room: message.room,
       media: message.media || '',
       mediaType: message.mediaType || ''
