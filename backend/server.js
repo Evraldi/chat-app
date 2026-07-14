@@ -94,6 +94,7 @@ app.get('*', (req, res) => {
 app.use(handleError);
 
 const io = socketIo(server, {
+  maxHttpBufferSize: 12e6, // 12 MB - allow image/voice-note base64 via socket
   cors: {
     origin: (origin, callback) => {
       if (!origin || corsOrigins.includes('*')) return callback(null, true);
