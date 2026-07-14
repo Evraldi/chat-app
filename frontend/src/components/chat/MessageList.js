@@ -112,6 +112,16 @@ const MessageList = React.memo(({ messages, currentUsername, currentUserRole, on
                 {formatTime(message.createdAt)}
               </div>
             )}
+            {!isSystemMessage && (message.username === currentUsername || currentUserRole === "admin") && (
+              <button
+                type="button"
+                className="message-delete-btn"
+                title="Delete message"
+                onClick={() => handleDelete(message._id)}
+              >
+                X
+              </button>
+            )}
           </div>
         </div>
       );
