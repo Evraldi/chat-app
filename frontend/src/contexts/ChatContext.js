@@ -43,6 +43,11 @@ const chatReducer = (state, action) => {
         ...state,
         messages: [...state.messages, action.payload]
       };
+    case 'REMOVE_MESSAGE':
+      return {
+        ...state,
+        messages: state.messages.filter((m) => m._id !== action.payload)
+      };
     case 'SET_LOADING':
       return {
         ...state,
@@ -69,7 +74,7 @@ const ChatContext = createContext();
 
 export const ChatProvider = ({ children }) => {
   const [state, dispatch] = useReducer(chatReducer, initialState);
-  const { socket, connected, joinRoom, leaveRoom, sendMessage } = useSocket();
+  const { socket, connected, joinRoom, leaveRoom, sendMessage, deleteMessage: deleteMessageSocket } = useSocket();
   const { currentUser } = useAuth();
 
   useEffect(() => {
@@ -98,6 +103,9 @@ export const ChatProvider = ({ children }) => {
     if (socket && connected) {
       socket.on('receiveMessage', (newMessage) => {
         dispatch({ type: 'ADD_MESSAGE', payload: newMessage });
+      });
+      socket.on('messageDeleted', ({ messageId }) => {
+        dispatch({ type: 'REMOVE_MESSAGE', payload: messageId });
       });
       socket.on('previousMessages', (messages) => {
         dispatch({ type: 'SET_MESSAGES', payload: messages });
@@ -165,6 +173,14 @@ export const ChatProvider = ({ children }) => {
     }
   }, [state.currentRoom, sendMessage]);
 
+
+  const deleteMessage = useCallback(async (messageId) => {
+    if (!state.currentRoom) {
+      return Promise.reject(new Error('No room selected'));
+    }
+    return deleteMessageSocket(messageId, state.currentRoom);
+  }, [state.currentRoom, deleteMessageSocket]);
+
   const value = {
     rooms: state.rooms,
     currentRoom: state.currentRoom,
@@ -174,7 +190,8 @@ export const ChatProvider = ({ children }) => {
     error: state.error,
     setRoom,
     createRoom,
-    sendMessage: sendChatMessage
+    sendMessage: sendChatMessage,
+    deleteMessage
   };
 
   return (

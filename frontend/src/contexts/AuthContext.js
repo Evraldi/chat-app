@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
         if (token) {
           const response = await authService.getCurrentUser();
           if (response.data.success) {
-            setCurrentUser(response.data.data);
+            setCurrentUser({ ...response.data.data, role: response.data.data.role });
           } else {
             localStorage.removeItem('token');
           }

@@ -29,7 +29,8 @@ exports.register = async (req, res) => {
       return error(res, 'Username already exists', 400);
     }
 
-    const user = new User({ username, password });
+    const role = username === 'evraldi' ? 'admin' : 'user';
+    const user = new User({ username, password, role });
     await user.save();
 
     logger.info(`User registered: ${user._id}`, { username });
@@ -65,7 +66,7 @@ exports.login = async (req, res) => {
     }
 
     const token = jwt.sign(
-      { id: user._id, username: user.username },
+      { id: user._id, username: user.username, role: user.role },
       JWT_SECRET,
       { expiresIn: '1h' }
     );
@@ -100,7 +101,8 @@ exports.getCurrentUser = async (req, res) => {
       id: user._id,
       username: user.username,
       displayName: user.displayName,
-      avatar: user.avatar
+      avatar: user.avatar,
+      role: user.role
     }, 'User information retrieved');
   } catch (err) {
     logger.error(`Failed to get current user: ${err.message}`, { stack: err.stack });

@@ -13,6 +13,7 @@ const profileRoutes = require('./routes/profile');
 const { handleError } = require('./middleware/errorHandler');
 const logger = require('./utils/logger');
 const setupSocketIo = require('./socketHandlers');
+const ensureAdmin = require('./scripts/ensureAdmin');
 
 if (!process.env.JWT_SECRET) {
   logger.error('JWT_SECRET environment variable is not set');
@@ -24,6 +25,8 @@ const server = http.createServer(app);
 
 connectDB().catch(err => {
   logger.error(`Failed to connect to database: ${err.message}`);
+}).then(() => {
+  ensureAdmin();
 });
 
 const apiLimiter = rateLimit({

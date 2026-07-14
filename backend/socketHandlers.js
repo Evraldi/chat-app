@@ -50,6 +50,10 @@ const setupSocketIo = (io) => {
       messageHandlers.handleSendMessage(io, socket, message, callback);
     });
 
+    socket.on('deleteMessage', (data, callback) => {
+      messageHandlers.handleDeleteMessage(io, socket, data, callback);
+    });
+
     socket.on('disconnect', (reason) => {
       logger.info('User disconnected', { socketId: socket.id, username: socket.user?.username, reason });
     });

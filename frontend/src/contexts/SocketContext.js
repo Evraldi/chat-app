@@ -119,13 +119,35 @@ export const SocketProvider = ({ children }) => {
     });
   }, [connected, currentUser]);
 
+
+  const deleteMessage = useCallback((messageId, room) => {
+    return new Promise((resolve, reject) => {
+      if (!socketRef.current) {
+        reject(new Error('Socket not initialized'));
+        return;
+      }
+      if (!connected) {
+        reject(new Error('Not connected to chat server'));
+        return;
+      }
+      socketRef.current.emit('deleteMessage', { messageId, room }, (response) => {
+        if (response && response.status === 'ok') {
+          resolve(response);
+        } else {
+          reject(new Error((response && response.message) || 'Failed to delete message'));
+        }
+      });
+    });
+  }, [connected]);
+
   const value = {
     socket: socketRef.current,
     connected,
     error,
     joinRoom,
     leaveRoom,
-    sendMessage
+    sendMessage,
+    deleteMessage
   };
 
   return (

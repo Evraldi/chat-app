@@ -5,9 +5,15 @@ import './MessageList.css';
 /**
  * Message list component
  */
-const MessageList = React.memo(({ messages, currentUsername }) => {
+const MessageList = React.memo(({ messages, currentUsername, currentUserRole, onDeleteMessage }) => {
   const messagesEndRef = useRef(null);
   const prevMessagesLengthRef = useRef(0);
+
+  const handleDelete = (messageId) => {
+    if (window.confirm('Delete this message?')) {
+      onDeleteMessage && onDeleteMessage(messageId);
+    }
+  };
 
   const formatTime = (dateString) => {
     const date = new Date(dateString);
