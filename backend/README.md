@@ -41,6 +41,8 @@ npm run dev
 ## Environment Variables
 
 Create a `.env` file in the root directory with the following variables:
+- `.env` jangan di-commit ke git
+- Jangan commit file `.env` ke git
 
 ```
 PORT=5000
