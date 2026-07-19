@@ -1,0 +1,9 @@
+.aider*
+
+# Continue / scheduler tooling
+TODO.md
+.scheduler.log
+plan.ps1
+scheduler.ps1
+.continue/agent.md
+
